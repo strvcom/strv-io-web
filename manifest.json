@@ -1,0 +1,10 @@
+{
+  "name": "STRV-IO",
+  "theme_color": "#ef0d33",
+  "background_color": "#111517",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [],
+  "splash_pages": null
+}
