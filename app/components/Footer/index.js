@@ -1,14 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 import variables from 'common/styleVariables'
+import { mq } from 'common/media'
+import Social from 'components/Social'
 
-const Wrapper = styled.footer``
+const Wrapper = styled.footer`
+  margin: 0 auto;
+  text-align: center;
+  max-width: 85%;
+  ${mq.tabletWide`
+  max-width: 600px;
+`};
+`
+const ContinueButton = styled.div`
+  font-family: ${variables.fonts.primary};
+  font-size: 20px;
+  color: #ffffff;
+  text-align: left;
+  padding: 40px 0;
+`
+
 const ArticleLink = styled.a`
   color: ${variables.colors.primary};
   font-family: ${variables.fonts.primary};
   font-size: 18px;
   letter-spacing: 0.1px;
-  line-height: 32px;
+  width: 100%;
+  border-top: solid 1px rgba(136, 136, 136, 0.2);
+  border-bottom: solid 1px rgba(136, 136, 136, 0.2);
   background-image: url('data:image/svg+xml;utf8,
     <svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <desc>Created with Sketch.</desc>
@@ -23,13 +42,15 @@ const ArticleLink = styled.a`
             </g>
         </g>
     </svg>');
-  background-position: top right;
+  background-position: center right;
   background-repeat: no-repeat;
+  padding: 20px 0;
+  display: inline-block;
+  text-align: left;
 `
-const Social = styled.div``
-
 const Footer = () => (
   <Wrapper>
+    <ContinueButton>Continue Browsing</ContinueButton>
     <ArticleLink>Read articles about STRV open source libraries</ArticleLink>
     <Social />
   </Wrapper>

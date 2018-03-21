@@ -40,7 +40,7 @@ injectGlobal`
   }
   body {
     overflow-x: hidden;
-    background: ${props => props.theme.colors.greyLight};
+    background: ${props => props.theme.colors.black};
     color: ${props => props.theme.colors.black};
     font-family: ${props => props.theme.fonts.primary};
     --webkit-text-size-adjust: 100%;

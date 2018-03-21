@@ -4,10 +4,9 @@ const variables = {
     black: '#111517',
     white: '#fff',
     grey: '#888888',
-    greyMedium: '#cecfcf',
-    greyLight: '#f5f5f5',
-    greyBg: '#f5f5f5',
+    greyDarker: '#555555',
     greyBorder: '#404345',
+    greyDark: '#282B2D',
   },
   fonts: {
     primary: 'Maison Neue, sans-serif',

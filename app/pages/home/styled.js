@@ -35,8 +35,8 @@ export const HeadLine = styled.h1`
   color: ${variables.colors.white};
   letter-spacing: 1px;
   text-align: center;
-  line-height: 36px;
-  font-size: 36px;
+  line-height: 40px;
+  font-size: 40px;
   text-transform: uppercase;
   margin: 40px 0;
   z-index: 2;
@@ -53,10 +53,10 @@ export const HeadLine = styled.h1`
 export const HeadLineTail = styled.div`
   font-family: ${variables.fonts.secondary};
   color: ${variables.colors.white};
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0;
   text-align: center;
-  line-height: 24px;
+  line-height: 20px;
   padding: 40px 0 0 0;
   background-image: url('data:image/svg+xml;utf8,
   <svg width="40px" height="4px" viewBox="0 0 40 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -71,9 +71,13 @@ export const HeadLineTail = styled.div`
   background-repeat: no-repeat;
   background-position: top center;
   z-index: 2;
-  ${mq.desktop`
-  line-height: 32px;
-  font-size: 32px;
+  ${mq.tablet`
+  line-height: 24px;
+  font-size: 24px;
+`};
+${mq.desktop`
+line-height: 32px;
+font-size: 32px;
 `};
 `
 

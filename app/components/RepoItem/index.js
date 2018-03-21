@@ -60,7 +60,7 @@ width: 33.333%;
 const Name = styled.h2`
   font-family: ${variables.fonts.primary};
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   color: ${variables.colors.white};
   letter-spacing: 0.1px;
   text-align: center;
@@ -70,7 +70,7 @@ const Name = styled.h2`
 const Description = styled.div`
   font-family: ${variables.fonts.primary};
   font-size: 16px;
-  color: #888888;
+  color: ${variables.colors.grey};
   text-align: center;
   height: 50px;
 `
@@ -78,7 +78,7 @@ const Category = styled.div`
   padding-top: 15px;
   font-family: ${variables.fonts.primary};
   font-size: 12px;
-  color: #555555;
+  color: ${variables.colors.greyDarker};
   letter-spacing: 1.6px;
   text-transform: uppercase;
   text-align: center;
