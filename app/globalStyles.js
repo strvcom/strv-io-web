@@ -1,18 +1,4 @@
 import { injectGlobal } from 'styled-components'
-import TrumpGothicEastBoldTtf from 'assets/fonts/TrumpGothicEast_bold.ttf'
-import TrumpGothicEastBoldWoff from 'assets/fonts/TrumpGothicEast_bold.woff'
-import TrumpGothicEastBoldWoff2 from 'assets/fonts/TrumpGothicEast_bold.woff2'
-import MaisonNeueBoldItalicOtf from 'assets/fonts/MaisonNeue_Bold_Italic.otf'
-import MaisonNeueBoldItalicWoff from 'assets/fonts/MaisonNeue_Bold_Italic.woff'
-import MaisonNeueBoldItalicWoff2 from 'assets/fonts/MaisonNeue_Bold_Italic.woff2'
-import MaisonNeueBoldOtf from 'assets/fonts/MaisonNeue_Bold.otf'
-import MaisonNeueBoldWoff from 'assets/fonts/MaisonNeue_Bold.woff'
-import MaisonNeueBoldWoff2 from 'assets/fonts/MaisonNeue_Bold.woff2'
-import MaisonNeueLightOtf from 'assets/fonts/MaisonNeue_Light.otf'
-import MaisonNeueBookOtf from 'assets/fonts/MaisonNeue_Book.otf'
-import MaisonNeueBookWoff from 'assets/fonts/MaisonNeue_Book.woff'
-import MaisonNeueBookWoff2 from 'assets/fonts/MaisonNeue_Book.woff2'
-import MaisonNeueMediumOtf from 'assets/fonts/MaisonNeue_Medium.otf'
 import variables from 'common/styleVariables'
 
 /* eslint no-unused-expressions: 0 */
@@ -71,45 +57,31 @@ injectGlobal`
     font-family: 'Maison Neue';
     font-weight: 300;
     src:
-      url(${MaisonNeueBookWoff2}) format('woff2'),
-      url(${MaisonNeueBookWoff}) format('woff'),
-      url(${MaisonNeueBookOtf}) format('opentype');
+      url('/static/assets/fonts/MaisonNeueBook.woff2') format('woff2'),
+      url('/static/assets/fonts/MaisonNeueBook.woff') format('woff'),
+      url('/static/assets/fonts/MaisonNeueBook.otf') format('opentype');
   }
-  @font-face {
-    font-family: 'Maison Neue';
-    font-weight: 700;
-    src:
-      url(${MaisonNeueBoldWoff2}) format('woff2'),
-      url(${MaisonNeueBoldWoff}) format('woff'),
-      url(${MaisonNeueBoldOtf}) format('opentype');
-  }
-  @font-face {
-    font-family: 'Maison Neue';
-    font-style: normal;
-    font-weight: 100;
-    src: url(${MaisonNeueLightOtf}) format('opentype');
-  }
+
   @font-face {
     font-family: 'Maison Neue';
     font-style: normal;
     font-weight: 400;
-    src: url(${MaisonNeueMediumOtf}) format('opentype');
+    src: url('/static/assets/fonts/MaisonNeueMedium.otf') format('opentype');
   }
-  @font-face {
+
+    @font-face {
     font-family: 'Maison Neue';
-    font-style: italic;
-    font-weight: 700;
+    font-weight: 600;
     src:
-      url(${MaisonNeueBoldItalicWoff2}) format('woff2'),
-      url(${MaisonNeueBoldItalicWoff}) format('woff'),
-      url(${MaisonNeueBoldItalicOtf}) format('opentype');
+      url('/static/assets/fonts/MaisonNeue_Demi.otf') format('opentype');
   }
+
   @font-face {
     font-family: 'Trump Gothic East';
     font-weight: 700;
     src:
-      url(${TrumpGothicEastBoldWoff2}) format('woff2'),
-      url(${TrumpGothicEastBoldWoff}) format('woff'),
-      url(${TrumpGothicEastBoldTtf}) format('truetype');
+      url('/static/assets/fonts/TrumpGothicEastBold.woff2') format('woff2'),
+      url('/static/assets/fonts/TrumpGothicEastBold.woff') format('woff'),
+      url('/static/assets/fonts/TrumpGothicEastBold.ttf') format('truetype');
   }
 `
