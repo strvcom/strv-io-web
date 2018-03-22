@@ -73,7 +73,7 @@ injectGlobal`
     font-family: 'Maison Neue';
     font-weight: 600;
     src:
-      url('/static/assets/fonts/MaisonNeue_Demi.otf') format('opentype');
+      url('/static/assets/fonts/MaisonNeueDemi.otf') format('opentype');
   }
 
   @font-face {
