@@ -14,6 +14,7 @@ const Button = styled.button`
   text-transform: uppercase;
   padding: 10px 20px;
   transition: all 0.4s ease;
+  font-weight: 600;
   outline: none;
   display: inline-block;
   border: ${props =>

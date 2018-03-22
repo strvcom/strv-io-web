@@ -9,6 +9,7 @@ import {
   RepoWrapper,
   RepoList,
   BannerImage,
+  BannerInfo,
 } from './styled'
 import Button from 'components/Button'
 import Header from 'components/Header'
@@ -41,8 +42,10 @@ export default class componentName extends Component {
         <Header />
         <Banner>
           <BannerImage />
-          <HeadLine>Open source libraries</HeadLine>
-          <HeadLineTail>Created by STRV</HeadLineTail>
+          <BannerInfo>
+            <HeadLine>Open source libraries</HeadLine>
+            <HeadLineTail>Created by STRV</HeadLineTail>
+          </BannerInfo>
         </Banner>
         <RepoWrapper>
           <RepoFilters>
@@ -53,10 +56,10 @@ export default class componentName extends Component {
               all
             </Button>
             <Button
-              primary={category === 'back-end'}
-              onClick={() => this.filteredRepos('back-end')}
+              primary={category === 'backend'}
+              onClick={() => this.filteredRepos('backend')}
             >
-              back-end
+              backend
             </Button>
             <Button
               primary={category === 'android'}
@@ -78,8 +81,8 @@ export default class componentName extends Component {
             </Button>
           </RepoFilters>
           <RepoList>
-            {repos.map((repo, index) =>
-              <RepoItem key={`repo-item-${index}`} repo={repo} />)}
+            {repos.map(repo =>
+              <RepoItem key={`repo-item-${repo.name}`} repo={repo} />)}
           </RepoList>
         </RepoWrapper>
         <Footer />

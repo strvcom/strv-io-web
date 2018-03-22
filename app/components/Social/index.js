@@ -132,7 +132,7 @@ const IconWrapper = styled.a`
   outlineL none;
   cursor: pointer;padding: 5px;
   g{
-    transition: fill .1s ease;
+    transition: fill .4s ease;
   }
   &:hover{
     g{

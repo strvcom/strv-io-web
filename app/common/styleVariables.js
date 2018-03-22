@@ -10,7 +10,6 @@ const variables = {
   },
   fonts: {
     primary: 'Maison Neue, sans-serif',
-    secondary: 'Playfair Display, sans-serif',
     headline: 'Trump Gothic East, sans-serif',
   },
 }

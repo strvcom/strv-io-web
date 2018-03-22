@@ -8,22 +8,27 @@ export const Wrapper = styled.div`
 `
 
 export const Banner = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   height: 65%;
   background-image: url('static/assets/banner.jpg');
-  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
 `
 
+export const BannerInfo = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+`
+
 export const BannerImage = styled.div`
   position absolute;
+  flex: 1;
   height: 100%;
   width: 100%;
-  z-index: 0;
 background: -moz-linear-gradient(top, rgba(17,21,23,0) 0%, rgba(17,21,23,0.99) 99%, rgba(17,21,23,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(17,21,23,0) 0%,rgba(17,21,23,0.99) 99%,rgba(17,21,23,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(17,21,23,0) 0%,rgba(17,21,23,0.99) 99%,rgba(17,21,23,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -44,14 +49,14 @@ export const HeadLine = styled.h1`
   line-height: 48px;
   font-size: 48px;
 `};
-  ${mq.desktop`
+  ${mq.tabletWide`
   line-height: 96px;
   font-size: 96px;
 `};
 `
 
 export const HeadLineTail = styled.div`
-  font-family: ${variables.fonts.secondary};
+  font-family: ${variables.fonts.primary};
   color: ${variables.colors.white};
   font-size: 20px;
   letter-spacing: 0;
@@ -75,7 +80,7 @@ export const HeadLineTail = styled.div`
   line-height: 24px;
   font-size: 24px;
 `};
-${mq.desktop`
+  ${mq.tabletWide`
 line-height: 32px;
 font-size: 32px;
 `};

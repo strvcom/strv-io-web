@@ -10,6 +10,7 @@ const Wrapper = styled.footer`
   max-width: 85%;
   ${mq.tabletWide`
   max-width: 600px;
+  padding-top: 40px;
 `};
 `
 const ContinueButton = styled.div`
@@ -24,6 +25,7 @@ const ArticleLink = styled.a`
   color: ${variables.colors.primary};
   font-family: ${variables.fonts.primary};
   font-size: 18px;
+  font-weight: 300;
   letter-spacing: 0.1px;
   width: 100%;
   border-top: solid 1px rgba(136, 136, 136, 0.2);
@@ -44,14 +46,16 @@ const ArticleLink = styled.a`
     </svg>');
   background-position: center right;
   background-repeat: no-repeat;
-  padding: 20px 0;
+  padding: 20px 20px 20px 0;
   display: inline-block;
   text-align: left;
 `
 const Footer = () => (
   <Wrapper>
     <ContinueButton>Continue Browsing</ContinueButton>
-    <ArticleLink>Read articles about STRV open source libraries</ArticleLink>
+    <ArticleLink href="https://www.strv.com/blog/tag/tech" target="_blank">
+      Read articles about STRV open source libraries
+    </ArticleLink>
     <Social />
   </Wrapper>
 )
