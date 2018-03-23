@@ -1,13 +1,18 @@
 /* eslint-disable */
 
 const webpack = require('webpack')
-const dev = process.env.NODE_ENV !== 'prod'
+const dev = process.env.NODE_ENV !== 'production'
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin
 
 module.exports = {
+  exportPathMap: function() {
+    return {
+      '/': { page: '/' },
+    }
+  },
   webpack: config => {
-    if (!dev) {
+    if (dev) {
       config.plugins = config.plugins.concat([
         new webpack.NamedModulesPlugin(),
         new BundleAnalyzerPlugin({
@@ -17,9 +22,6 @@ module.exports = {
           defaultSizes: 'gzip',
         }),
       ])
-    }
-    if (dev) {
-      config.plugins = config.plugins.concat([new webpack.NamedModulesPlugin()])
     }
 
     if (!config.resolve) {
