@@ -10,7 +10,7 @@ const Wrapper = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 57px 10px 0 10px;
   outline: none;
   cursor: pointer;
   text-decoration: none;
@@ -29,13 +29,14 @@ width: 33.333%;
 const Name = styled.h2`
   font-family: ${variables.fonts.primary};
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 700;
   color: ${variables.colors.white};
   letter-spacing: 0.1px;
   text-align: center;
   line-height: 32px;
   transition: color 0.4s ease;
   text-transform: lowercase;
+  margin: 26px 0 6px 0;
 `
 const Description = styled.div`
   font-family: ${variables.fonts.primary};
@@ -45,9 +46,10 @@ const Description = styled.div`
   font-weight: 300;
   line-height: 24px;
   width: 100%;
+  max-width: 300px;
 `
 const Category = styled.div`
-  padding-top: 15px;
+  padding-top: 11px;
   font-family: ${variables.fonts.primary};
   font-size: 12px;
   color: ${variables.colors.greyDarker};
@@ -57,12 +59,12 @@ const Category = styled.div`
   font-weight: 600;
 `
 
-const RepoItem = ({ repo }) => (
-  <Wrapper href={repo.url} target="_blank">
-    {repo.icon}
-    <Name>{repo.name}</Name>
-    <Description>{repo.description}</Description>
-    <Category>{repo.category}</Category>
+const RepoItem = props => (
+  <Wrapper {...props} target="_blank">
+    {props.repo.icon}
+    <Name>{props.repo.name}</Name>
+    <Description>{props.repo.description}</Description>
+    <Category>{props.repo.category}</Category>
   </Wrapper>
 )
 

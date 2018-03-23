@@ -7,10 +7,9 @@ import Social from 'components/Social'
 const Wrapper = styled.footer`
   margin: 0 auto;
   text-align: center;
-  max-width: 85%;
+  padding: 0 30px;
   ${mq.tabletWide`
   max-width: 600px;
-  padding-top: 40px;
 `};
 `
 const ContinueButton = styled.div`
@@ -18,7 +17,7 @@ const ContinueButton = styled.div`
   font-size: 20px;
   color: #ffffff;
   text-align: left;
-  padding: 40px 0;
+  padding: 136px 0 29px 0;
 `
 
 const ArticleLink = styled.a`

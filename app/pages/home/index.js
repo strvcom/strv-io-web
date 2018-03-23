@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ScrollReveal from 'scrollreveal'
 import data from 'data'
 import {
   Wrapper,
@@ -25,6 +26,23 @@ export default class componentName extends Component {
     }
   }
 
+  componentDidMount() {
+    this.ScrollReveal = new ScrollReveal({
+      scale: 1,
+      duration: 900,
+      easing: 'ease',
+      distance: '50px',
+    })
+    this.ScrollReveal.reveal('.reveal')
+    this.ScrollReveal.reveal('.reveal--delay1', { delay: 300 })
+    this.ScrollReveal.reveal('.reveal--delay2', { delay: 500 })
+    this.ScrollReveal.reveal('.reveal--delay3', { delay: 500 })
+  }
+
+  componentDidUpdate() {
+    this.ScrollReveal.reveal('.reveal--delay3', { delay: 200 })
+  }
+
   filteredRepos = category => {
     this.setState({
       repos:
@@ -38,17 +56,19 @@ export default class componentName extends Component {
   render() {
     const { repos, category } = this.state
     return (
-      <Wrapper>
+      <Wrapper c>
         <Header />
         <Banner>
           <BannerImage />
-          <BannerInfo>
+          <BannerInfo className="reveal">
             <HeadLine>Open source libraries</HeadLine>
-            <HeadLineTail>Created by STRV</HeadLineTail>
+            <HeadLineTail className="reveal--delay1">
+              Curated by STRV
+            </HeadLineTail>
           </BannerInfo>
         </Banner>
         <RepoWrapper>
-          <RepoFilters>
+          <RepoFilters className="reveal--delay2">
             <Button
               primary={category === 'all'}
               onClick={() => this.filteredRepos('all')}
@@ -81,8 +101,13 @@ export default class componentName extends Component {
             </Button>
           </RepoFilters>
           <RepoList>
-            {repos.map(repo =>
-              <RepoItem key={`repo-item-${repo.name}`} repo={repo} />)}
+            {repos.map(repo => (
+              <RepoItem
+                className="reveal--delay3"
+                key={`repo-item-${repo.name}`}
+                repo={repo}
+              />
+            ))}
           </RepoList>
         </RepoWrapper>
         <Footer />

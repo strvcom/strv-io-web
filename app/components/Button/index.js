@@ -9,22 +9,21 @@ const Button = styled.button`
     props.primary ? variables.colors.primary : variables.colors.black};
   letter-spacing: 1.6px;
   text-align: center;
-  line-height: 20px;
   border-radius: 24px;
   text-transform: uppercase;
-  padding: 10px 20px;
   transition: all 0.4s ease;
   font-weight: 600;
   outline: none;
   display: inline-block;
+  padding: 16px 30px;
   border: ${props =>
     props.primary
-      ? `solid 2px ${variables.colors.primary}`
-      : `solid 2px ${variables.colors.greyBorder}`};
+      ? `solid 1px ${variables.colors.primary}`
+      : 'solid 1px rgba(255,255,255, 0.2)'};
 
   &:hover {
     background-color: ${variables.colors.primary};
-    border: solid 2px ${variables.colors.primary};
+    border: solid 1px ${variables.colors.primary};
   }
   cursor: pointer;
 `

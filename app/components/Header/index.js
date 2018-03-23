@@ -8,12 +8,11 @@ const Wrapper = styled.div`
   align-items: center;
   position: absolute;
   z-index: 2;
-  height: 70px;
-  padding: 0 25px;
-  height: 90px;
+  padding: 0 30px;
+  height: 92px;
   ${mq.tabletWide`
-  height: 140px;
-  padding: 0 50px;
+  height: 132px;
+  padding: 0 49px;
 `};
 `
 

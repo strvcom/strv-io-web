@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Banner = styled.div`
   position: relative;
-  height: 65%;
+  height: 513px;
   background-image: url('static/assets/banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,14 +40,15 @@ export const HeadLine = styled.h1`
   color: ${variables.colors.white};
   letter-spacing: 1px;
   text-align: center;
-  line-height: 40px;
-  font-size: 40px;
-  text-transform: uppercase;
-  margin: 40px 0;
-  z-index: 2;
-  ${mq.tablet`
   line-height: 48px;
   font-size: 48px;
+  text-transform: uppercase;
+  margin: 67px 0 26px 0;
+  visibility: none;
+  z-index: 2;
+  ${mq.tablet`
+  line-height: 76px;
+  font-size: 76px;
 `};
   ${mq.tabletWide`
   line-height: 96px;
@@ -56,13 +57,14 @@ export const HeadLine = styled.h1`
 `
 
 export const HeadLineTail = styled.div`
-  font-family: ${variables.fonts.primary};
+  font-family: ${variables.fonts.subHeadline};
   color: ${variables.colors.white};
   font-size: 20px;
   letter-spacing: 0;
   text-align: center;
   line-height: 20px;
-  padding: 40px 0 0 0;
+  padding: 26px 0 0 0;
+  visibility: none;
   background-image: url('data:image/svg+xml;utf8,
   <svg width="40px" height="4px" viewBox="0 0 40 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <desc>Created with Sketch.</desc>
@@ -89,6 +91,10 @@ font-size: 32px;
 export const RepoWrapper = styled.div`
   margin: 0 auto;
   max-width: 1020px;
+  padding: 0 30px;
+  ${mq.tabletWide`
+  padding: 0;
+`};
 `
 
 export const RepoFilters = styled.div`
@@ -99,14 +105,9 @@ export const RepoFilters = styled.div`
 `};
   button {
     margin: 5px;
-    padding: 7.5px 15px;
-    ${mq.tablet`
-    min-width: 60px;
-    box-sizing: content-box;
-  `};
   }
 `
 
 export const RepoList = styled.div`
-  margin: 50px 0;
+  margin: 65px 0 0 0;
 `

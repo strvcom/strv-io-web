@@ -130,7 +130,7 @@ const Vimeo = () => (
 const IconWrapper = styled.a`
   display: inline-block;
   outlineL none;
-  cursor: pointer;padding: 5px;
+  cursor: pointer;
   g{
     transition: fill .4s ease;
   }
@@ -141,12 +141,12 @@ const IconWrapper = styled.a`
   }
 `
 const Wrapper = styled.div`
-  width: 300px;
+  width: 227px;
   display: flex;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 77px 0 92px 0;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 
 const Social = () => (
@@ -160,7 +160,10 @@ const Social = () => (
     <IconWrapper target="_blank" href="https://dribbble.com/strvcom">
       <Dribbble />
     </IconWrapper>
-    <IconWrapper target="_blank" href="https://www.linkedin.com/company/638464/">
+    <IconWrapper
+      target="_blank"
+      href="https://www.linkedin.com/company/638464/"
+    >
       <LinkedIn />
     </IconWrapper>
     <IconWrapper target="_blank" href="https://www.behance.net/strvcom">

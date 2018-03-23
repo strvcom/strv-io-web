@@ -53,6 +53,18 @@ injectGlobal`
     min-height: 100%;
     min-width: 100%;
   }
+  .reveal,
+   .reveal--card,
+    .reveal--delay1,
+     .reveal--delay2,
+      .reveal--delay3,
+       .reveal--delay4,
+        .reveal--item,
+         .reveal--left,
+          .reveal--right
+           {
+    visibility: hidden;
+}
   @font-face {
     font-family: 'Maison Neue';
     font-weight: 300;
@@ -61,7 +73,22 @@ injectGlobal`
       url('/static/assets/fonts/MaisonNeueBook.woff') format('woff'),
       url('/static/assets/fonts/MaisonNeueBook.otf') format('opentype');
   }
-
+  @font-face {
+    font-family: 'Maison Neue';
+    font-weight: 700;
+    src:
+      url('/static/assets/fonts/MaisonNeueBold.woff2') format('woff2'),
+      url('/static/assets/fonts/MaisonNeueBold.woff') format('woff'),
+      url('/static/assets/fonts/MaisonNeueBold.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    src:
+      url('/static/assets/fonts/PlayfairDisplayRegular.woff2') format('woff2'),
+      url('/static/assets/fonts/PlayfairDisplayRegular.woff') format('woff'),
+      url('/static/assets/fonts/PlayfairDisplayRegular.ttf') format('truetype');
+  }PlayfairDisplayRegular
   @font-face {
     font-family: 'Maison Neue';
     font-style: normal;
