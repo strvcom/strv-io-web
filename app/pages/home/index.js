@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ScrollReveal from 'scrollreveal'
 import data from 'data'
 import {
   Wrapper,
@@ -27,6 +26,8 @@ export default class componentName extends Component {
   }
 
   componentDidMount() {
+    const ScrollReveal = require('scrollreveal') // eslint-disable-line no-undef
+
     this.ScrollReveal = new ScrollReveal({
       scale: 1,
       duration: 900,
