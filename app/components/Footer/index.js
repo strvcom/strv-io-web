@@ -9,7 +9,7 @@ const Wrapper = styled.footer`
   text-align: center;
   padding: 0 30px;
   ${mq.tabletWide`
-  max-width: 600px;
+  max-width: 580px;
 `};
 `
 const ContinueButton = styled.div`

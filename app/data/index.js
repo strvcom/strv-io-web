@@ -4,8 +4,7 @@ const repos = [
   {
     name: 'atlas.js',
     url: 'https://github.com/strvcom/atlas.js',
-    description:
-      'An awesome component-based Node.js framework for all kinds of use cases.',
+    description: 'Component-based Node.js framework for all kinds of use cases',
     category: 'backend',
     owner: 'strvcom',
     icon: (
@@ -43,9 +42,9 @@ const repos = [
     ),
   },
   {
-    name: 'eslint-config-javascript',
+    name: 'Eslint config javascript',
     url: 'https://github.com/strvcom/eslint-config-javascript',
-    description: 'Write bulletproof JavaScript like a pro!',
+    description: 'Various configuration files for JavaScript ESLint',
     category: 'backend',
     owner: 'strvcom',
     icon: (
@@ -78,10 +77,9 @@ const repos = [
     ),
   },
   {
-    name: 'nodestream',
+    name: 'Nodestream',
     url: 'https://github.com/nodestream/nodestream',
-    description:
-      'Storage-agnostic streaming library for binary data transfers.',
+    description: 'Storage-agnostic streaming library for binary data transfers',
     category: 'backend',
     owner: 'nodestream',
     icon: (
@@ -133,9 +131,9 @@ const repos = [
     ),
   },
   {
-    name: 'semantic-merge',
+    name: 'Semantic merge',
     url: 'https://github.com/Dreamscapes/semantic-merge',
-    description: 'A merging utility that is self-descriptive and makes sense.',
+    description: 'A merging utility that is self-descriptive and makes sense',
     category: 'backend',
     owner: 'Dreamscapes',
     icon: (
@@ -174,19 +172,10 @@ const repos = [
     ),
   },
   {
-    name: 'local-scope',
-    url: 'https://github.com/Dreamscapes/local-scope',
-    description:
-      'ES 2015 way of making private properties in class-based programming.',
-    category: 'backend',
-    owner: 'Dreamscapes',
-    icon: <div />,
-  },
-  {
-    name: 'immutable-custom-merge',
+    name: 'Immutable custom merge',
     url: 'https://github.com/ruzicka/immutable-custom-merge',
     description:
-      'Allows deep merging of Immutable objects with custom per-property merging strategy.',
+      'Deep merging of Immutable structures with custom per-property merging strategy',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -230,9 +219,10 @@ const repos = [
     ),
   },
   {
-    name: 'to-json-schema',
+    name: 'To json schema',
     url: 'https://github.com/ruzicka/to-json-schema',
-    description: 'Converts JS objects to JSON Schema.',
+    description:
+      'Converts javascript objects (and other types) to corresponding JSON schema',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -271,9 +261,9 @@ const repos = [
     ),
   },
   {
-    name: 'koogn',
+    name: 'Koogn',
     url: 'https://github.com/ruzicka/koogn',
-    description: 'Validate JS objects just by example, not schema.',
+    description: 'Validate JS objects just by example, not schema',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -316,10 +306,10 @@ const repos = [
     ),
   },
   {
-    name: 'Android-Templates-And-Utilities',
+    name: 'Android Templates and Utilities',
     url: 'https://github.com/petrnohejl/Android-Templates-And-Utilities',
     description:
-      'Collection of source codes, utilities, templates and snippets for Android development.',
+      'Collection of source codes, utilities, templates and snippets for Android development',
     category: 'android',
     owner: 'petrnohejl',
     icon: (
@@ -364,8 +354,7 @@ const repos = [
   {
     name: 'Alfonz',
     url: 'https://github.com/petrnohejl/Alfonz',
-    description:
-      'Mr. Alfonz is here to help you build your Android app, make the development process easier and avoid boilerplate code.',
+    description: 'Multi purpose library, making the development easy peasy',
     category: 'android',
     owner: 'petrnohejl',
     icon: (
@@ -410,10 +399,10 @@ const repos = [
     ),
   },
   {
-    name: 'HELU-Utils',
-    url: 'https://github.com/Tuxilero/HELU-Utils',
+    name: 'Android utils',
+    url: 'https://github.com/Tuxilero/Android-Utils',
     description:
-      'This repository provides various utility classes to make android development less painful.',
+      'Various utility classes to make android development less painful',
     category: 'android',
     owner: 'tuxilero',
     icon: (
@@ -458,7 +447,8 @@ const repos = [
   {
     name: 'LineCounter-Plugin',
     url: 'https://github.com/Tuxilero/LineCounter-Plugin',
-    description: 'Counting lines in java files',
+    description:
+      'Plugin for displaying the list of files and methods which have bigger number of lines than user defined value',
     category: 'android',
     owner: 'tuxilero',
     icon: (
@@ -501,11 +491,11 @@ const repos = [
     ),
   },
   {
-    name: 'android-keystore-compat',
+    name: 'Keystore compat',
     url:
       'https://github.com/kotomisak/security-showcase-android/tree/develop/android-keystore-compat',
     description:
-      'Sample application pointing some security related practices on Android device.',
+      'Wrapper library designed to save secret to local shared preferences using Android default security and Android Keystore',
     category: 'android',
     owner: 'kotomisak',
     icon: (
@@ -539,10 +529,10 @@ const repos = [
     ),
   },
   {
-    name: 'valifi',
+    name: 'VaLifi',
     url: 'https://github.com/mlykotom/valifi',
     description:
-      'Android library for validation forms and inputs based on data binding.',
+      'Android library for validation forms and inputs based on data binding',
     category: 'android',
     owner: 'mlykotom',
     icon: (
@@ -591,10 +581,10 @@ const repos = [
     ),
   },
   {
-    name: 'Android-ViewModelBinding',
+    name: 'ViewModelBinding',
     url: 'https://github.com/jakubkinst/Android-ViewModelBinding',
     description:
-      'A lightweight library aiming to speed up Android app development by leveraging the new Android Data Binding together with the Model-View-ViewModel design pattern.',
+      'A lightweight library aiming to speed up development by leveraging the new Android Data Binding and taking the best from the Model-View-ViewModel design pattern',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
@@ -641,18 +631,19 @@ const repos = [
     ),
   },
   {
-    name: 'dundee',
+    name: 'Dundee',
     url: 'https://github.com/strvcom/dundee',
-    description: 'Android App Architecture Showcase',
+    description:
+      'Our little playground to test drive the greatest Android app architecture approaches',
     category: 'android',
     owner: 'strvcom',
     icon: <div />,
   },
   {
-    name: 'Android-StatefulLayout',
+    name: 'Stateful layout',
     url: 'https://github.com/jakubkinst/Android-StatefulLayout',
     description:
-      'A custom Android ViewGroup to display different states of screen (CONTENT, PROGRESS, OFFLINE, EMPTY, etc.)',
+      'A custom Android ViewGroup to display different states of screen',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
@@ -680,9 +671,10 @@ const repos = [
     ),
   },
   {
-    name: 'Android-LongTouch',
+    name: 'Long touch',
     url: 'https://github.com/jakubkinst/Android-LongTouch',
-    description: 'LongTouch for Android (3D Touch for Android)',
+    description:
+      'A small library for adding 3D Touch-like popup to your Android App Views',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
@@ -716,7 +708,7 @@ const repos = [
   {
     name: 'DCTableViewController',
     url: 'https://github.com/DanielCech/DCTableViewController',
-    description: 'Convenience wrapper for table views in controllers',
+    description: 'Convenience wrapper for UITableViews in controllers',
     category: 'ios',
     owner: 'DanielCech',
     icon: (
@@ -750,7 +742,7 @@ const repos = [
     ),
   },
   {
-    name: 'matchJSON',
+    name: 'MatchJSON',
     url: 'https://github.com/DanielCech/matchJSON',
     description: 'Command line tool for JSON structure comparison',
     category: 'ios',
@@ -790,7 +782,7 @@ const repos = [
     ),
   },
   {
-    name: 'localizenib-ios',
+    name: 'LocalizeNIB',
     url: 'https://github.com/strvcom/localizenib-ios',
     description: 'Simple localization of storyboards and xib files',
     category: 'ios',
@@ -832,9 +824,10 @@ const repos = [
     ),
   },
   {
-    name: 'LCDKeypad',
+    name: 'LCDKeypad Arduino library',
     url: 'https://github.com/dzindra/LCDKeypad',
-    description: 'LCDKeypad Arduino library',
+    description:
+      'This library allows you to control display, read button state and toggle backlight of LCDKeypad shield',
     category: 'iot',
     owner: 'dzindra',
     icon: (
@@ -869,9 +862,10 @@ const repos = [
     ),
   },
   {
-    name: 'ch34x-osx-installer',
+    name: 'Repackaged installer of CH34x driver',
     url: 'https://github.com/dzindra/ch34x-osx-installer',
-    description: 'Repackaged installer of CH34x driver',
+    description:
+      'This installer of CH34x USB to serial driver for OSX 10.11 and 10.12 does not require restart after install and is properly signed',
     category: 'iot',
     owner: 'dzindra',
     icon: (
@@ -900,7 +894,7 @@ const repos = [
     ),
   },
   {
-    name: 'toycar',
+    name: 'Toy car',
     url: 'https://github.com/dzindra/toycar',
     description: 'WiFi controlled toy car',
     category: 'iot',
@@ -943,9 +937,10 @@ const repos = [
     ),
   },
   {
-    name: 'letsmake-ledmatrix',
+    name: 'LedMatrix',
     url: 'https://github.com/TheCaveCz/letsmake-ledmatrix',
-    description: 'Simple LED matrix driven by MAX7219 and Arduino Nano',
+    description:
+      'Simple LED matrix driven by MAX7219 and Arduino Nano in nice small 3D printed case',
     category: 'iot',
     owner: 'TheCaveCz',
     icon: (
@@ -989,10 +984,10 @@ const repos = [
     ),
   },
   {
-    name: 'letsmake-wifilamp',
+    name: 'WiFi Lamp',
     url: 'https://github.com/TheCaveCz/letsmake-wifilamp',
     description:
-      'WiFi controllable WS2812b LED strip in Ikea Storuman enclosure',
+      'ESP8266 chip on Wemos D1 mini module that is driving WS2812 LED strip, one tactile switch or touch sensor for manual control.',
     category: 'iot',
     owner: 'TheCaveCz',
     icon: (

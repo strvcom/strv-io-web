@@ -1,8 +1,8 @@
 import { css } from 'styled-components'
 
 const breakpoints = {
-  tablet: 600,
-  tabletWide: 900,
+  tablet: 768,
+  tabletWide: 1024,
   desktop: 1200,
   desktopWide: 1800,
 }

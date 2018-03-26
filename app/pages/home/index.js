@@ -28,20 +28,20 @@ export default class componentName extends Component {
   componentDidMount() {
     const ScrollReveal = require('scrollreveal') // eslint-disable-line no-undef
 
-    this.ScrollReveal = new ScrollReveal({
+    this.scrollReveal = new ScrollReveal({
       scale: 1,
       duration: 900,
       easing: 'ease',
       distance: '50px',
     })
-    this.ScrollReveal.reveal('.reveal')
-    this.ScrollReveal.reveal('.reveal--delay1', { delay: 300 })
-    this.ScrollReveal.reveal('.reveal--delay2', { delay: 500 })
-    this.ScrollReveal.reveal('.reveal--delay3', { delay: 500 })
+    this.scrollReveal.reveal('.reveal')
+    this.scrollReveal.reveal('.reveal--delay1', { delay: 300 })
+    this.scrollReveal.reveal('.reveal--delay2', { delay: 400 })
+    this.scrollReveal.reveal('.reveal--delay3', { delay: 450 })
   }
 
   componentDidUpdate() {
-    this.ScrollReveal.reveal('.reveal--delay3', { delay: 200 })
+    this.scrollReveal.reveal('.reveal--delay3', { delay: 200 })
   }
 
   filteredRepos = category => {
@@ -61,8 +61,8 @@ export default class componentName extends Component {
         <Header />
         <Banner>
           <BannerImage />
-          <BannerInfo className="reveal">
-            <HeadLine>Open source libraries</HeadLine>
+          <BannerInfo >
+            <HeadLine className="reveal">Open source libraries</HeadLine>
             <HeadLineTail className="reveal--delay1">
               Curated by STRV
             </HeadLineTail>

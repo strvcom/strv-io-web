@@ -15,7 +15,8 @@ const Button = styled.button`
   font-weight: 600;
   outline: none;
   display: inline-block;
-  padding: 16px 30px;
+  padding: 13px 30px;
+  line-height: 20px;
   border: ${props =>
     props.primary
       ? `solid 1px ${variables.colors.primary}`

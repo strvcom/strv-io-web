@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   z-index: 2;
   padding: 0 30px;
   height: 92px;
-  ${mq.tabletWide`
+  ${mq.tablet`
   height: 132px;
   padding: 0 49px;
 `};
@@ -47,7 +47,7 @@ const Logo = styled.a`
     &:after {
       visibility: visible;
       opacity: 1;
-      transform: translate3d(45%, 0, 0);
+      transform: translate3d(47%, 0, 0);
       ${mq.tabletWide`
       transform: translate3d(75%, 0 , 0);
     `};

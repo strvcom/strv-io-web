@@ -5,25 +5,26 @@ import variables from 'common/styleVariables'
 injectGlobal`
   html,
   body {
-    font-size: 62.5%;
     height: 100%;
     width: 100%;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     background: ${variables.colors.black}
   }
   *{
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscaled;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
   }
   a {
     text-decoration: none;
     color: inherit;
   }
-  @page {
-    size: A4;
-    margin: 0;
-  }
+
   body {
     overflow-x: hidden;
     background: ${props => props.theme.colors.black};
@@ -41,17 +42,6 @@ injectGlobal`
       transform-origin: 0 0;
       width: 125%;
     }
-  }
-  body.fontLoaded {
-    font-family:
-      ${props => props.theme.fonts.primary},
-      Open Sans,
-      Helvetica Neue,
-      sans-serif;
-  }
-  #app {
-    min-height: 100%;
-    min-width: 100%;
   }
   .reveal,
    .reveal--card,
@@ -83,12 +73,13 @@ injectGlobal`
   }
   @font-face {
     font-family: 'Playfair Display';
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
     src:
       url('/static/assets/fonts/PlayfairDisplayRegular.woff2') format('woff2'),
       url('/static/assets/fonts/PlayfairDisplayRegular.woff') format('woff'),
       url('/static/assets/fonts/PlayfairDisplayRegular.ttf') format('truetype');
-  }PlayfairDisplayRegular
+  }
   @font-face {
     font-family: 'Maison Neue';
     font-style: normal;
@@ -99,6 +90,7 @@ injectGlobal`
     @font-face {
     font-family: 'Maison Neue';
     font-weight: 600;
+    font-style: normal;
     src:
       url('/static/assets/fonts/MaisonNeueDemi.otf') format('opentype');
   }
@@ -106,6 +98,7 @@ injectGlobal`
   @font-face {
     font-family: 'Trump Gothic East';
     font-weight: 700;
+    font-style: normal;
     src:
       url('/static/assets/fonts/TrumpGothicEastBold.woff2') format('woff2'),
       url('/static/assets/fonts/TrumpGothicEastBold.woff') format('woff'),

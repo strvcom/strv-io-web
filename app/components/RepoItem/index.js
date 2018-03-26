@@ -5,20 +5,16 @@ import PropTypes from 'prop-types'
 import { mq } from 'common/media'
 
 const Wrapper = styled.a`
-  width: 100%;
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 57px 10px 0 10px;
+  padding: 57px 0 0 0;
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  width: 100%;
   ${mq.tablet`
-  width: 50%;
-`};
-  ${mq.desktop`
-width: 33.333%;
+    width: 380px;
 `};
   &:hover {
     h2 {
@@ -35,8 +31,8 @@ const Name = styled.h2`
   text-align: center;
   line-height: 32px;
   transition: color 0.4s ease;
-  text-transform: lowercase;
   margin: 26px 0 6px 0;
+  max-width: 300px;
 `
 const Description = styled.div`
   font-family: ${variables.fonts.primary};
@@ -49,7 +45,7 @@ const Description = styled.div`
   max-width: 300px;
 `
 const Category = styled.div`
-  padding-top: 11px;
+  padding-top: 19px;
   font-family: ${variables.fonts.primary};
   font-size: 12px;
   color: ${variables.colors.greyDarker};
@@ -57,11 +53,19 @@ const Category = styled.div`
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
+  line-height: 20px;
+`
+const IconWrapper = styled.div`
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const RepoItem = props => (
   <Wrapper {...props} target="_blank">
-    {props.repo.icon}
+    <IconWrapper>{props.repo.icon}</IconWrapper>
     <Name>{props.repo.name}</Name>
     <Description>{props.repo.description}</Description>
     <Category>{props.repo.category}</Category>
