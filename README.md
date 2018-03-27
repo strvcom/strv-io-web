@@ -1,8 +1,11 @@
 # STRV-IO
 
 ## how to run 
-`npm i` to download node modules
+first `npm i` to download node modules
 
 `npm run dev` for development environment
 
-`npm run prod` for deployment or you can try `npm run build` and `npm run start` seperately
+`npm run prod` for production then `npm run start` to serve application
+
+## deployment
+deployment for firebase host, you must run `npm run export` to create public application files; then run `firebase deploy` to upload files to firebase host
