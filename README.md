@@ -15,3 +15,4 @@ after running those npm tasks visit `localhost:3000`
 
 ## deployment
 deployment for firebase host, run `npm run deploy` 
+
