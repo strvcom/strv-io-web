@@ -9,14 +9,13 @@ injectGlobal`
     width: 100%;
     margin: 0;
     padding: 0;
-    background: ${variables.colors.black}
+    background: ${variables.colors.black};
   }
-  *{
+
+  * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscaled;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
   }
@@ -30,13 +29,11 @@ injectGlobal`
     background: ${props => props.theme.colors.black};
     color: ${props => props.theme.colors.black};
     font-family: ${props => props.theme.fonts.primary};
-    --webkit-text-size-adjust: 100%;
-    --ms-text-size-adjust: 100%;
-    --webkit-font-smoothing: antialiased;
-    > div#__next{
+    > div#__next {
       height: 100%;
       width: 100%;
     }
+
     @media print {
       transform: scale(0.8);
       transform-origin: 0 0;
@@ -44,17 +41,17 @@ injectGlobal`
     }
   }
   .reveal,
-   .reveal--card,
-    .reveal--delay1,
-     .reveal--delay2,
-      .reveal--delay3,
-       .reveal--delay4,
-        .reveal--item,
-         .reveal--left,
-          .reveal--right
-           {
+  .reveal--card,
+  .reveal--delay1,
+  .reveal--delay2,
+  .reveal--delay3,
+  .reveal--delay4,
+  .reveal--item,
+  .reveal--left,
+  .reveal--right {
     visibility: hidden;
-}
+  }
+
   @font-face {
     font-family: 'Maison Neue';
     font-weight: 300;
@@ -63,6 +60,7 @@ injectGlobal`
       url('/static/assets/fonts/MaisonNeueBook.woff') format('woff'),
       url('/static/assets/fonts/MaisonNeueBook.otf') format('opentype');
   }
+
   @font-face {
     font-family: 'Maison Neue';
     font-weight: 700;
@@ -71,6 +69,7 @@ injectGlobal`
       url('/static/assets/fonts/MaisonNeueBold.woff') format('woff'),
       url('/static/assets/fonts/MaisonNeueBold.otf') format('opentype');
   }
+
   @font-face {
     font-family: 'Playfair Display';
     font-weight: 400;
@@ -80,6 +79,7 @@ injectGlobal`
       url('/static/assets/fonts/PlayfairDisplayRegular.woff') format('woff'),
       url('/static/assets/fonts/PlayfairDisplayRegular.ttf') format('truetype');
   }
+
   @font-face {
     font-family: 'Maison Neue';
     font-style: normal;
@@ -87,12 +87,11 @@ injectGlobal`
     src: url('/static/assets/fonts/MaisonNeueMedium.otf') format('opentype');
   }
 
-    @font-face {
+  @font-face {
     font-family: 'Maison Neue';
     font-weight: 600;
     font-style: normal;
-    src:
-      url('/static/assets/fonts/MaisonNeueDemi.otf') format('opentype');
+    src: url('/static/assets/fonts/MaisonNeueDemi.otf') format('opentype');
   }
 
   @font-face {

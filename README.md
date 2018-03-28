@@ -1,8 +1,17 @@
 # STRV-IO
 
+## install node modules
+first `npm i` to download node modules
+
 ## how to run 
-`npm i` to download node modules
 
 `npm run dev` for development environment
 
-`npm run prod` for deployment or you can try `npm run build` and `npm run start` seperately
+`npm run build` for production environment
+
+
+after running those npm tasks visit `localhost:3000`
+
+
+## deployment
+deployment for firebase host, run `npm run deploy` 
