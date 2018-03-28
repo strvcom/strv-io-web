@@ -28,6 +28,7 @@ export const ErrorTitle = styled.h2`
   max-width: 250px;
   max-width: 80px;
   text-align: center;
+  font-weight: 700;
   padding-top: 50px;
   ${mq.tablet`padding-top: 0;  text-align: left;  font-size: 160px;  line-height: 160px;  max-width: 300px;`};
   ${mq.tabletWide` font-size: 180px;  line-height: 180px;`};
@@ -57,6 +58,7 @@ export const ErrorQuote = styled.p`
   font-size: 20px;
   line-height: 20px;
   max-width: 300px;
+  font-weight: 400;
   margin: 0 auto;
   text-align: center;
   color: ${variables.colors.white};
@@ -69,6 +71,7 @@ export const ErrorQuoteAuthor = styled.p`
   font-size: 14px;
   line-height: 14px;
   max-width: 300px;
+  font-weight: 300;
   margin: 30px auto 0 auto;
   text-align: center;
   color: ${variables.colors.white};

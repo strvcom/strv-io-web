@@ -11,9 +11,10 @@ export const Wrapper = styled.footer`
 export const ContinueButton = styled.div`
   font-family: ${variables.fonts.primary};
   font-size: 20px;
-  color: #ffffff;
+  color: #fff;
   text-align: left;
   padding: 136px 0 29px 0;
+  font-weight: 700;
 `
 
 export const ArticleLink = styled.a`
