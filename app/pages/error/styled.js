@@ -7,73 +7,62 @@ export const Wrapper = styled.div`
   width: 100%;
 `
 
-export const ErrorWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const InnerWrapper = styled.div`
   height: 100%;
-  background-image: url('/static/assets/error.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-top: 59px;
-  ${mq.tablet` padding-top: 79px;flex-direction: row;`};
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
 `
 
-export const ErrorTitle = styled.h2`
+export const Title = styled.h2`
   font-family: ${variables.fonts.headline};
   color: ${variables.colors.white};
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 82px 0 0 0;
+  ${mq.tablet`
   font-size: 48px;
   line-height: 48px;
-  margin: 0 auto;
-  max-width: 250px;
-  max-width: 80px;
-  text-align: center;
-  font-weight: 700;
-  padding-top: 50px;
-  ${mq.tablet`padding-top: 0;  text-align: left;  font-size: 160px;  line-height: 160px;  max-width: 300px;`};
-  ${mq.tabletWide` font-size: 180px;  line-height: 180px;`};
+  margin: 102px 0 0 0;
+  `};
+
+  ${mq.tabletWide`
+  font-size: 72px;
+  line-height: 72px;
+  `};
 `
 
-export const TitleWrapper = styled.div`
-  width: 50%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
-
-export const QuoteWrapper = styled.div`
-  width: 50%;
-  text-align: left;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
-
-export const ErrorQuote = styled.p`
-  font-family: ${variables.fonts.subHeadline};
-  font-size: 20px;
-  line-height: 20px;
-  max-width: 300px;
-  font-weight: 400;
-  margin: 0 auto;
-  text-align: center;
-  color: ${variables.colors.white};
-  ${mq.tablet` font-size: 24px; line-height: 36px;`};
-  ${mq.tabletWide` font-size: 32px;  line-height: 48px; `};
-`
-
-export const ErrorQuoteAuthor = styled.p`
-  font-family: ${variables.fonts.primary};
-  font-size: 14px;
-  line-height: 14px;
-  max-width: 300px;
+export const Message = styled.p`
+  margin: 0;
   font-weight: 300;
-  margin: 30px auto 0 auto;
-  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
   color: ${variables.colors.white};
-  ${mq.tablet` font-size: 16px; line-height: 16px;`};
+  font-family: ${variables.fonts.primary};
+  text-align: center;
+
+  ${mq.tabletWide`
+  font-size: 24px;
+  line-height: 32px;
+  `};
+`
+
+export const Yoda = styled.div`
+  height: 212px;
+  width: 135px;
+  background-image: url('/static/assets/yoda.png');
+  background-size: cover;
+  ${mq.tablet`
+  height:212px;
+  width: 135px;
+  `};
+
+  ${mq.tabletWide`
+  height: 425px;
+  width: 270px;
+  `};
 `

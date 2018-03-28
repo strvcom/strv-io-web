@@ -1,30 +1,22 @@
 import React from 'react'
 import Header from 'components/Header'
-import {
-  Wrapper,
-  ErrorWrapper,
-  ErrorTitle,
-  ErrorQuote,
-  ErrorQuoteAuthor,
-  TitleWrapper,
-  QuoteWrapper,
-} from './styled'
+import Button from 'components/Button'
+import Link from 'next/link'
+import { Wrapper, InnerWrapper, Title, Message, Yoda } from './styled'
 
 const ErrorPage = () => (
   <Wrapper>
     <Header />
-    <ErrorWrapper>
-      <TitleWrapper>
-        <ErrorTitle>YOU GOT LOST</ErrorTitle>
-      </TitleWrapper>
-      <QuoteWrapper>
-        <ErrorQuote>
-          “We cannot teach people anything; we can only help them discover it
-          within themselves.”
-        </ErrorQuote>
-        <ErrorQuoteAuthor>GALILEO GALILEI</ErrorQuoteAuthor>
-      </QuoteWrapper>
-    </ErrorWrapper>
+    <InnerWrapper>
+      <Title>you got lost</Title>
+      <Message>
+        Go back, you must. <br /> Do or do not. There is no try.
+      </Message>
+      <Yoda />
+      <Link prefetch href="/" passHref>
+        <Button>go back to home</Button>
+      </Link>
+    </InnerWrapper>
   </Wrapper>
 )
 
