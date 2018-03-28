@@ -44,7 +44,7 @@ export default class componentName extends Component {
     this.scrollReveal.reveal('.reveal--delay3', { delay: 200 })
   }
 
-  filteredRepos = category => {
+  filterRepos = category => {
     this.setState({
       repos:
         category === 'all'
@@ -57,11 +57,11 @@ export default class componentName extends Component {
   render() {
     const { repos, category } = this.state
     return (
-      <Wrapper c>
+      <Wrapper>
         <Header />
         <Banner>
           <BannerImage />
-          <BannerInfo >
+          <BannerInfo>
             <HeadLine className="reveal">Open source libraries</HeadLine>
             <HeadLineTail className="reveal--delay1">
               Curated by STRV
@@ -72,31 +72,31 @@ export default class componentName extends Component {
           <RepoFilters className="reveal--delay2">
             <Button
               primary={category === 'all'}
-              onClick={() => this.filteredRepos('all')}
+              onClick={() => this.filterRepos('all')}
             >
               all
             </Button>
             <Button
               primary={category === 'backend'}
-              onClick={() => this.filteredRepos('backend')}
+              onClick={() => this.filterRepos('backend')}
             >
               backend
             </Button>
             <Button
               primary={category === 'android'}
-              onClick={() => this.filteredRepos('android')}
+              onClick={() => this.filterRepos('android')}
             >
               android
             </Button>
             <Button
               primary={category === 'ios'}
-              onClick={() => this.filteredRepos('ios')}
+              onClick={() => this.filterRepos('ios')}
             >
               ios
             </Button>
             <Button
               primary={category === 'iot'}
-              onClick={() => this.filteredRepos('iot')}
+              onClick={() => this.filterRepos('iot')}
             >
               iot
             </Button>

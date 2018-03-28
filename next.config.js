@@ -9,12 +9,12 @@ module.exports = {
   exportPathMap: function() {
     return {
       '/': { page: '/' },
+      '/_error': { page: '/error' },
     }
   },
   webpack: config => {
-    if (dev) {
+    if (!dev) {
       config.plugins = config.plugins.concat([
-        new webpack.NamedModulesPlugin(),
         new BundleAnalyzerPlugin({
           analyzerMode: 'static',
           openAnalyzer: false,

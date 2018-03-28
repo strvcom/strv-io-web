@@ -637,7 +637,35 @@ const repos = [
       'Our little playground to test drive the greatest Android app architecture approaches',
     category: 'android',
     owner: 'strvcom',
-    icon: <div />,
+    icon: (
+      <svg
+        width="52px"
+        height="58px"
+        viewBox="0 0 52 58"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="none"
+          strokeWidth="1"
+          fill="none"
+          fillRule="evenodd"
+          strokeLinecap="round"
+        >
+          <g transform="translate(-694.000000, -2435.000000)" strokeWidth="2">
+            <g transform="translate(530.000000, 2424.000000)">
+              <g transform="translate(150.000000, 0.000000)">
+                <g transform="translate(15.000000, 12.000000)">
+                  <rect stroke="#FFFFFF" x="0" y="28" width="10" height="28" />
+                  <rect stroke="#FFFFFF" x="20" y="12" width="10" height="44" />
+                  <rect stroke="#EF0D33" x="40" y="0" width="10" height="56" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
   },
   {
     name: 'Stateful layout',

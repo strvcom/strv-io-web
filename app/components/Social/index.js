@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Wrapper, IconWrapper } from './styled'
 
 const Facebook = () => (
   <svg
@@ -127,49 +127,48 @@ const Vimeo = () => (
   </svg>
 )
 
-const IconWrapper = styled.a`
-  display: inline-block;
-  outlineL none;
-  cursor: pointer;
-  g{
-    transition: fill .4s ease;
-  }
-  &:hover{
-    g{
-      fill: #fff;
-    }
-  }
-`
-const Wrapper = styled.div`
-  width: 227px;
-  display: flex;
-  margin: 0 auto;
-  padding: 77px 0 92px 0;
-  align-items: center;
-  justify-content: space-between;
-`
-
 const Social = () => (
   <Wrapper>
-    <IconWrapper target="_blank" href="https://www.facebook.com/strvcom">
+    <IconWrapper
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.facebook.com/strvcom"
+    >
       <Facebook />
     </IconWrapper>
-    <IconWrapper target="_blank" href="https://twitter.com/strvcom">
+    <IconWrapper
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://twitter.com/strvcom"
+    >
       <Twitter />
     </IconWrapper>
-    <IconWrapper target="_blank" href="https://dribbble.com/strvcom">
+    <IconWrapper
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://dribbble.com/strvcom"
+    >
       <Dribbble />
     </IconWrapper>
     <IconWrapper
+      rel="noopener noreferrer"
       target="_blank"
       href="https://www.linkedin.com/company/638464/"
     >
       <LinkedIn />
     </IconWrapper>
-    <IconWrapper target="_blank" href="https://www.behance.net/strvcom">
+    <IconWrapper
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.behance.net/strvcom"
+    >
       <Behance />
     </IconWrapper>
-    <IconWrapper target="_blank" href="https://vimeo.com/strv">
+    <IconWrapper
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://vimeo.com/strv"
+    >
       <Vimeo />
     </IconWrapper>
   </Wrapper>
