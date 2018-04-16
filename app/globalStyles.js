@@ -10,6 +10,7 @@ injectGlobal`
     margin: 0;
     padding: 0;
     background: ${variables.colors.black};
+    font-size: 62.5%;
   }
 
   * {

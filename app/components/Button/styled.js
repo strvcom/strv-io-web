@@ -3,7 +3,7 @@ import variables from 'common/styleVariables'
 
 const Button = styled.button`
   font-family: ${variables.fonts.primary};
-  font-size: 12px;
+  font-size: 1.2rem;
   color: ${variables.colors.white};
   background-color: ${props =>
     props.primary ? variables.colors.primary : variables.colors.black};

@@ -68,7 +68,7 @@ export const HeadLine = styled.h1`
   letter-spacing: 1px;
   text-align: center;
   line-height: 48px;
-  font-size: 48px;
+  font-size: 4.8rem;
   text-transform: uppercase;
   font-weight: 700;
   z-index: 2;
@@ -78,11 +78,11 @@ export const HeadLine = styled.h1`
   ${mq.tablet`
   line-height: 76px;
   margin-top: 193px 0 0 0;
-  font-size: 76px;
+  font-size: 7.6rem;
 `};
   ${mq.tabletWide`
   line-height: 96px;
-  font-size: 96px;
+  font-size: 9.6rem;
 `};
   &:after {
     content: '';
@@ -101,14 +101,14 @@ export const HeadLineTail = styled.div`
   font-family: ${variables.fonts.subHeadline};
   color: ${variables.colors.white};
   line-height: 38px;
-  font-size: 26px;
+  font-size: 2.6rem;
   letter-spacing: 0;
   text-align: center;
   padding: 27px 0 0 0;
   visibility: none;
   z-index: 2;
   margin-bottom: 107px;
-  ${mq.tabletWide` margin-bottom:0; line-height: 48px; font-size: 32px; `};
+  ${mq.tabletWide` margin-bottom:0; line-height: 48px; font-size: 3.2rem; `};
 `
 
 export const RepoWrapper = styled.div`
