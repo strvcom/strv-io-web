@@ -30,18 +30,17 @@ export default class componentName extends Component {
 
     this.scrollReveal = new ScrollReveal({
       scale: 1,
-      duration: 900,
+      duration: 800,
       easing: 'ease',
       distance: '50px',
     })
     this.scrollReveal.reveal('.reveal')
-    this.scrollReveal.reveal('.reveal--delay1', { delay: 300 })
-    this.scrollReveal.reveal('.reveal--delay2', { delay: 400 })
-    this.scrollReveal.reveal('.reveal--delay3', { delay: 450 })
+    this.scrollReveal.reveal('.reveal--delay1', { delay: 100 })
+    this.scrollReveal.reveal('.reveal--delay2', { delay: 200 })
   }
 
   componentDidUpdate() {
-    this.scrollReveal.reveal('.reveal--delay3', { delay: 200 })
+    this.scrollReveal.reveal('.reveal--delay2', { delay: 100 })
   }
 
   filterRepos = category => {
@@ -69,7 +68,7 @@ export default class componentName extends Component {
           </BannerInfo>
         </Banner>
         <RepoWrapper>
-          <RepoFilters className="reveal--delay2">
+          <RepoFilters className="reveal--delay1">
             <Button
               primary={category === 'all'}
               onClick={() => this.filterRepos('all')}
@@ -104,7 +103,7 @@ export default class componentName extends Component {
           <RepoList>
             {repos.map(repo => (
               <RepoItem
-                className="reveal--delay3"
+                className="reveal--delay2"
                 key={`repo-item-${repo.name}`}
                 repo={repo}
               />

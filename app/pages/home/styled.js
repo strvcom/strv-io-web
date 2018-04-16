@@ -70,20 +70,31 @@ export const HeadLine = styled.h1`
   line-height: 48px;
   font-size: 48px;
   text-transform: uppercase;
-  margin: 0 0 26px 0;
   font-weight: 700;
   z-index: 2;
-  margin-top: 175px;
+  margin: 175px 0 0 0;
+  position: relative;
+  padding-bottom: 30px;
   ${mq.tablet`
   line-height: 76px;
-  margin-top: 193px;
+  margin-top: 193px 0 0 0;
   font-size: 76px;
 `};
   ${mq.tabletWide`
-  margin: 213px 0 26px 0;
   line-height: 96px;
   font-size: 96px;
 `};
+  &:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: ${variables.colors.primary};
+  }
 `
 
 export const HeadLineTail = styled.div`
@@ -93,11 +104,8 @@ export const HeadLineTail = styled.div`
   font-size: 26px;
   letter-spacing: 0;
   text-align: center;
-  padding: 30px 0 0 0;
+  padding: 27px 0 0 0;
   visibility: none;
-  background-image: url(data:image/svg+xml;base64,IDxzdmcgd2lkdGg9IjQwcHgiIGhlaWdodD0iNHB4IiB2aWV3Qm94PSIwIDAgNDAgNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgICAgIDxnIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNzAwLjAwMDAwMCwgLTMzNS4wMDAwMDApIiBmaWxsPSJyZ2IoMjM5LDEzLDUxKSI+ICAgICAgICAgICAgICA8cmVjdCB4PSI3MDAiIHk9IjMzNSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQiPjwvcmVjdD4gICAgICAgICAgPC9nPiAgICAgIDwvZz4gIDwvc3ZnPg==);
-  background-repeat: no-repeat;
-  background-position: top center;
   z-index: 2;
   margin-bottom: 107px;
   ${mq.tabletWide` margin-bottom:0; line-height: 48px; font-size: 32px; `};
