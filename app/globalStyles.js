@@ -26,9 +26,9 @@ injectGlobal`
 
   body {
     overflow-x: hidden;
-    background: ${props => props.theme.colors.black};
-    color: ${props => props.theme.colors.black};
-    font-family: ${props => props.theme.fonts.primary};
+    background: ${variables.colors.black};
+    color: ${variables.colors.black};
+    font-family: ${variables.fonts.primary};
     > div#__next {
       height: 100%;
       width: 100%;
@@ -41,14 +41,8 @@ injectGlobal`
     }
   }
   .reveal,
-  .reveal--card,
   .reveal--delay1,
-  .reveal--delay2,
-  .reveal--delay3,
-  .reveal--delay4,
-  .reveal--item,
-  .reveal--left,
-  .reveal--right {
+  .reveal--delay2, {
     visibility: hidden;
   }
 
