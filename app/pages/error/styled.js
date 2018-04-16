@@ -20,18 +20,18 @@ export const Title = styled.h2`
   font-family: ${variables.fonts.headline};
   color: ${variables.colors.white};
   font-weight: 700;
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 36px;
   text-transform: uppercase;
   margin: 82px 0 0 0;
   ${mq.tablet`
-  font-size: 48px;
+  font-size: 4.8rem;
   line-height: 48px;
   margin: 102px 0 0 0;
   `};
 
   ${mq.tabletWide`
-  font-size: 72px;
+  font-size: 7.2rem;
   line-height: 72px;
   `};
 `
@@ -39,14 +39,14 @@ export const Title = styled.h2`
 export const Message = styled.p`
   margin: 0;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 26px;
   color: ${variables.colors.white};
   font-family: ${variables.fonts.primary};
   text-align: center;
 
   ${mq.tabletWide`
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 32px;
   `};
 `

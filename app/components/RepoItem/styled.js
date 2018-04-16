@@ -21,7 +21,7 @@ export const Wrapper = styled.a`
 
 export const Name = styled.h2`
   font-family: ${variables.fonts.primary};
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   color: ${variables.colors.white};
   letter-spacing: 0.1px;
@@ -34,7 +34,7 @@ export const Name = styled.h2`
 
 export const Description = styled.div`
   font-family: ${variables.fonts.primary};
-  font-size: 16px;
+  font-size: 1.6rem;
   color: ${variables.colors.grey};
   text-align: center;
   font-weight: 300;
@@ -47,7 +47,7 @@ export const Description = styled.div`
 export const Category = styled.div`
   padding-top: 19px;
   font-family: ${variables.fonts.primary};
-  font-size: 12px;
+  font-size: 1.2rem;
   color: ${variables.colors.greyDarker};
   letter-spacing: 1.6px;
   text-transform: uppercase;
