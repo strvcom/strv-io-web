@@ -63,7 +63,7 @@ export default class componentName extends Component {
           <BannerInfo>
             <HeadLine className="reveal">Open source libraries</HeadLine>
             <HeadLineTail className="reveal--delay1">
-              Curated by STRV
+              Curated by STRV developers
             </HeadLineTail>
           </BannerInfo>
         </Banner>
