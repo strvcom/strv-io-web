@@ -2,7 +2,7 @@ import React from 'react'
 
 const repos = [
   {
-    name: 'atlas.js',
+    name: 'Atlas.js',
     url: 'https://github.com/strvcom/atlas.js',
     description: 'Component-based Node.js framework for all kinds of use cases',
     category: 'backend',
@@ -42,9 +42,9 @@ const repos = [
     ),
   },
   {
-    name: 'Eslint config javascript',
+    name: 'ESlint-Config-Javascript',
     url: 'https://github.com/strvcom/eslint-config-javascript',
-    description: 'Various configuration files for JavaScript ESLint',
+    description: 'Various configuration files for the awesome JavaScript linter, ESLint',
     category: 'backend',
     owner: 'strvcom',
     icon: (
@@ -131,9 +131,9 @@ const repos = [
     ),
   },
   {
-    name: 'Semantic merge',
+    name: 'Semantic Merge',
     url: 'https://github.com/Dreamscapes/semantic-merge',
-    description: 'A merging utility that is self-descriptive and makes sense',
+    description: 'Merging utility that is self-descriptive and makes sense',
     category: 'backend',
     owner: 'Dreamscapes',
     icon: (
@@ -172,10 +172,10 @@ const repos = [
     ),
   },
   {
-    name: 'Immutable custom merge',
+    name: 'Immutable Custom Merge',
     url: 'https://github.com/ruzicka/immutable-custom-merge',
     description:
-      'Deep merging of Immutable structures with custom per-property merging strategy',
+      'Merging of Immutable structures with custom per-property merging strategy',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -219,10 +219,10 @@ const repos = [
     ),
   },
   {
-    name: 'To json schema',
+    name: 'To JSON schema',
     url: 'https://github.com/ruzicka/to-json-schema',
     description:
-      'Converts javascript objects (and other types) to corresponding JSON schema',
+      'Converts JS objects (and other types) to corresponding JSON Schema',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -263,7 +263,7 @@ const repos = [
   {
     name: 'Koogn',
     url: 'https://github.com/ruzicka/koogn',
-    description: 'Validate JS objects just by example, not schema',
+    description: 'Simple tool to validate JavaScript objects by example, not schema',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -309,7 +309,7 @@ const repos = [
     name: 'Dundee',
     url: 'https://github.com/strvcom/dundee',
     description:
-      'Our little playground to test drive the greatest Android app architecture approaches',
+      'Our little playground for test driving the best Android app architecture approaches',
     category: 'android',
     owner: 'strvcom',
     icon: (
@@ -346,7 +346,7 @@ const repos = [
     name: 'Android Templates and Utilities',
     url: 'https://github.com/petrnohejl/Android-Templates-And-Utilities',
     description:
-      'Collection of source codes, utilities, templates and snippets for Android development',
+      'Collection of source codes, utilities, templates and snippets for Android',
     category: 'android',
     owner: 'petrnohejl',
     icon: (
@@ -391,7 +391,7 @@ const repos = [
   {
     name: 'Alfonz',
     url: 'https://github.com/petrnohejl/Alfonz',
-    description: 'Multi purpose library, making the development easy peasy',
+    description: 'Multi-purpose library for easy development avoiding boilerplate code',
     category: 'android',
     owner: 'petrnohejl',
     icon: (
@@ -439,7 +439,7 @@ const repos = [
     name: 'Android utils',
     url: 'https://github.com/Tuxilero/Android-Utils',
     description:
-      'Various utility classes to make android development less painful',
+      'Various utility classes to make Android development less painful',
     category: 'android',
     owner: 'tuxilero',
     icon: (
@@ -528,11 +528,11 @@ const repos = [
     ),
   },
   {
-    name: 'Keystore compat',
+    name: 'Keystore Compat',
     url:
       'https://github.com/kotomisak/security-showcase-android/tree/develop/android-keystore-compat',
     description:
-      'Wrapper library designed to save secret to local shared preferences using Android default security and Android Keystore',
+      'Wrapper library designed to save secret and local shared preferences using Android default security and Android Keystore',
     category: 'android',
     owner: 'kotomisak',
     icon: (
@@ -621,7 +621,7 @@ const repos = [
     name: 'ViewModelBinding',
     url: 'https://github.com/jakubkinst/Android-ViewModelBinding',
     description:
-      'A lightweight library aiming to speed up development by leveraging the new Android Data Binding and taking the best from the Model-View-ViewModel design pattern',
+      'Leverages Android Data Binding and takes the best from Model-View-ViewMode',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
@@ -668,10 +668,10 @@ const repos = [
     ),
   },
   {
-    name: 'Stateful layout',
+    name: 'Stateful Layout',
     url: 'https://github.com/jakubkinst/Android-StatefulLayout',
     description:
-      'A custom Android ViewGroup to display different states of screen',
+      'A custom Android ViewGroup that displays different screen states',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
@@ -702,7 +702,7 @@ const repos = [
     name: 'Long touch',
     url: 'https://github.com/jakubkinst/Android-LongTouch',
     description:
-      'A small library for adding 3D Touch-like popup to your Android App Views',
+      'Small library for adding 3D Touch-like popups to your Android App Views',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
@@ -736,7 +736,7 @@ const repos = [
   {
     name: 'DCTableViewController',
     url: 'https://github.com/DanielCech/DCTableViewController',
-    description: 'Convenience wrapper for UITableViews in controllers',
+    description: 'Convenience wrapper for UITableViews will help simplify your work',
     category: 'ios',
     owner: 'DanielCech',
     icon: (
@@ -772,7 +772,7 @@ const repos = [
   {
     name: 'MatchJSON',
     url: 'https://github.com/DanielCech/matchJSON',
-    description: 'Command line tool for JSON structure comparison',
+    description: 'OS X command line tool for structure comparison of JSON files',
     category: 'ios',
     owner: 'DanielCech',
     icon: (
@@ -812,7 +812,7 @@ const repos = [
   {
     name: 'LocalizeNIB',
     url: 'https://github.com/strvcom/localizenib-ios',
-    description: 'Simple localization of storyboards and xib files',
+    description: 'Easy-to-use localization tool for storyboards and XIB files',
     category: 'ios',
     owner: 'strvcom',
     icon: (
@@ -852,7 +852,7 @@ const repos = [
     ),
   },
   {
-    name: 'LCDKeypad Arduino library',
+    name: 'LCDKeypad Arduino Library',
     url: 'https://github.com/dzindra/LCDKeypad',
     description:
       'This library allows you to control display, read button state and toggle backlight of LCDKeypad shield',
@@ -893,7 +893,7 @@ const repos = [
     name: 'Repackaged installer of CH34x driver',
     url: 'https://github.com/dzindra/ch34x-osx-installer',
     description:
-      'This installer of CH34x USB to serial driver for OSX 10.11 and 10.12 does not require restart after install and is properly signed',
+      'CH34x USB-to-serial driver installer for OSX 10.11 and 10.12',
     category: 'iot',
     owner: 'dzindra',
     icon: (
@@ -922,9 +922,9 @@ const repos = [
     ),
   },
   {
-    name: 'Toy car',
+    name: 'Toy Car',
     url: 'https://github.com/dzindra/toycar',
-    description: 'WiFi controlled toy car',
+    description: 'Cool WiFi-controlled toy car with Pololu wheels and a 3D-printed case',
     category: 'iot',
     owner: 'dzindra',
     icon: (
@@ -968,7 +968,7 @@ const repos = [
     name: 'LedMatrix',
     url: 'https://github.com/TheCaveCz/letsmake-ledmatrix',
     description:
-      'Simple LED matrix driven by MAX7219 and Arduino Nano in nice small 3D printed case',
+      'Simple LED Matrix driven by MAX7219 and Arduino Nano in 3D-printed case',
     category: 'iot',
     owner: 'TheCaveCz',
     icon: (
@@ -1015,7 +1015,7 @@ const repos = [
     name: 'WiFi Lamp',
     url: 'https://github.com/TheCaveCz/letsmake-wifilamp',
     description:
-      'ESP8266 chip on Wemos D1 mini module that is driving WS2812 LED strip, one tactile switch or touch sensor for manual control.',
+      'ESP8266 chip on Wemos D1 mini module drives WS2812 LED strip',
     category: 'iot',
     owner: 'TheCaveCz',
     icon: (
