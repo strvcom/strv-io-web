@@ -1,7 +1,7 @@
-import { mq } from 'common/media'
 import styled from 'styled-components'
+import { mq } from 'common/media'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   display: flex;
   align-items: center;
   position: absolute;
