@@ -19,8 +19,8 @@ class CustomDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <title>STRV-IO</title>
           <meta charSet="utf-8" />
+          <title>Open Source Libraries</title>
           <meta name="description" content="STRV-IO" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/static/assets/favicon.ico" />
