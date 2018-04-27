@@ -621,7 +621,7 @@ const repos = [
     name: 'ViewModelBinding',
     url: 'https://github.com/jakubkinst/Android-ViewModelBinding',
     description:
-      'Leverages Android Data Binding and takes the best from Model-View-ViewMode',
+      'Leverages Android Data Binding and takes the best from Model-View-ViewModel',
     category: 'android',
     owner: 'jakubkinst',
     icon: (
