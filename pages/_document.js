@@ -21,7 +21,7 @@ class CustomDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <title>Open Source Libraries</title>
-          <meta name="description" content="STRV-IO" />
+          <meta name="description" content="Curated by STRV developers" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/static/assets/favicon.ico" />
           <link rel="manifest" href="static/manifest.json" />
