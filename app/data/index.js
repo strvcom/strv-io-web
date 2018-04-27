@@ -566,7 +566,7 @@ const repos = [
     ),
   },
   {
-    name: 'VaLifi',
+    name: 'ValiFi',
     url: 'https://github.com/mlykotom/valifi',
     description:
       'Android library for validation forms and inputs based on data binding',
