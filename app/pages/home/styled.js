@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Banner = styled.div`
   position: relative;
-  background-image: url('static/assets/banner.jpg');
+  background-image: url('static/assets/banner.png');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 30px;
