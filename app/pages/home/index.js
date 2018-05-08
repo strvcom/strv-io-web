@@ -104,7 +104,7 @@ export default class componentName extends Component {
             {repos.map(repo => (
               <RepoItem
                 className="reveal--delay2"
-                key={`repo-item-${repo.name}`}
+                key={`repo-item-${repo.name}-${category}`}
                 repo={repo}
               />
             ))}
