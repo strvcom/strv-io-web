@@ -48,7 +48,7 @@ export default class componentName extends Component {
       repos:
         category === 'all'
           ? data
-          : data.filter(repo => repo.category === category),
+          : data.filter(repo => repo.categories.indexOf(category) !== -1),
       category,
     })
   }
@@ -80,6 +80,12 @@ export default class componentName extends Component {
               onClick={() => this.filterRepos('backend')}
             >
               backend
+            </Button>
+            <Button
+              primary={category === 'frontend'}
+              onClick={() => this.filterRepos('frontend')}
+            >
+              frontend
             </Button>
             <Button
               primary={category === 'android'}
