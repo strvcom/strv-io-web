@@ -1,4 +1,4 @@
-# STRV-IO
+# STRV.io
 
 ## How to run 
 
@@ -13,3 +13,7 @@
 > If not, run `yarn global add firebase-tools` and then login with `firebase login --reauth`.
 > You also need to have an access into `strv-io` project in Firebase under your email.
 2. Then run `yarn deploy` handles deployment to firebase host
+
+## Production
+
+[strv.io](https://strv.io)
