@@ -44,7 +44,8 @@ const repos = [
   {
     name: 'ESlint-Config-Javascript',
     url: 'https://github.com/strvcom/eslint-config-javascript',
-    description: 'Various configuration files for the awesome JavaScript linter, ESLint',
+    description:
+      'Various configuration files for the awesome JavaScript linter, ESLint',
     category: 'backend',
     owner: 'strvcom',
     icon: (
@@ -263,7 +264,8 @@ const repos = [
   {
     name: 'Koogn',
     url: 'https://github.com/ruzicka/koogn',
-    description: 'Simple tool to validate JavaScript objects by example, not schema',
+    description:
+      'Simple tool to validate JavaScript objects by example, not schema',
     category: 'backend',
     owner: 'ruzicka',
     icon: (
@@ -343,55 +345,10 @@ const repos = [
     ),
   },
   {
-    name: 'Android Templates and Utilities',
-    url: 'https://github.com/petrnohejl/Android-Templates-And-Utilities',
-    description:
-      'Collection of source codes, utilities, templates and snippets for Android',
-    category: 'android',
-    owner: 'petrnohejl',
-    icon: (
-      <svg
-        width="54px"
-        height="62px"
-        viewBox="0 0 54 62"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g transform="translate(-693.000000, -705.000000)" strokeWidth="2">
-            <g transform="translate(530.000000, 696.000000)">
-              <g transform="translate(150.000000, 0.000000)">
-                <g id="Group-3" transform="translate(14.000000, 10.000000)">
-                  <path
-                    d="M24,6 L24,1 C24,0.44771525 24.4477153,1.01453063e-16 25,0 L51,0 C51.5522847,-1.01453063e-16 52,0.44771525 52,1 L52,35 C52,35.5522847 51.5522847,36 51,36 L46,36"
-                    stroke="#FFFFFF"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M12,18 L12,13 C12,12.4477153 12.4477153,12 13,12 L39,12 C39.5522847,12 40,12.4477153 40,13 L40,47 C40,47.5522847 39.5522847,48 39,48 L34,48"
-                    stroke="#EF0D33"
-                    strokeLinecap="round"
-                  />
-                  <rect
-                    stroke="#FFFFFF"
-                    x="0"
-                    y="24"
-                    width="28"
-                    height="36"
-                    rx="1"
-                  />
-                </g>
-              </g>
-            </g>
-          </g>
-        </g>
-      </svg>
-    ),
-  },
-  {
     name: 'Alfonz',
     url: 'https://github.com/petrnohejl/Alfonz',
-    description: 'Multi-purpose library for easy development avoiding boilerplate code',
+    description:
+      'Multi-purpose library for easy development avoiding boilerplate code',
     category: 'android',
     owner: 'petrnohejl',
     icon: (
@@ -436,43 +393,28 @@ const repos = [
     ),
   },
   {
-    name: 'Android utils',
-    url: 'https://github.com/Tuxilero/Android-Utils',
+    name: 'Stateful Layout',
+    url: 'https://github.com/jakubkinst/Android-StatefulLayout',
     description:
-      'Various utility classes to make Android development less painful',
+      'A custom Android ViewGroup that displays different screen states',
     category: 'android',
-    owner: 'tuxilero',
+    owner: 'jakubkinst',
     icon: (
       <svg
         width="54px"
-        height="62px"
-        viewBox="0 0 54 62"
+        height="58px"
+        viewBox="0 0 54 58"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g transform="translate(-293.000000, -993.000000)" strokeWidth="2">
-            <g transform="translate(130.000000, 984.000000)">
+          <g transform="translate(-1093.000000, -1283.000000)" strokeWidth="2">
+            <g transform="translate(930.000000, 1272.000000)">
               <g transform="translate(150.000000, 0.000000)">
-                <g transform="translate(14.000000, 10.000000)">
-                  <path
-                    d="M24,6 L24,1 C24,0.44771525 24.4477153,1.01453063e-16 25,0 L51,0 C51.5522847,-1.01453063e-16 52,0.44771525 52,1 L52,35 C52,35.5522847 51.5522847,36 51,36 L46,36"
-                    stroke="#EF0D33"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M12,18 L12,13 C12,12.4477153 12.4477153,12 13,12 L39,12 C39.5522847,12 40,12.4477153 40,13 L40,47 C40,47.5522847 39.5522847,48 39,48 L34,48"
-                    stroke="#FFFFFF"
-                    strokeLinecap="round"
-                  />
-                  <rect
-                    stroke="#FFFFFF"
-                    x="0"
-                    y="24"
-                    width="28"
-                    height="36"
-                    rx="1"
-                  />
+                <g transform="translate(14.000000, 12.000000)">
+                  <rect stroke="#FFFFFF" x="0" y="0" width="10" height="56" />
+                  <polygon stroke="#EF0D33" points="20 0 52 0 52 10 20 10" />
+                  <polygon stroke="#FFFFFF" points="20 20 52 20 52 56 20 56" />
                 </g>
               </g>
             </g>
@@ -482,53 +424,7 @@ const repos = [
     ),
   },
   {
-    name: 'LineCounter-Plugin',
-    url: 'https://github.com/Tuxilero/LineCounter-Plugin',
-    description:
-      'Plugin for displaying the list of files and methods which have bigger number of lines than user defined value',
-    category: 'android',
-    owner: 'tuxilero',
-    icon: (
-      <svg
-        width="54px"
-        height="42px"
-        viewBox="0 0 54 42"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g
-          stroke="none"
-          strokeWidth="1"
-          fill="none"
-          fillRule="evenodd"
-          strokeLinecap="round"
-        >
-          <g transform="translate(-696.000000, -1003.000000)" strokeWidth="2">
-            <g transform="translate(530.000000, 984.000000)">
-              <g transform="translate(150.000000, 0.000000)">
-                <g transform="translate(17.000000, 19.000000)">
-                  <path d="M0,1 L10,1" stroke="#EF0D33" />
-                  <path d="M22,1 L52,1" stroke="#FFFFFF" />
-                  <path d="M0,9 L10,9" stroke="#EF0D33" />
-                  <path d="M22,9 L52,9" stroke="#FFFFFF" />
-                  <path d="M0,17 L10,17" stroke="#EF0D33" />
-                  <path d="M22,17 L52,17" stroke="#FFFFFF" />
-                  <path d="M0,25 L10,25" stroke="#EF0D33" />
-                  <path d="M22,25 L52,25" stroke="#FFFFFF" />
-                  <path d="M0,33 L10,33" stroke="#EF0D33" />
-                  <path d="M22,33 L52,33" stroke="#FFFFFF" />
-                  <path d="M0,41 L10,41" stroke="#EF0D33" />
-                  <path d="M22,41 L52,41" stroke="#FFFFFF" />
-                </g>
-              </g>
-            </g>
-          </g>
-        </g>
-      </svg>
-    ),
-  },
-  {
-    name: 'Keystore Compat',
+    name: 'KeystoreCompat',
     url:
       'https://github.com/kotomisak/security-showcase-android/tree/develop/android-keystore-compat',
     description:
@@ -618,6 +514,144 @@ const repos = [
     ),
   },
   {
+    name: 'Android Templates and Utilities',
+    url: 'https://github.com/petrnohejl/Android-Templates-And-Utilities',
+    description:
+      'Collection of source codes, utilities, templates and snippets for Android',
+    category: 'android',
+    owner: 'petrnohejl',
+    icon: (
+      <svg
+        width="54px"
+        height="62px"
+        viewBox="0 0 54 62"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g transform="translate(-693.000000, -705.000000)" strokeWidth="2">
+            <g transform="translate(530.000000, 696.000000)">
+              <g transform="translate(150.000000, 0.000000)">
+                <g id="Group-3" transform="translate(14.000000, 10.000000)">
+                  <path
+                    d="M24,6 L24,1 C24,0.44771525 24.4477153,1.01453063e-16 25,0 L51,0 C51.5522847,-1.01453063e-16 52,0.44771525 52,1 L52,35 C52,35.5522847 51.5522847,36 51,36 L46,36"
+                    stroke="#FFFFFF"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M12,18 L12,13 C12,12.4477153 12.4477153,12 13,12 L39,12 C39.5522847,12 40,12.4477153 40,13 L40,47 C40,47.5522847 39.5522847,48 39,48 L34,48"
+                    stroke="#EF0D33"
+                    strokeLinecap="round"
+                  />
+                  <rect
+                    stroke="#FFFFFF"
+                    x="0"
+                    y="24"
+                    width="28"
+                    height="36"
+                    rx="1"
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+  },
+  {
+    name: 'Helu Utils',
+    url: 'https://github.com/Tuxilero/Android-Utils',
+    description:
+      'Various utility classes to make Android development less painful',
+    category: 'android',
+    owner: 'tuxilero',
+    icon: (
+      <svg
+        width="54px"
+        height="62px"
+        viewBox="0 0 54 62"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g transform="translate(-293.000000, -993.000000)" strokeWidth="2">
+            <g transform="translate(130.000000, 984.000000)">
+              <g transform="translate(150.000000, 0.000000)">
+                <g transform="translate(14.000000, 10.000000)">
+                  <path
+                    d="M24,6 L24,1 C24,0.44771525 24.4477153,1.01453063e-16 25,0 L51,0 C51.5522847,-1.01453063e-16 52,0.44771525 52,1 L52,35 C52,35.5522847 51.5522847,36 51,36 L46,36"
+                    stroke="#EF0D33"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M12,18 L12,13 C12,12.4477153 12.4477153,12 13,12 L39,12 C39.5522847,12 40,12.4477153 40,13 L40,47 C40,47.5522847 39.5522847,48 39,48 L34,48"
+                    stroke="#FFFFFF"
+                    strokeLinecap="round"
+                  />
+                  <rect
+                    stroke="#FFFFFF"
+                    x="0"
+                    y="24"
+                    width="28"
+                    height="36"
+                    rx="1"
+                  />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+  },
+  {
+    name: 'LineCounter',
+    url: 'https://github.com/Tuxilero/LineCounter-Plugin',
+    description:
+      'Plugin for displaying the list of files and methods which have bigger number of lines than user defined value',
+    category: 'android',
+    owner: 'tuxilero',
+    icon: (
+      <svg
+        width="54px"
+        height="42px"
+        viewBox="0 0 54 42"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="none"
+          strokeWidth="1"
+          fill="none"
+          fillRule="evenodd"
+          strokeLinecap="round"
+        >
+          <g transform="translate(-696.000000, -1003.000000)" strokeWidth="2">
+            <g transform="translate(530.000000, 984.000000)">
+              <g transform="translate(150.000000, 0.000000)">
+                <g transform="translate(17.000000, 19.000000)">
+                  <path d="M0,1 L10,1" stroke="#EF0D33" />
+                  <path d="M22,1 L52,1" stroke="#FFFFFF" />
+                  <path d="M0,9 L10,9" stroke="#EF0D33" />
+                  <path d="M22,9 L52,9" stroke="#FFFFFF" />
+                  <path d="M0,17 L10,17" stroke="#EF0D33" />
+                  <path d="M22,17 L52,17" stroke="#FFFFFF" />
+                  <path d="M0,25 L10,25" stroke="#EF0D33" />
+                  <path d="M22,25 L52,25" stroke="#FFFFFF" />
+                  <path d="M0,33 L10,33" stroke="#EF0D33" />
+                  <path d="M22,33 L52,33" stroke="#FFFFFF" />
+                  <path d="M0,41 L10,41" stroke="#EF0D33" />
+                  <path d="M22,41 L52,41" stroke="#FFFFFF" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    ),
+  },
+  {
     name: 'ViewModelBinding',
     url: 'https://github.com/jakubkinst/Android-ViewModelBinding',
     description:
@@ -668,38 +702,7 @@ const repos = [
     ),
   },
   {
-    name: 'Stateful Layout',
-    url: 'https://github.com/jakubkinst/Android-StatefulLayout',
-    description:
-      'A custom Android ViewGroup that displays different screen states',
-    category: 'android',
-    owner: 'jakubkinst',
-    icon: (
-      <svg
-        width="54px"
-        height="58px"
-        viewBox="0 0 54 58"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g transform="translate(-1093.000000, -1283.000000)" strokeWidth="2">
-            <g transform="translate(930.000000, 1272.000000)">
-              <g transform="translate(150.000000, 0.000000)">
-                <g transform="translate(14.000000, 12.000000)">
-                  <rect stroke="#FFFFFF" x="0" y="0" width="10" height="56" />
-                  <polygon stroke="#EF0D33" points="20 0 52 0 52 10 20 10" />
-                  <polygon stroke="#FFFFFF" points="20 20 52 20 52 56 20 56" />
-                </g>
-              </g>
-            </g>
-          </g>
-        </g>
-      </svg>
-    ),
-  },
-  {
-    name: 'Long touch',
+    name: 'Long Touch',
     url: 'https://github.com/jakubkinst/Android-LongTouch',
     description:
       'Small library for adding 3D Touch-like popups to your Android App Views',
@@ -736,7 +739,8 @@ const repos = [
   {
     name: 'DCTableViewController',
     url: 'https://github.com/DanielCech/DCTableViewController',
-    description: 'Convenience wrapper for UITableViews will help simplify your work',
+    description:
+      'Convenience wrapper for UITableViews will help simplify your work',
     category: 'ios',
     owner: 'DanielCech',
     icon: (
@@ -772,7 +776,8 @@ const repos = [
   {
     name: 'MatchJSON',
     url: 'https://github.com/DanielCech/matchJSON',
-    description: 'OS X command line tool for structure comparison of JSON files',
+    description:
+      'OS X command line tool for structure comparison of JSON files',
     category: 'ios',
     owner: 'DanielCech',
     icon: (
@@ -892,8 +897,7 @@ const repos = [
   {
     name: 'Repackaged installer of CH34x driver',
     url: 'https://github.com/dzindra/ch34x-osx-installer',
-    description:
-      'CH34x USB-to-serial driver installer for OSX 10.11 and 10.12',
+    description: 'CH34x USB-to-serial driver installer for OSX 10.11 and 10.12',
     category: 'iot',
     owner: 'dzindra',
     icon: (
@@ -924,7 +928,8 @@ const repos = [
   {
     name: 'Toy Car',
     url: 'https://github.com/dzindra/toycar',
-    description: 'Cool WiFi-controlled toy car with Pololu wheels and a 3D-printed case',
+    description:
+      'Cool WiFi-controlled toy car with Pololu wheels and a 3D-printed case',
     category: 'iot',
     owner: 'dzindra',
     icon: (
@@ -1014,8 +1019,7 @@ const repos = [
   {
     name: 'WiFi Lamp',
     url: 'https://github.com/TheCaveCz/letsmake-wifilamp',
-    description:
-      'ESP8266 chip on Wemos D1 mini module drives WS2812 LED strip',
+    description: 'ESP8266 chip on Wemos D1 mini module drives WS2812 LED strip',
     category: 'iot',
     owner: 'TheCaveCz',
     icon: (
