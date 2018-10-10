@@ -1,3 +1,3 @@
-import ErrorPage from '../app/pages/error'
+import ErrorPage from 'pages/Error'
 
 export default ErrorPage

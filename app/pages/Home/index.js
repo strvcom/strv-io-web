@@ -16,7 +16,7 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import RepoItem from 'components/RepoItem'
 
-export default class componentName extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -115,3 +115,5 @@ export default class componentName extends Component {
     )
   }
 }
+
+export default Home
