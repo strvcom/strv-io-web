@@ -14,15 +14,16 @@
   "homepage": "https://github.com/strvcom/strv-io-web#readme",
   "scripts": {
     "dev": "next",
-    "build": "next build && next start",
+    "build": "next build",
     "start": "next start",
-    "prettier": "prettier --write 'app/**/*.js'",
-    "lint:css": "stylelint './app/**/*.js' --ignore-path .gitignore --ignore-pattern",
-    "lint:staged": "lint-staged",
-    "deploy": "next build && next export && mv out/_error/index.html out/404.html && rm -rf out/_error && firebase deploy",
+    "export": "next build && next export && mv out/404/index.html out/404.html && rm -rf out/404",
+    "deploy": "npm run export && firebase deploy",
     "analyze": "BUNDLE_ANALYZE=both next build",
     "analyze:server": "BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build",
+    "prettier": "prettier --write 'app/**/*.js'",
+    "lint:css": "stylelint './app/**/*.js' --ignore-path .gitignore --ignore-pattern",
+    "lint:staged": "lint-staged"
   },
   "husky": {
     "hooks": {
