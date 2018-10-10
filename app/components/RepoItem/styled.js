@@ -9,9 +9,11 @@ export const Wrapper = styled.a`
   cursor: pointer;
   text-decoration: none;
   width: 100%;
-  ${mq.tablet`
+
+  ${mq.tablet} {
     width: 380px;
-`};
+  }
+
   &:hover {
     h2 {
       color: ${variables.colors.primary};

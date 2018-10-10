@@ -4,9 +4,11 @@ export const IconWrapper = styled.a`
   display: inline-block;
   outline: none;
   cursor: pointer;
+
   g {
     transition: fill 0.4s ease;
   }
+
   &:hover {
     g {
       fill: #fff;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import data from 'data'
 import {
   Wrapper,
   Banner,
@@ -11,6 +10,7 @@ import {
   BannerImage,
   BannerInfo,
 } from './styled'
+import data from 'data'
 import Button from 'components/Button'
 import Header from 'components/Header'
 import Footer from 'components/Footer'

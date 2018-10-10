@@ -8,10 +8,11 @@ export const Wrapper = styled.header`
   z-index: 2;
   padding: 0 30px;
   height: 92px;
-  ${mq.tablet`
-  height: 132px;
-  padding: 0 49px;
-`};
+
+  ${mq.tablet} {
+    height: 132px;
+    padding: 0 49px;
+  }
 `
 
 export const Logo = styled.a`
@@ -23,7 +24,8 @@ export const Logo = styled.a`
     height: 32px;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   }
-  &:after {
+
+  &::after {
     content: '';
     position: absolute;
     left: 0;
@@ -36,18 +38,19 @@ export const Logo = styled.a`
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   }
+
   &:hover {
     span {
       transform: translate3d(-50%, 0, 0);
       opacity: 0;
     }
-    &:after {
+    &::after {
       visibility: visible;
       opacity: 1;
       transform: translate3d(47%, 0, 0);
-      ${mq.tablet`
-      transform: translate3d(75%, 0 , 0);
-    `};
+      ${mq.tablet} {
+        transform: translate3d(75%, 0, 0);
+      }
     }
   }
 `

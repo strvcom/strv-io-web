@@ -1,6 +1,6 @@
 import React from 'react'
-import Social from 'components/Social'
 import { Wrapper, ContinueButton, ArticleLink } from './styled'
+import Social from 'components/Social'
 
 const Footer = () => (
   <Wrapper>
