@@ -34,17 +34,17 @@
     ]
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.5.1",
-    "next": "^5.0.0",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "next": "^7.0.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "scrollreveal": "^3.4.0",
-    "styled-components": "^3.2.3"
+    "styled-components": "^3.4.10"
   },
   "devDependencies": {
     "@strv/eslint-config-javascript": "^8.3.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-styled-components": "^1.8.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
