@@ -5,6 +5,12 @@ module.exports = {
     '@strv/javascript/coding-styles/recommended',
     'prettier',
   ],
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+    es6: true,
+  },
   settings: {
     'import/resolver': {
       node: {

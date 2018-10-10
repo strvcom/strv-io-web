@@ -19,7 +19,10 @@
     "prettier": "prettier --write 'app/**/*.js'",
     "lint:css": "stylelint './app/**/*.js' --ignore-path .gitignore --ignore-pattern",
     "lint:staged": "lint-staged",
-    "deploy": "next build && next export && mv out/_error/index.html out/404.html && rm -rf out/_error && firebase deploy"
+    "deploy": "next build && next export && mv out/_error/index.html out/404.html && rm -rf out/_error && firebase deploy",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "analyze:server": "BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build"
   },
   "husky": {
     "hooks": {
@@ -43,9 +46,10 @@
   },
   "devDependencies": {
     "@strv/eslint-config-javascript": "^8.3.0",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
-    "cross-env": "^5.2.0",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
     "file-loader": "^2.0.0",
@@ -55,8 +59,7 @@
     "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.5.0",
-    "webpack-bundle-analyzer": "^3.0.2"
+    "stylelint-processor-styled-components": "^1.5.0"
   },
   "moduleDirectories": [
     "node_modules",
