@@ -29,7 +29,7 @@ class Home extends PureComponent {
   render() {
     const { query } = this.props.router
     // Show All as default
-    const category = query.view || 'all'
+    const category = query.filter || 'all'
 
     return (
       <Fragment>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Wrapper, Ul, Li } from './styled'
 import categories from 'data/categories'
 import Button from 'components/Button'
+import routes from 'common/routes'
 
 const Navigation = ({ activeCategory }) => (
   <Wrapper className="reveal--delay1">
@@ -10,7 +11,7 @@ const Navigation = ({ activeCategory }) => (
       {categories.map(val => (
         <Li key={val}>
           <Button
-            href={`/?view=${val}`}
+            href={routes.homeWithFilter(val)}
             replace
             scroll={false}
             isPrimary={activeCategory === val}
