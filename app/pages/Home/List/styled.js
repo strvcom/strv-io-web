@@ -20,8 +20,10 @@ export const Ul = styled.ul`
 `
 
 export const Li = styled.li`
-  &:nth-child(even) {
-    margin: 0 0 0 20px;
+  ${mq.tablet} {
+    &:nth-child(even) {
+      margin: 0 0 0 20px;
+    }
   }
 
   ${mq.desktop} {
