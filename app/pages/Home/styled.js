@@ -113,20 +113,6 @@ export const RepoWrapper = styled.div`
   }
 `
 
-export const RepoFilters = styled.div`
-  text-align: center;
-
-  ${mq.tablet} {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-
-  button {
-    margin: 5px 5px 5px 5px;
-  }
-`
-
 export const RepoList = styled.div`
   margin: 50px auto 0 auto;
   width: 100%;
