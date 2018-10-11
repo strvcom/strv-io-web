@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import variables from 'common/styleVariables'
+import theme from 'styles/theme'
 
 export const Wrapper = styled.footer`
   margin: 0 auto;
@@ -9,8 +9,8 @@ export const Wrapper = styled.footer`
 `
 
 export const Title = styled.h2`
-  font-family: ${variables.fonts.primary};
-  font-weight: ${variables.fontWeight.bold};
+  font-family: ${theme.fonts.primary};
+  font-weight: ${theme.fontWeight.bold};
   font-size: 2rem;
   color: #fff;
   text-align: left;
@@ -19,9 +19,9 @@ export const Title = styled.h2`
 `
 
 export const ArticleLink = styled.a`
-  color: ${variables.colors.primary};
-  font-family: ${variables.fonts.primary};
-  font-weight: ${variables.fontWeight.light};
+  color: ${theme.colors.primary};
+  font-family: ${theme.fonts.primary};
+  font-weight: ${theme.fontWeight.light};
   font-size: 1.8rem;
   letter-spacing: 0.1px;
   width: 100%;

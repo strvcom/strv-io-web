@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import variables from 'common/styleVariables'
-import { mq } from 'common/media'
+import theme from 'styles/theme'
+import { mq } from 'styles/media'
 
 export const Wrapper = styled.div`
   height: 100%;
@@ -48,9 +48,9 @@ export const BannerInfo = styled.div`
 `
 
 export const HeadLine = styled.h1`
-  font-family: ${variables.fonts.headline};
-  color: ${variables.colors.white};
-  font-weight: ${variables.fontWeight.bold};
+  font-family: ${theme.fonts.headline};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.bold};
   letter-spacing: 1px;
   text-align: center;
   line-height: 48px;
@@ -81,14 +81,14 @@ export const HeadLine = styled.h1`
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: ${variables.colors.primary};
+    background-color: ${theme.colors.primary};
   }
 `
 
 export const HeadLineTail = styled.h2`
-  font-family: ${variables.fonts.subHeadline};
-  color: ${variables.colors.white};
-  font-weight: ${variables.fontWeight.regular};
+  font-family: ${theme.fonts.subHeadline};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.regular};
   line-height: 38px;
   font-size: 2.6rem;
   letter-spacing: 0;

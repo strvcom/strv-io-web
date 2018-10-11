@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mq } from 'common/media'
+import { mq } from 'styles/media'
 
 export const Wrapper = styled.header`
   display: flex;

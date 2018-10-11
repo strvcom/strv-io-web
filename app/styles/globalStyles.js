@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import { injectGlobal } from 'styled-components'
-import variables from 'common/styleVariables'
+import theme from 'styles/theme'
 import fontFaces from 'styles/fontFaces'
 
 injectGlobal`
@@ -21,8 +21,8 @@ injectGlobal`
   }
 
   body {
-    background: ${variables.colors.black};
-    font-family: ${variables.fonts.primary};
+    background: ${theme.colors.black};
+    font-family: ${theme.fonts.primary};
 
     @media print {
       transform: scale(0.8);

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-// import variables from 'common/styleVariables'
-import { mq } from 'common/media'
+import { mq } from 'styles/media'
 
 export const Ul = styled.ul`
   margin: 50px auto 0 auto;

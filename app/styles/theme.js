@@ -1,4 +1,4 @@
-const variables = {
+const theme = {
   colors: {
     primary: '#ef0d33',
     black: '#111517',
@@ -21,4 +21,4 @@ const variables = {
   },
 }
 
-export default variables
+export default theme

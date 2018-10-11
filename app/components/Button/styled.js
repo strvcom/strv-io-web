@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import variables from 'common/styleVariables'
+import theme from 'styles/theme'
 
 const Button = styled.button`
-  font-family: ${variables.fonts.primary};
+  font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
-  color: ${variables.colors.white};
+  color: ${theme.colors.white};
   background-color: ${props =>
-    props.primary ? variables.colors.primary : variables.colors.black};
+    props.primary ? theme.colors.primary : theme.colors.black};
   letter-spacing: 1.6px;
   text-align: center;
   border-radius: 24px;
@@ -19,12 +19,12 @@ const Button = styled.button`
   line-height: 20px;
   border: ${props =>
     props.primary
-      ? `solid 1px ${variables.colors.primary}`
+      ? `solid 1px ${theme.colors.primary}`
       : 'solid 1px rgba(255,255,255, 0.2)'};
 
   &:hover {
-    background-color: ${variables.colors.primary};
-    border: solid 1px ${variables.colors.primary};
+    background-color: ${theme.colors.primary};
+    border: solid 1px ${theme.colors.primary};
   }
   cursor: pointer;
 `

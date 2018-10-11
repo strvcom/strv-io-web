@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mq } from 'common/media'
+import { mq } from 'styles/media'
 import Button from 'components/Button'
 
 export const Wrapper = styled.nav`

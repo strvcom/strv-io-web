@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import variables from 'common/styleVariables'
-import { mq } from 'common/media'
+import theme from 'styles/theme'
+import { mq } from 'styles/media'
 
 export const Name = styled.h3`
-  font-family: ${variables.fonts.primary};
+  font-family: ${theme.fonts.primary};
   font-size: 2rem;
-  font-weight: ${variables.fontWeight.bold};
-  color: ${variables.colors.white};
+  font-weight: ${theme.fontWeight.bold};
+  color: ${theme.colors.white};
   letter-spacing: 0.1px;
   text-align: center;
   line-height: 32px;
@@ -29,17 +29,17 @@ export const Link = styled.a`
 
   &:hover {
     ${Name} {
-      color: ${variables.colors.primary};
+      color: ${theme.colors.primary};
     }
   }
 `
 
 export const Description = styled.p`
-  font-family: ${variables.fonts.primary};
+  font-family: ${theme.fonts.primary};
   font-size: 1.6rem;
-  color: ${variables.colors.grey};
+  color: ${theme.colors.grey};
   text-align: center;
-  font-weight: ${variables.fontWeight.light};
+  font-weight: ${theme.fontWeight.light};
   line-height: 24px;
   width: 100%;
   max-width: 300px;
@@ -49,13 +49,13 @@ export const Description = styled.p`
 export const Category = styled.span`
   display: block;
   padding-top: 19px;
-  font-family: ${variables.fonts.primary};
+  font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
-  color: ${variables.colors.greyDarker};
+  color: ${theme.colors.greyDarker};
   letter-spacing: 1.6px;
   text-transform: uppercase;
   text-align: center;
-  font-weight: ${variables.fontWeight.semibold};
+  font-weight: ${theme.fontWeight.semibold};
   line-height: 20px;
   margin: 0 auto;
 `

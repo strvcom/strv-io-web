@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import variables from 'common/styleVariables'
-import { mq } from 'common/media'
+import theme from 'styles/theme'
+import { mq } from 'styles/media'
 
 export const InnerWrapper = styled.div`
   height: 100%;
@@ -12,8 +12,8 @@ export const InnerWrapper = styled.div`
 `
 
 export const Title = styled.h2`
-  font-family: ${variables.fonts.headline};
-  color: ${variables.colors.white};
+  font-family: ${theme.fonts.headline};
+  color: ${theme.colors.white};
   font-weight: 700;
   font-size: 3.6rem;
   line-height: 36px;
@@ -37,8 +37,8 @@ export const Message = styled.p`
   font-weight: 300;
   font-size: 2rem;
   line-height: 26px;
-  color: ${variables.colors.white};
-  font-family: ${variables.fonts.primary};
+  color: ${theme.colors.white};
+  font-family: ${theme.fonts.primary};
   text-align: center;
 
   ${mq.tabletWide} {
