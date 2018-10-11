@@ -2,11 +2,6 @@ import styled from 'styled-components'
 import variables from 'common/styleVariables'
 import { mq } from 'common/media'
 
-export const Wrapper = styled.div`
-  height: 100%;
-  width: 100%;
-`
-
 export const InnerWrapper = styled.div`
   height: 100%;
   width: 100%;

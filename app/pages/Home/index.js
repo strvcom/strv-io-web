@@ -1,17 +1,9 @@
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { withRouter } from 'next/router'
-import {
-  Wrapper,
-  Banner,
-  HeadLine,
-  HeadLineTail,
-  Main,
-  BannerInfo,
-} from './styled'
+import { Banner, HeadLine, HeadLineTail, Main, BannerInfo } from './styled'
 import List from './List'
 import Navigation from './Navigation'
-import Header from 'components/Header'
 import Footer from 'components/Footer'
 
 class Home extends PureComponent {
@@ -40,8 +32,7 @@ class Home extends PureComponent {
     const category = query.view || 'all'
 
     return (
-      <Wrapper>
-        <Header />
+      <Fragment>
         <Banner>
           <BannerInfo>
             <HeadLine className="reveal">Open source libraries</HeadLine>
@@ -55,7 +46,7 @@ class Home extends PureComponent {
           <List activeCategory={category} />
         </Main>
         <Footer />
-      </Wrapper>
+      </Fragment>
     )
   }
 }
