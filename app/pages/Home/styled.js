@@ -13,9 +13,10 @@ export const Banner = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 30px;
-  ${mq.tabletWide`
+
+  ${mq.tabletWide} {
     height: 538px;
-`};
+  }
 `
 
 export const BannerInfo = styled.div`
@@ -25,9 +26,10 @@ export const BannerInfo = styled.div`
   align-items: center;
   height: 100%;
   justify-content: center;
-  ${mq.tabletWide`
-  justify-content: unset;
-`};
+
+  ${mq.tabletWide} {
+    justify-content: unset;
+  }
 `
 
 export const BannerImage = styled.div`
@@ -75,16 +77,19 @@ export const HeadLine = styled.h1`
   margin: 175px 0 0 0;
   position: relative;
   padding-bottom: 30px;
-  ${mq.tablet`
-  line-height: 76px;
-  margin-top: 193px 0 0 0;
-  font-size: 7.6rem;
-`};
-  ${mq.tabletWide`
-  line-height: 96px;
-  font-size: 9.6rem;
-`};
-  &:after {
+
+  ${mq.tablet} {
+    line-height: 76px;
+    margin-top: 193px 0 0 0;
+    font-size: 7.6rem;
+  }
+
+  ${mq.tabletWide} {
+    line-height: 96px;
+    font-size: 9.6rem;
+  }
+
+  &::after {
     content: '';
     position: absolute;
     width: 40px;
@@ -108,18 +113,32 @@ export const HeadLineTail = styled.div`
   visibility: none;
   z-index: 2;
   margin-bottom: 107px;
-  ${mq.tabletWide` margin-bottom:0; line-height: 48px; font-size: 3.2rem; `};
+
+  ${mq.tabletWide} {
+    margin-bottom: 0;
+    line-height: 48px;
+    font-size: 3.2rem;
+  }
 `
 
 export const RepoWrapper = styled.div`
   margin: 0 auto;
   padding: 0 30px;
-  ${mq.tabletWide` padding: 0;`};
+
+  ${mq.tabletWide} {
+    padding: 0;
+  }
 `
 
 export const RepoFilters = styled.div`
   text-align: center;
-  ${mq.tablet` display: flex; justify-content: center;  flex-direction: row;`};
+
+  ${mq.tablet} {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
   button {
     margin: 5px 5px 5px 5px;
   }
@@ -133,21 +152,25 @@ export const RepoList = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  ${mq.tabletWide` width: 780px;
-a {
-  &:nth-child(even) {
-    margin: 0 0 0 20px;
+  ${mq.tabletWide} {
+    width: 780px;
   }
-}
-`};
 
-  ${mq.desktop`
-width: 1180px;
-a {
-  margin: 0 !important;
-  &:nth-child(3n + 2) {
-    margin: 0 20px !important;
+  a {
+    &:nth-child(even) {
+      margin: 0 0 0 20px;
+    }
   }
-}
-`};
+
+  ${mq.desktop} {
+    width: 1180px;
+
+    a {
+      margin: 0 !important;
+
+      &:nth-child(3n + 2) {
+        margin: 0 20px !important;
+      }
+    }
+  }
 `

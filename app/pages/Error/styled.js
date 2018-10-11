@@ -24,16 +24,17 @@ export const Title = styled.h2`
   line-height: 36px;
   text-transform: uppercase;
   margin: 82px 0 0 0;
-  ${mq.tablet`
-  font-size: 4.8rem;
-  line-height: 48px;
-  margin: 102px 0 0 0;
-  `};
 
-  ${mq.tabletWide`
-  font-size: 7.2rem;
-  line-height: 72px;
-  `};
+  ${mq.tablet} {
+    font-size: 4.8rem;
+    line-height: 48px;
+    margin: 102px 0 0 0;
+  }
+
+  ${mq.tabletWide} {
+    font-size: 7.2rem;
+    line-height: 72px;
+  }
 `
 
 export const Message = styled.p`
@@ -45,10 +46,10 @@ export const Message = styled.p`
   font-family: ${variables.fonts.primary};
   text-align: center;
 
-  ${mq.tabletWide`
-  font-size: 2.4rem;
-  line-height: 32px;
-  `};
+  ${mq.tabletWide} {
+    font-size: 2.4rem;
+    line-height: 32px;
+  }
 `
 
 export const Yoda = styled.div`
@@ -56,13 +57,14 @@ export const Yoda = styled.div`
   width: 135px;
   background-image: url('/static/assets/yoda.png');
   background-size: cover;
-  ${mq.tablet`
-  height:212px;
-  width: 135px;
-  `};
 
-  ${mq.tabletWide`
-  height: 425px;
-  width: 270px;
-  `};
+  ${mq.tablet} {
+    height: 212px;
+    width: 135px;
+  }
+
+  ${mq.tabletWide} {
+    height: 425px;
+    width: 270px;
+  }
 `

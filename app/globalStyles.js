@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-expressions */
 import { injectGlobal } from 'styled-components'
 import variables from 'common/styleVariables'
 
-/* eslint no-unused-expressions: 0 */
 injectGlobal`
   html,
   body {
@@ -20,6 +20,7 @@ injectGlobal`
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
   }
+
   a {
     text-decoration: none;
     color: inherit;
@@ -30,6 +31,7 @@ injectGlobal`
     background: ${variables.colors.black};
     color: ${variables.colors.black};
     font-family: ${variables.fonts.primary};
+  
     > div#__next {
       height: 100%;
       width: 100%;

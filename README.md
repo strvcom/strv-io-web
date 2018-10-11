@@ -17,3 +17,10 @@
 ## Production
 
 [strv.io](https://strv.io)
+
+## 404 Page
+
+Firebase Static Hosting requires having a specific file named `404.html` in the public directory ([read more](https://firebase.google.com/docs/hosting/url-redirects-rewrites#section-404)), therefore following modification is being applied while doing export
+```
+next build && next export && mv out/404/index.html out/404.html && rm -rf out/404
+```

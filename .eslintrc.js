@@ -1,13 +1,16 @@
-'use strict'
-
-// Put this file to the directory where your browser code is located. This could be the root
-// directory, or a subdirectory if your project consists of both node.js and browser code.
 module.exports = {
+  parser: 'babel-eslint',
   extends: [
     '@strv/javascript/environments/react/v16',
     '@strv/javascript/coding-styles/recommended',
     'prettier',
   ],
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+    es6: true,
+  },
   settings: {
     'import/resolver': {
       node: {
@@ -15,5 +18,7 @@ module.exports = {
       },
     },
   },
-  parser: 'babel-eslint',
+  rules: {
+    'import/group-exports': 0,
+  },
 }

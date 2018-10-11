@@ -1,20 +1,14 @@
-import { css } from 'styled-components'
-
-const breakpoints = {
+export const breakpoints = {
   tablet: 768,
   tabletWide: 1024,
   desktop: 1200,
   desktopWide: 1800,
 }
 
-// Iterate through the breakpoints and create a media template
-const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
-  accumulator[label] = (...args) => css`
-    @media (min-width: ${breakpoints[label] / 16}em) {
-      ${css(...args)};
-    }
-  `
+export const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
+  const emSize = breakpoints[label] / 16
+
+  accumulator[label] = `@media (min-width: ${emSize}em)`
+
   return accumulator
 }, {})
-
-export { breakpoints, mq }
