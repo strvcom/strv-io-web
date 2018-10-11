@@ -67,12 +67,12 @@ export const BannerImage = styled.div`
 export const HeadLine = styled.h1`
   font-family: ${variables.fonts.headline};
   color: ${variables.colors.white};
+  font-weight: ${variables.fontWeight.bold};
   letter-spacing: 1px;
   text-align: center;
   line-height: 48px;
   font-size: 4.8rem;
   text-transform: uppercase;
-  font-weight: 700;
   z-index: 2;
   margin: 175px 0 0 0;
   position: relative;
@@ -102,14 +102,16 @@ export const HeadLine = styled.h1`
   }
 `
 
-export const HeadLineTail = styled.div`
+export const HeadLineTail = styled.h2`
   font-family: ${variables.fonts.subHeadline};
   color: ${variables.colors.white};
+  font-weight: ${variables.fontWeight.regular};
   line-height: 38px;
   font-size: 2.6rem;
   letter-spacing: 0;
   text-align: center;
   padding: 27px 0 0 0;
+  margin-top: 0;
   visibility: none;
   z-index: 2;
   margin-bottom: 107px;
