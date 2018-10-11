@@ -1,17 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import { InnerWrapper, Title, Message, Yoda } from './styled'
-import Button from 'components/Button'
+import { InnerWrapper, Title, Message, Img } from './styled'
+import { ButtonLink } from 'components/Button'
 
 const ErrorPage = () => (
   <InnerWrapper>
-    <Title>you got lost</Title>
+    <Title>You Got Lost</Title>
     <Message>
       Go back, you must. <br /> Do or do not. There is no try.
     </Message>
-    <Yoda />
+    <Img src="/static/assets/yoda.png" alt="Yoda" />
     <Link prefetch href="/" passHref>
-      <Button>go back to home</Button>
+      <ButtonLink>Go back to home</ButtonLink>
     </Link>
   </InnerWrapper>
 )
