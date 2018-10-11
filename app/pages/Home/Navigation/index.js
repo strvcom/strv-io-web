@@ -1,17 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'next/link'
-import { Wrapper, NavLink, Ul, Li } from './styled'
+import { Wrapper, Ul, Li } from './styled'
 import categories from 'data/categories'
+import Button from 'components/Button'
 
 const Navigation = ({ activeCategory }) => (
   <Wrapper className="reveal--delay1">
     <Ul>
       {categories.map(val => (
         <Li key={val}>
-          <Link href={`?view=${val}`} replace scroll={false}>
-            <NavLink primary={activeCategory === val}>{val}</NavLink>
-          </Link>
+          <Button
+            href={`/?view=${val}`}
+            replace
+            scroll={false}
+            isPrimary={activeCategory === val}
+          >
+            {val}
+          </Button>
         </Li>
       ))}
     </Ul>

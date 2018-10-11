@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { mq } from 'styles/media'
-import Button from 'components/Button'
 
 export const Wrapper = styled.nav`
   text-align: center;
@@ -21,7 +20,5 @@ export const Ul = styled.ul`
 `
 
 export const Li = styled.li`
-  margin: 5px 5px 5px 5px;
+  margin: 5px;
 `
-
-export const NavLink = Button.withComponent('a')
