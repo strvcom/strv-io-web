@@ -104,42 +104,11 @@ export const HeadLineTail = styled.h2`
   }
 `
 
-export const RepoWrapper = styled.div`
+export const Main = styled.main`
   margin: 0 auto;
   padding: 0 30px;
 
   ${mq.tabletWide} {
     padding: 0;
-  }
-`
-
-export const RepoList = styled.div`
-  margin: 50px auto 0 auto;
-  width: 100%;
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  ${mq.tabletWide} {
-    width: 780px;
-  }
-
-  a {
-    &:nth-child(even) {
-      margin: 0 0 0 20px;
-    }
-  }
-
-  ${mq.desktop} {
-    width: 1180px;
-
-    a {
-      margin: 0 !important;
-
-      &:nth-child(3n + 2) {
-        margin: 0 20px !important;
-      }
-    }
   }
 `

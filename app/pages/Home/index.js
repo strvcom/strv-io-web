@@ -6,21 +6,17 @@ import {
   Banner,
   HeadLine,
   HeadLineTail,
-  RepoWrapper,
-  RepoList,
+  Main,
   BannerInfo,
 } from './styled'
+import List from './List'
 import Navigation from './Navigation'
-import repositories from 'data/repositories'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
-import RepoItem from 'components/RepoItem'
-
-const ALL = 'all'
 
 class Home extends PureComponent {
   componentDidMount() {
-    const ScrollReveal = require('scrollreveal') // eslint-disable-line no-undef
+    const ScrollReveal = require('scrollreveal')
 
     this.scrollReveal = new ScrollReveal({
       scale: 1,
@@ -34,30 +30,14 @@ class Home extends PureComponent {
   }
 
   componentDidUpdate() {
+    // Update reveal animation of a repository item
     this.scrollReveal.reveal('.reveal--delay2', { delay: 100 })
-  }
-
-  renderList() {
-    const { query } = this.props.router
-    const category = query.view || ALL
-    const data =
-      category === ALL
-        ? repositories
-        : repositories.filter(repo => repo.category === category)
-
-    return data.map(repo => (
-      <RepoItem
-        className="reveal--delay2"
-        key={`repo-item-${repo.name}-${category}`}
-        repo={repo}
-      />
-    ))
   }
 
   render() {
     const { query } = this.props.router
     // Show All as default
-    const category = query.view || ALL
+    const category = query.view || 'all'
 
     return (
       <Wrapper>
@@ -70,10 +50,10 @@ class Home extends PureComponent {
             </HeadLineTail>
           </BannerInfo>
         </Banner>
-        <Navigation activeItem={category} />
-        <RepoWrapper>
-          <RepoList>{this.renderList()}</RepoList>
-        </RepoWrapper>
+        <Navigation activeCategory={category} />
+        <Main>
+          <List activeCategory={category} />
+        </Main>
         <Footer />
       </Wrapper>
     )
