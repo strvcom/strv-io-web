@@ -1,10 +1,10 @@
 import React from 'react'
-import { Wrapper, ContinueButton, ArticleLink } from './styled'
+import { Wrapper, Title, ArticleLink } from './styled'
 import Social from 'components/Social'
 
 const Footer = () => (
   <Wrapper>
-    <ContinueButton>Continue Browsing</ContinueButton>
+    <Title>Continue Browsing</Title>
     <ArticleLink
       href="https://www.strv.com/blog/tag/tech"
       target="_blank"

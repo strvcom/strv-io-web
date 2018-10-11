@@ -8,20 +8,21 @@ export const Wrapper = styled.footer`
   max-width: 580px;
 `
 
-export const ContinueButton = styled.div`
+export const Title = styled.h2`
   font-family: ${variables.fonts.primary};
+  font-weight: ${variables.fontWeight.bold};
   font-size: 2rem;
   color: #fff;
   text-align: left;
   padding: 136px 0 29px 0;
-  font-weight: 700;
+  margin: 0;
 `
 
 export const ArticleLink = styled.a`
   color: ${variables.colors.primary};
   font-family: ${variables.fonts.primary};
+  font-weight: ${variables.fontWeight.light};
   font-size: 1.8rem;
-  font-weight: 300;
   letter-spacing: 0.1px;
   width: 100%;
   border-top: solid 1px rgba(136, 136, 136, 0.2);
@@ -32,4 +33,9 @@ export const ArticleLink = styled.a`
   padding: 20px 20px 20px 0;
   display: inline-block;
   text-align: left;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: #fff;
+  }
 `
