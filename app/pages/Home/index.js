@@ -7,7 +7,6 @@ import {
   RepoFilters,
   RepoWrapper,
   RepoList,
-  BannerImage,
   BannerInfo,
 } from './styled'
 import data from 'data'
@@ -59,7 +58,6 @@ class Home extends Component {
       <Wrapper>
         <Header />
         <Banner>
-          <BannerImage />
           <BannerInfo>
             <HeadLine className="reveal">Open source libraries</HeadLine>
             <HeadLineTail className="reveal--delay1">

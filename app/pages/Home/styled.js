@@ -14,54 +14,37 @@ export const Banner = styled.div`
   background-repeat: no-repeat;
   padding: 0 30px;
 
-  ${mq.tabletWide} {
-    height: 538px;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 21, 23, 0) 0%,
+      rgba(17, 21, 23, 0.99) 99%,
+      rgba(17, 21, 23, 1) 100%
+    );
+    filter: dximagetransform.microsoft.gradient(
+      startColorstr= '#00111517',
+      endColorstr= '#111517',
+      GradientType=0
+    );
   }
 `
 
 export const BannerInfo = styled.div`
-  display: flex;
   position: relative;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: center;
+  z-index: 1;
+  text-align: center;
+  padding-top: 17.5rem;
+  padding-bottom: 10.7rem;
 
   ${mq.tabletWide} {
-    justify-content: unset;
+    padding-bottom: 16.2rem;
   }
-`
-
-export const BannerImage = styled.div`
-  position: absolute;
-  flex: 1;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: -moz-linear-gradient(
-    top,
-    rgba(17, 21, 23, 0) 0%,
-    rgba(17, 21, 23, 0.99) 99%,
-    rgba(17, 21, 23, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(17, 21, 23, 0) 0%,
-    rgba(17, 21, 23, 0.99) 99%,
-    rgba(17, 21, 23, 1) 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(17, 21, 23, 0) 0%,
-    rgba(17, 21, 23, 0.99) 99%,
-    rgba(17, 21, 23, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    startColorstr='#00111517',
-    endColorstr='#111517',
-    GradientType=0
-  );
 `
 
 export const HeadLine = styled.h1`
@@ -74,13 +57,13 @@ export const HeadLine = styled.h1`
   font-size: 4.8rem;
   text-transform: uppercase;
   z-index: 2;
-  margin: 175px 0 0 0;
+  margin: 0;
   position: relative;
   padding-bottom: 30px;
 
   ${mq.tablet} {
     line-height: 76px;
-    margin-top: 193px 0 0 0;
+    margin-top: 0;
     font-size: 7.6rem;
   }
 
@@ -111,13 +94,11 @@ export const HeadLineTail = styled.h2`
   letter-spacing: 0;
   text-align: center;
   padding: 27px 0 0 0;
-  margin-top: 0;
+  margin: 0;
   visibility: none;
   z-index: 2;
-  margin-bottom: 107px;
 
   ${mq.tabletWide} {
-    margin-bottom: 0;
     line-height: 48px;
     font-size: 3.2rem;
   }
