@@ -1,7 +1,7 @@
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document' // eslint-disable-line
 import { ServerStyleSheet } from 'styled-components'
-import '../app/globalStyles'
+import '../app/styles/globalStyles'
 
 export default class CustomDocument extends Document {
   static getInitialProps({ renderPage }) {
@@ -20,6 +20,10 @@ export default class CustomDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css"
+          />
           <link rel="icon" href="/static/assets/favicon.ico" />
           <link rel="manifest" href="static/manifest.json" />
           <meta name="mobile-web-app-capable" content="yes" />
