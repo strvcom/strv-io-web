@@ -1,4 +1,4 @@
-![](./static/assets/share-banner.png)
+![](https://strv.ghost.io/content/images/2018/07/3.jpg)
 
 ### STRV.io - Open Source Library Hub
 
