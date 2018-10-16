@@ -63,7 +63,6 @@ export const HeadLine = styled.h1`
 
   ${mq.tablet} {
     line-height: 76px;
-    margin-top: 0;
     font-size: 7.6rem;
   }
 
