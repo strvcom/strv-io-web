@@ -1,23 +1,19 @@
 import React from 'react'
-import Link from 'next/link'
-import { Wrapper, InnerWrapper, Title, Message, Yoda } from './styled'
-import Header from 'components/Header'
+import { InnerWrapper, Title, Message, Img } from './styled'
+import routes from 'common/routes'
 import Button from 'components/Button'
 
 const ErrorPage = () => (
-  <Wrapper>
-    <Header />
-    <InnerWrapper>
-      <Title>you got lost</Title>
-      <Message>
-        Go back, you must. <br /> Do or do not. There is no try.
-      </Message>
-      <Yoda />
-      <Link prefetch href="/" passHref>
-        <Button>go back to home</Button>
-      </Link>
-    </InnerWrapper>
-  </Wrapper>
+  <InnerWrapper>
+    <Title>You Got Lost</Title>
+    <Message>
+      Go back, you must. <br /> Do or do not. There is no try.
+    </Message>
+    <Img src="/static/assets/yoda.png" alt="Yoda" />
+    <Button href={routes.home} prefetch>
+      Go back to home
+    </Button>
+  </InnerWrapper>
 )
 
 export default ErrorPage

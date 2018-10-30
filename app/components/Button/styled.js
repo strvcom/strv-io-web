@@ -1,32 +1,32 @@
 import styled from 'styled-components'
-import variables from 'common/styleVariables'
+import theme from 'styles/theme'
 
-const Button = styled.button`
-  font-family: ${variables.fonts.primary};
+export const StyledButton = styled.button`
+  font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
-  color: ${variables.colors.white};
+  color: ${theme.colors.white};
   background-color: ${props =>
-    props.primary ? variables.colors.primary : variables.colors.black};
+    props.isPrimary ? theme.colors.primary : theme.colors.black};
   letter-spacing: 1.6px;
   text-align: center;
   border-radius: 24px;
   text-transform: uppercase;
   transition: all 0.4s ease;
-  font-weight: 600;
+  font-weight: ${theme.fontWeight.semibold};
   outline: none;
+  cursor: pointer;
   display: inline-block;
-  padding: 13px 30px;
-  line-height: 20px;
-  border: ${props =>
-    props.primary
-      ? `solid 1px ${variables.colors.primary}`
-      : 'solid 1px rgba(255,255,255, 0.2)'};
+  padding: 0 3rem;
+  line-height: 4.8rem;
+  height: 4.8rem;
+  border: solid 1px
+    ${props =>
+      props.isPrimary ? theme.colors.primary : 'rgba(255,255,255, 0.2)'};
 
   &:hover {
-    background-color: ${variables.colors.primary};
-    border: solid 1px ${variables.colors.primary};
+    background-color: ${theme.colors.primary};
+    border: solid 1px ${theme.colors.primary};
   }
-  cursor: pointer;
 `
 
-export default Button
+export const StyledA = StyledButton.withComponent('a')

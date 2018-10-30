@@ -1,4 +1,4 @@
-const variables = {
+const theme = {
   colors: {
     primary: '#ef0d33',
     black: '#111517',
@@ -13,6 +13,12 @@ const variables = {
     headline: 'Trump Gothic East, sans-serif',
     subHeadline: 'Playfair Display, sans-serif',
   },
+  fontWeight: {
+    light: 300,
+    regular: 400,
+    semibold: 600,
+    bold: 700,
+  },
 }
 
-export default variables
+export default theme

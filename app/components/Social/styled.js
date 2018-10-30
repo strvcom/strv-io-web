@@ -1,26 +1,36 @@
 import styled from 'styled-components'
 
-export const IconWrapper = styled.a`
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-
-  g {
-    transition: fill 0.4s ease;
-  }
-
-  &:hover {
-    g {
-      fill: #fff;
-    }
-  }
-`
-
-export const Wrapper = styled.div`
+export const Ul = styled.ul`
   width: 227px;
   display: flex;
   margin: 0 auto;
   padding: 77px 0 92px 0;
   align-items: center;
   justify-content: space-between;
+`
+
+export const Li = styled.li``
+
+export const Link = styled.a`
+  position: relative;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+
+  path {
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    path {
+      opacity: 1;
+    }
+  }
+`
+
+export const Title = styled.span`
+  position: absolute;
+  width: 0;
+  overflow: hidden;
 `

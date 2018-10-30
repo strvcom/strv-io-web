@@ -1,6 +1,7 @@
+import React from 'react'
 import App, { Container } from 'next/app'
 import Head from 'next/head'
-import React from 'react'
+import Header from '../app/components/Header'
 
 const meta = {
   title: "STRV's Open Source Libraries",
@@ -35,6 +36,7 @@ export default class MyApp extends App {
           <meta property="og:url" content={meta.ogUrl} />
           <meta property="og:image" content={meta.ogImage} />
         </Head>
+        <Header />
         <Component {...pageProps} />
       </Container>
     )

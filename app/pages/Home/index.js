@@ -1,32 +1,14 @@
-import React, { Component } from 'react'
-import {
-  Wrapper,
-  Banner,
-  HeadLine,
-  HeadLineTail,
-  RepoFilters,
-  RepoWrapper,
-  RepoList,
-  BannerImage,
-  BannerInfo,
-} from './styled'
-import data from 'data'
-import Button from 'components/Button'
-import Header from 'components/Header'
+import React, { Fragment, PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import { withRouter } from 'next/router'
+import { Banner, HeadLine, HeadLineTail, Main, BannerInfo } from './styled'
+import List from './List'
+import Navigation from './Navigation'
 import Footer from 'components/Footer'
-import RepoItem from 'components/RepoItem'
 
-class Home extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      repos: data,
-      category: 'all',
-    }
-  }
-
+class Home extends PureComponent {
   componentDidMount() {
-    const ScrollReveal = require('scrollreveal') // eslint-disable-line no-undef
+    const ScrollReveal = require('scrollreveal')
 
     this.scrollReveal = new ScrollReveal({
       scale: 1,
@@ -40,26 +22,18 @@ class Home extends Component {
   }
 
   componentDidUpdate() {
+    // Update reveal animation of a repository item
     this.scrollReveal.reveal('.reveal--delay2', { delay: 100 })
   }
 
-  filterRepos = category => {
-    this.setState({
-      repos:
-        category === 'all'
-          ? data
-          : data.filter(repo => repo.category === category),
-      category,
-    })
-  }
-
   render() {
-    const { repos, category } = this.state
+    const { query } = this.props.router
+    // Show All as default
+    const category = query.filter || 'all'
+
     return (
-      <Wrapper>
-        <Header />
+      <Fragment>
         <Banner>
-          <BannerImage />
           <BannerInfo>
             <HeadLine className="reveal">Open source libraries</HeadLine>
             <HeadLineTail className="reveal--delay1">
@@ -67,53 +41,22 @@ class Home extends Component {
             </HeadLineTail>
           </BannerInfo>
         </Banner>
-        <RepoWrapper>
-          <RepoFilters className="reveal--delay1">
-            <Button
-              primary={category === 'all'}
-              onClick={() => this.filterRepos('all')}
-            >
-              all
-            </Button>
-            <Button
-              primary={category === 'backend'}
-              onClick={() => this.filterRepos('backend')}
-            >
-              backend
-            </Button>
-            <Button
-              primary={category === 'android'}
-              onClick={() => this.filterRepos('android')}
-            >
-              android
-            </Button>
-            <Button
-              primary={category === 'ios'}
-              onClick={() => this.filterRepos('ios')}
-            >
-              ios
-            </Button>
-            <Button
-              primary={category === 'iot'}
-              onClick={() => this.filterRepos('iot')}
-            >
-              iot
-            </Button>
-          </RepoFilters>
-          <RepoList>
-            {repos.map(repo => (
-              <RepoItem
-                className="reveal--delay2"
-                key={`repo-item-${repo.name}-${category}`}
-                repo={repo}
-              />
-            ))}
-          </RepoList>
-        </RepoWrapper>
+        <Navigation activeCategory={category} />
+        <Main>
+          <List activeCategory={category} />
+        </Main>
         <Footer />
-      </Wrapper>
+      </Fragment>
     )
   }
 }
 
-export default Home
+Home.propTypes = {
+  router: PropTypes.shape({
+    query: PropTypes.shape({
+      view: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+}
+
+export default withRouter(Home)
