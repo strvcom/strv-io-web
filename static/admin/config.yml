@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: ddcech/ddcech.github.io
+  repo: strvcom/strv-io-web
+  branch: "gatsby"
 collections:
   - name: "tool" # Used in routes, e.g., /admin/collections/blog
     label: "Tool" # Used in the UI
