@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Fade from 'react-reveal/Fade'
 import { Ul, Li } from './styled'
 import Item from './Item'
 import repositories from 'data/repositories'
@@ -18,7 +19,7 @@ const List = ({ activeCategory }) => {
           className="reveal--delay2"
           key={`repo-item-${repo.name}-${activeCategory}`}
         >
-          <Item repo={repo} />
+          <Fade duration={2000}><Item repo={repo} /></Fade>
         </Li>
       ))}
     </Ul>

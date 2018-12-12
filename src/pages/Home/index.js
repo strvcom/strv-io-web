@@ -7,25 +7,6 @@ import Navigation from './Navigation'
 import Footer from 'components/Footer'
 
 class Home extends Component {
-  // componentDidMount() {
-  //   const ScrollReveal = require('scrollreveal')
-
-  //   this.scrollReveal = new ScrollReveal({
-  //     scale: 1,
-  //     duration: 800,
-  //     easing: 'ease',
-  //     distance: '50px',
-  //   })
-  //   this.scrollReveal.reveal('.reveal')
-  //   this.scrollReveal.reveal('.reveal--delay1', { delay: 100 })
-  //   this.scrollReveal.reveal('.reveal--delay2', { delay: 200 })
-  // }
-
-  // componentDidUpdate() {
-  //   // Update reveal animation of a repository item
-  //   this.scrollReveal.reveal('.reveal--delay2', { delay: 100 })
-  // }
-
   render() {
     // const { query } = this.props.router
     // Show All as default
