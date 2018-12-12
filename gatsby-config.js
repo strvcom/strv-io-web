@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/assets`,
       },
     },
     'gatsby-transformer-sharp',
@@ -23,7 +23,7 @@ module.exports = {
         short_name: 'starter',
         start_url: '/',
         display: 'minimal-ui',
-        icon: 'src/images/android-chrome-512x512.png', // This path is relative to the root of the site.
+        icon: 'static/assets/android-chrome-512x512.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

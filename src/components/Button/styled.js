@@ -28,5 +28,3 @@ export const StyledButton = styled.button`
     border: solid 1px ${theme.colors.primary};
   }
 `
-
-export const StyledA = StyledButton.withComponent('a')

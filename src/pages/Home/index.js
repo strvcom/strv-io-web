@@ -1,10 +1,10 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
 import querystring from 'query-string'
-// import { withRouter } from 'next/router'
 import { Banner, HeadLine, HeadLineTail, Main, BannerInfo } from './styled'
 import List from './List'
 import Navigation from './Navigation'
+import Header from 'components/Header'
 import Footer from 'components/Footer'
 
 class Home extends Component {
@@ -17,6 +17,7 @@ class Home extends Component {
 
     return (
       <Fragment>
+        <Header />
         <Banner>
           <BannerInfo>
             <HeadLine className="reveal">Open source libraries</HeadLine>

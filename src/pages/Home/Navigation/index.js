@@ -13,7 +13,6 @@ const Navigation = ({ activeCategory }) => (
           <Button
             href={routes.homeWithFilter(val)}
             replace
-            scroll={false}
             isPrimary={activeCategory === val}
           >
             {val}

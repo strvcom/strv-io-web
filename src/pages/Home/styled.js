@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
-import banner from 'images/assets/banner.png'
+import banner from 'images/banner.png'
 
 export const Wrapper = styled.div`
   height: 100%;
