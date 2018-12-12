@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
+import querystring from 'query-string'
 // import { withRouter } from 'next/router'
 import { Banner, HeadLine, HeadLineTail, Main, BannerInfo } from './styled'
 import List from './List'
@@ -8,9 +9,11 @@ import Footer from 'components/Footer'
 
 class Home extends Component {
   render() {
-    // const { query } = this.props.router
+    const { search } = this.props.location
+    const query = querystring.parse(search)
+    
     // Show All as default
-    const category = 'all' //query.filter || 'all'
+    const category = query.filter || 'all'
 
     return (
       <Fragment>
@@ -32,12 +35,10 @@ class Home extends Component {
   }
 }
 
-// Home.propTypes = {
-//   router: PropTypes.shape({
-//     query: PropTypes.shape({
-//       view: PropTypes.string,
-//     }).isRequired,
-//   }).isRequired,
-// }
+Home.propTypes = {
+  location: PropTypes.shape({
+    search: PropTypes.string.isRequired,
+  }).isRequired,
+}
 
 export default Home
