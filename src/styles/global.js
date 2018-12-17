@@ -19,7 +19,7 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscaled;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    font-size: 62.5%;
+    ${'' /* font-size: 62.5%; */}
   }
 
   body {
@@ -34,7 +34,7 @@ export default createGlobalStyle`
     }
   }
 
-  #__next {
+  #___gatsby {
     height: 100%;
   }
 
