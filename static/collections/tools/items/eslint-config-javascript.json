@@ -4,5 +4,5 @@
   "description": "Various configuration files for the awesome JavaScript linter, ESLint",
   "owner": "strvcom",
   "category": "backend",
-  "icon": " Open SVG  Paste markup Demo Contribute About Powered by the incredible SVGO   370 bytes → 190 bytes 51.35% <svg width=\"64\" height=\"54\" viewBox=\"0 0 64 54\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M2 27L17 1h30l15 26-15 26H17z\"/><path stroke=\"#EF0D33\" d=\"M32 12l13 7.5v15L32 42l-13-7.5v-15z\"/></g></svg>"
+  "icon": "<svg width=\"64\" height=\"54\" viewBox=\"0 0 64 54\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M2 27L17 1h30l15 26-15 26H17z\"/><path stroke=\"#EF0D33\" d=\"M32 12l13 7.5v15L32 42l-13-7.5v-15z\"/></g></svg>"
 }
