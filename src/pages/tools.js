@@ -19,10 +19,19 @@ const StyledTools = styled.div`
 
 class Tools extends Component {
   render() {
-    const { data } = this.props
-    console.log(data)
+    const { edges } = this.props.data.allItemsJson
+    console.log(edges)
     return (
-      <StyledTools>Tools Hrere</StyledTools>
+      <StyledTools>
+        <h3>Tools HEre</h3>
+        <ul>
+          {edges.map(tool => (
+            <li>
+              Name: {tool.node.name}
+            </li>
+          ))}
+        </ul>
+      </StyledTools>
     )
   }
 }
@@ -33,9 +42,17 @@ Tools.propTypes = {
   }).isRequired,
 }
 
-// export const query = graphql`
-//   query IndexQuery {
-//   }
-// `
+export const query = graphql`
+  query IndexQuery {
+    allItemsJson {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+`
 
 export default Tools
