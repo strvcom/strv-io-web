@@ -1,8 +1,6 @@
 {
-  "name": "ESLint",
-  "url": "https://github.com/strvcom/atlas.js",
-  "description": "Component-based Node.js framework for all kinds of use cases",
-  "category": "backend",
-  "owner": "strvcom",
-  "icon": ""
+  "name": "ESlint-Config-Javascript",
+  "url": "https://github.com/strvcom/eslint-config-javascript",
+  "description": "Various configuration files for the awesome JavaScript linter, ESLint",
+  "owner": "strvcom"
 }
