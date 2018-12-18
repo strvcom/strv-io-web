@@ -1,0 +1,8 @@
+{
+  "name": "LCDKeypad Arduino Library",
+  "url": "https://github.com/dzindra/LCDKeypad",
+  "description": "This library allows you to control display, read button state and toggle backlight of LCDKeypad shield",
+  "owner": "dzindra",
+  "category": "iot",
+  "icon": "<svg width=\"46\" height=\"63\" viewBox=\"0 0 46 63\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(1 1)\" fill=\"none\"><circle stroke=\"#FFF\" cx=\"5\" cy=\"5\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"22\" cy=\"5\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"39\" cy=\"5\" r=\"5\"/><circle stroke=\"#EF0D33\" cx=\"5\" cy=\"22\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"22\" cy=\"22\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"39\" cy=\"22\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"5\" cy=\"39\" r=\"5\"/><circle stroke=\"#EF0D33\" cx=\"22\" cy=\"39\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"39\" cy=\"39\" r=\"5\"/><circle stroke=\"#FFF\" cx=\"22\" cy=\"56\" r=\"5\"/></g></svg>"
+}
