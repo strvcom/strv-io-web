@@ -17,6 +17,5 @@ collections:
       - {label: "Owner", name: "owner", widget: "string"}
       - {label: "Category", name: "category", widget: "select", options: ["backend", "android", "ios", "iot"]}
       - {label: "Icon", name: "icon", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", allow_multiple: false}
 media_folder: static/img
 public_folder: /img

@@ -19,17 +19,23 @@ import { Link, graphql } from 'gatsby'
 
 class Tools extends Component {
   render() {
-    // const { edges } = this.props.data.allItemsJson
-    // console.log(edges)
+    const { edges } = this.props.data.allItemsJson
+    console.log(edges)
+
+    const image = {__html: 'First &middot; Second'};
+
     return (
       <div>
         <h3>Tools HEre</h3>
         <ul>
-          {/* {edges.map(tool => (
-            <li>
-              Name: {tool.node.name}
+          {edges.map(tool => (
+            <li key={tool.node.id}>
+              <div dangerouslySetInnerHTML={{__html: tool.node.icon}} />
+              <div>{tool.node.name}</div>
+              <div>{tool.node.description}</div>
+              <div>{tool.node.category}</div>
             </li>
-          ))} */}
+          ))}
         </ul>
       </div>
     )
@@ -42,17 +48,20 @@ Tools.propTypes = {
   }).isRequired,
 }
 
-// export const query = graphql`
-//   query IndexQuery {
-//     allItemsJson {
-//       edges {
-//         node {
-//           id
-//           name
-//         }
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query ToolsQuery {
+    allItemsJson {
+      edges {
+        node {
+          id
+          name
+          description
+          category
+          icon
+        }
+      }
+    }
+  }
+`
 
 export default Tools
