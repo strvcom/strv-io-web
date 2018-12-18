@@ -1,0 +1,8 @@
+{
+  "name": "Toy Car",
+  "url": "https://github.com/dzindra/toycar",
+  "description": "Cool WiFi-controlled toy car with Pololu wheels and a 3D-printed case",
+  "owner": "dzindra",
+  "category": "iot",
+  "icon": "<svg width=\"58\" height=\"58\" viewBox=\"0 0 58 58\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(-11 -11)\" fill=\"none\"><circle stroke=\"#FFF\" cx=\"40\" cy=\"40\" r=\"28\"/><circle stroke=\"#EF0D33\" cx=\"40\" cy=\"40\" r=\"8\"/><path d=\"M40 53v15M53 37l14-3.98M27 37l-14-3.98\" stroke=\"#FFF\"/></g></svg>"
+}
