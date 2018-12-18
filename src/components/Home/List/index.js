@@ -6,20 +6,20 @@ import Item from './Item'
 import repositories from 'data/repositories'
 import categories from 'data/categories'
 
-const List = ({ activeCategory }) => {
+const List = ({ activeCategory, items }) => {
   const data =
     activeCategory === 'all'
-      ? repositories
-      : repositories.filter(repo => repo.category === activeCategory)
+      ? items
+      : items.filter(repo => repo.node.category === activeCategory)
 
   return (
     <Ul>
       {data.map(repo => (
         <Li
           className="reveal--delay2"
-          key={`repo-item-${repo.name}-${activeCategory}`}
+          key={`repo-item-${repo.node.name}-${activeCategory}`}
         >
-          <Fade duration={2000}><Item repo={repo} /></Fade>
+          <Fade duration={2000}><Item repo={repo.node} /></Fade>
         </Li>
       ))}
     </Ul>

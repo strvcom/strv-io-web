@@ -4,7 +4,7 @@ import { Link, Name, Description, Category, IconWrapper } from './styled'
 
 const Item = ({ repo }) => (
   <Link href={repo.url} target="_blank" rel="noopener noreferrer">
-    <IconWrapper>{repo.icon}</IconWrapper>
+    <IconWrapper dangerouslySetInnerHTML={{__html: repo.icon}} />
     <Name>{repo.name}</Name>
     <Description>{repo.description}</Description>
     <Category>{repo.category}</Category>

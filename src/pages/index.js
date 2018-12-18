@@ -1,5 +1,6 @@
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import querystring from 'query-string'
 import { Banner, HeadLine, HeadLineTail, Main, BannerInfo } from '../components/Home/styled'
 import List from 'components/Home/List'
@@ -9,8 +10,8 @@ import Footer from 'components/Footer'
 
 class Home extends Component {
   render() {
-    const { edges } = this.props.data.allItemsJson
-    console.log(edges)
+    const items = this.props.data.allItemsJson.edges
+
     const { search } = this.props.location
     const query = querystring.parse(search)
     
@@ -30,7 +31,7 @@ class Home extends Component {
         </Banner>
         <Navigation activeCategory={category} />
         <Main>
-          <List activeCategory={category} />
+          <List items={items} activeCategory={category} />
         </Main>
         <Footer />
       </Fragment>
@@ -52,6 +53,10 @@ export const query = graphql`
         node {
           id
           name
+          url
+          description
+          category
+          icon
         }
       }
     }
