@@ -1,0 +1,8 @@
+{
+  "name": "DCTableViewController",
+  "url": "https://github.com/DanielCech/DCTableViewController",
+  "description": "Convenience wrapper for UITableViews will help simplify your work",
+  "owner": "DanielCech",
+  "category": "ios",
+  "icon": "<svg width=\"52\" height=\"52\" viewBox=\"0 0 52 52\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M1 1h10v10H1zM1 21h10v10H1zM1 41h10v10H1zM21 1h10v10H21z\"/><path stroke=\"#EF0D33\" d=\"M21 21h10v10H21z\"/><path stroke=\"#FFF\" d=\"M21 41h10v10H21z\"/><path stroke=\"#EF0D33\" d=\"M41 1h10v10H41z\"/><path stroke=\"#FFF\" d=\"M41 21h10v10H41zM41 41h10v10H41z\"/></g></svg>"
+}
