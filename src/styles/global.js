@@ -19,13 +19,14 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscaled;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    ${'' /* font-size: 62.5%; */}
+    font-size: 62.5%;
   }
 
   body {
     background: ${theme.colors.black};
     font-family: ${theme.fonts.primary};
     color: white;
+    margin: 0;
 
     @media print {
       transform: scale(0.8);
