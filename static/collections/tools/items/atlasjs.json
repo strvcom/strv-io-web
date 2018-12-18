@@ -2,5 +2,8 @@
   "name": "Atlas.js",
   "url": "https://github.com/strvcom/atlas.js",
   "description": "Component-based Node.js framework for all kinds of use cases",
-  "owner": "strvcom"
+  "owner": "strvcom",
+  "category": "backend",
+  "icon": "<svg width=\"52\" height=\"61\" viewBox=\"0 0 52 61\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(-12 1)\" fill=\"none\"><circle stroke=\"#EF0D33\" cx=\"42\" cy=\"21\" r=\"20\"/><path d=\"M21.5.5a29 29 0 1 0 41 41M42 50v9M54 59H30\" stroke=\"#FFF\"/></g></svg>",
+  "image": "/img/atlasjs.svg"
 }
