@@ -1,0 +1,8 @@
+{
+  "name": "Long Touch",
+  "url": "https://github.com/jakubkinst/Android-LongTouch",
+  "description": "Small library for adding 3D Touch-like popups to your Android App Views",
+  "owner": "jakubkinst",
+  "category": "android",
+  "icon": "<svg width=\"62\" height=\"62\" viewBox=\"0 0 62 62\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(1 1)\" fill=\"none\"><path d=\"M30 60a30 30 0 1 0 0-60 30 30 0 0 0 0 60z\" stroke=\"#FFF\"/><circle stroke=\"#FFF\" cx=\"30\" cy=\"30\" r=\"20\"/><circle stroke=\"#EF0D33\" cx=\"30\" cy=\"30\" r=\"10\"/></g></svg>"
+}
