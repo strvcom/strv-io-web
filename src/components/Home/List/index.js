@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { Ul, Li } from './styled'
 import Item from './Item'
-import repositories from 'data/repositories'
 import categories from 'data/categories'
 
 const List = ({ activeCategory, items }) => {
