@@ -6,20 +6,20 @@ const MetaHead = ({ title, description }) => (
   <Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta property="og:image" content="/static/assets/banner.jpg" />
+    <meta property="og:image" content="/static/assets/share-banner.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="628" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://www.joust.com" />
+    <meta property="og:url" content="https://strv.io" />
     <meta name="twitter:card" content="summary_large_image" />
   </Helmet>
 )
 
 MetaHead.defaultProps = {
-  title: 'Joust - The all-inclusive banking toolkit for entrepreneurs',
+  title: "STRV's Open Source Libraries",
   description:
-    'Joust, the all-inclusive banking toolkit for entrepreneurs and freelancers. We do banking, payments and invoices so you can do what matters.',
+    'Over the years STRV’s developers have built up quite a lot of open source libraries. This is the place where you’ll find all of them. Have fun.',
 }
 
 MetaHead.propTypes = {
