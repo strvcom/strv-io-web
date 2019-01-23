@@ -1,21 +1,26 @@
 backend:
   name: github
   repo: strvcom/strv-io-web
-  branch: "gatsby"
+  branch: 'master'
 collections:
-  - name: "tool" # Used in routes, e.g., /admin/collections/blog
-    label: "Tool" # Used in the UI
-    folder: "static/collections/tools/items" # The path to the folder where the documents are stored
+  - name: 'tool' # Used in routes, e.g., /admin/collections/blog
+    label: 'Tool' # Used in the UI
+    folder: 'static/collections/tools/items' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    identifier_field: "name"
-    extension: "json"
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: 'name'
+    extension: 'json'
     fields: # The fields for each document, usually in front matter
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "URL", name: "url", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Owner", name: "owner", widget: "string"}
-      - {label: "Category", name: "category", widget: "select", options: ["backend", "android", "ios", "iot"]}
-      - {label: "Icon", name: "icon", widget: "string"}
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'URL', name: 'url', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Owner', name: 'owner', widget: 'string' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options: ['backend', 'android', 'ios', 'iot'],
+        }
+      - { label: 'Icon', name: 'icon', widget: 'string' }
 media_folder: static/img
 public_folder: /img
