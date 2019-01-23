@@ -2,7 +2,7 @@
   "name": "strv-io",
   "description": "strv.io website",
   "version": "1.0.0",
-  "author": "David Cech",
+  "author": "STRV",
   "dependencies": {
     "gatsby": "^2.0.70",
     "gatsby-image": "^2.0.25",
