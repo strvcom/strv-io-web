@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Wrapper, Ul, Li } from './styled'
-import CATEGORIES from 'data/categories'
+import { CATEGORIES } from 'common/constants'
 import Button from 'components/Button'
 import routes from 'common/routes'
 
