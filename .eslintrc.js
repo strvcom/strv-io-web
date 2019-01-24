@@ -19,5 +19,6 @@ module.exports = {
     'import/group-exports': 0,
     'import/order': 0,
     'max-len': 0,
+    'no-warning-comments': 0,
   },
 }
