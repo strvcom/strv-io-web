@@ -15,35 +15,33 @@ import Navigation from 'components/Home/Navigation'
 import List from 'components/Home/List'
 import Footer from 'components/Footer'
 
-class Home extends Component {
-  render() {
-    const items = this.props.data.allItemsJson.edges
+const Home = ({ data, location }) => {
+  const items = data.allItemsJson.edges
 
-    const { search } = this.props.location
-    const query = queryString.parse(search)
+  const { search } = location
+  const query = queryString.parse(search)
 
-    // Show All as default
-    const category = query.filter || CATEGORIES.ALL
+  // Show All as default
+  const category = query.filter || CATEGORIES.ALL
 
-    return (
-      <Fragment>
-        <Header />
-        <Banner>
-          <BannerInfo>
-            <HeadLine className="reveal">Open source libraries</HeadLine>
-            <HeadLineTail className="reveal--delay1">
-              Curated by STRV developers
-            </HeadLineTail>
-          </BannerInfo>
-        </Banner>
-        <Navigation activeCategory={category} />
-        <Main>
-          <List items={items} activeCategory={category} />
-        </Main>
-        <Footer />
-      </Fragment>
-    )
-  }
+  return (
+    <Fragment>
+      <Header />
+      <Banner>
+        <BannerInfo>
+          <HeadLine className="reveal">Open source libraries</HeadLine>
+          <HeadLineTail className="reveal--delay1">
+            Curated by STRV developers
+          </HeadLineTail>
+        </BannerInfo>
+      </Banner>
+      <Navigation activeCategory={category} />
+      <Main>
+        <List items={items} activeCategory={category} />
+      </Main>
+      <Footer />
+    </Fragment>
+  )
 }
 
 Home.propTypes = {
