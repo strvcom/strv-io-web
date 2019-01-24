@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Wrapper, Ul, Li } from './styled'
+import routes from 'common/routes'
 import { CATEGORIES } from 'common/constants'
 import Button from 'components/Button'
-import routes from 'common/routes'
+import { Wrapper, Ul, Li } from './styled'
 
 const Navigation = ({ activeCategory }) => (
   <Wrapper className="reveal--delay1">

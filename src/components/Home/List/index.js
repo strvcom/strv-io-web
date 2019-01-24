@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
 import { CATEGORIES } from 'common/constants'
-import { Ul, Li } from './styled'
 import Item from './Item'
+import { Ul, Li } from './styled'
 
 const List = ({ activeCategory, items }) => {
   const data =

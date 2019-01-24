@@ -1,7 +1,7 @@
 import React from 'react'
 import { Facebook, Twitter, Dribbble, LinkedIn, Behance, Vimeo } from './icons'
 
-export const networks = [
+export const NETWORKS = [
   {
     title: 'Facebook',
     icon: <Facebook />,

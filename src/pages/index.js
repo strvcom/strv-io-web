@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import queryString from 'query-string'
 import { CATEGORIES } from 'common/constants'
+import Header from 'components/Header'
 import {
   Banner,
   HeadLine,
@@ -10,9 +11,8 @@ import {
   Main,
   BannerInfo,
 } from 'components/Home/styled'
-import List from 'components/Home/List'
 import Navigation from 'components/Home/Navigation'
-import Header from 'components/Header'
+import List from 'components/Home/List'
 import Footer from 'components/Footer'
 
 class Home extends Component {

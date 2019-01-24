@@ -1,10 +1,10 @@
 import React from 'react'
 import { Ul, Li, Link, Title } from './styled'
-import { networks } from './constants'
+import { NETWORKS } from './constants'
 
 const Social = () => (
   <Ul>
-    {networks.map(val => (
+    {NETWORKS.map(val => (
       <Li key={val.title}>
         <Link target="_blank" rel="noopener noreferrer" href={val.url}>
           {val.icon}

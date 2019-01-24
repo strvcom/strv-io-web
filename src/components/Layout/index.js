@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import MetaHead from 'components/MetaHead'
 import { Wrap } from './styled'
-import MetaHead from '../MetaHead'
 
 class Layout extends React.Component {
   render() {
