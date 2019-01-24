@@ -1,3 +1,9 @@
-const categories = ['all', 'backend', 'android', 'ios', 'iot']
+const CATEGORIES = {
+  ALL: 'all',
+  ANDROID: 'android',
+  BACKEND: 'backend',
+  IOS: 'ios',
+  IOT: 'iot',
+}
 
-export default categories
+export default CATEGORIES

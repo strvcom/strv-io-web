@@ -1,30 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Wrapper, Ul, Li } from './styled'
-import categories from 'data/categories'
+import CATEGORIES from 'data/categories'
 import Button from 'components/Button'
 import routes from 'common/routes'
 
 const Navigation = ({ activeCategory }) => (
   <Wrapper className="reveal--delay1">
     <Ul>
-      {categories.map(val => (
-        <Li key={val}>
-          <Button
-            href={routes.homeWithFilter(val)}
-            replace
-            isPrimary={activeCategory === val}
-          >
-            {val}
-          </Button>
-        </Li>
-      ))}
+      {Object.keys(CATEGORIES).map(categoryKey => {
+        const category = CATEGORIES[categoryKey]
+        return (
+          <Li key={category}>
+            <Button
+              href={routes.homeWithFilter(category)}
+              replace
+              isPrimary={activeCategory === category}
+            >
+              {category}
+            </Button>
+          </Li>
+        )
+      })}
     </Ul>
   </Wrapper>
 )
 
+// @TODO Avoid using Object.values by switching to Typescript
 Navigation.propTypes = {
-  activeCategory: PropTypes.oneOf(categories).isRequired,
+  activeCategory: PropTypes.oneOf(Object.values(CATEGORIES)).isRequired,
 }
 
 export default Navigation
