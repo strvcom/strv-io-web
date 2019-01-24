@@ -10,8 +10,6 @@ export const Ul = styled.ul`
   list-style: none;
 `
 
-export const Li = styled.li``
-
 export const Link = styled.a`
   position: relative;
   display: inline-block;
