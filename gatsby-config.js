@@ -1,7 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'STRV.IO',
-  },
   plugins: [
     'gatsby-plugin-resolve-src',
     'gatsby-plugin-styled-components',

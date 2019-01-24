@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
-import Layout from 'components/Layout'
+import Helmet from 'react-helmet'
 import GlobalStyles from 'styles/global'
+import Layout from 'components/Layout'
 
 export const wrapRootElement = ({ element }) => {
   return (

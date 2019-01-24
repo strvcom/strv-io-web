@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import MetaHead from 'components/MetaHead'
-import { Wrap } from './styled'
 
 const Layout = ({ children }) => (
-  <Wrap>
+  <Fragment>
     <MetaHead />
     {children}
-  </Wrap>
+  </Fragment>
 )
 
 Layout.propTypes = {
