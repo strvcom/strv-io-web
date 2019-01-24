@@ -30,6 +30,7 @@ const List = ({ activeCategory, items }) => {
 // @TODO Avoid using Object.values by switching to Typescript
 List.propTypes = {
   activeCategory: PropTypes.oneOf(Object.values(CATEGORIES)).isRequired,
+  items: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default List

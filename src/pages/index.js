@@ -21,7 +21,7 @@ const Home = ({ data, location }) => {
   const { search } = location
   const query = queryString.parse(search)
 
-  // Show All as default
+  // Show all as default
   const category = query.filter || CATEGORIES.ALL
 
   return (
@@ -45,6 +45,7 @@ const Home = ({ data, location }) => {
 }
 
 Home.propTypes = {
+  data: PropTypes.object,
   location: PropTypes.shape({
     search: PropTypes.string.isRequired,
   }).isRequired,
