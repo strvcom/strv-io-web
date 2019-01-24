@@ -40,8 +40,7 @@ export default css`
     font-weight: 400;
     font-style: normal;
     font-display: optional;
-    src: url('/assets/fonts/PlayfairDisplayRegular.woff2')
-        format('woff2'),
+    src: url('/assets/fonts/PlayfairDisplayRegular.woff2') format('woff2'),
       url('/assets/fonts/PlayfairDisplayRegular.woff') format('woff');
   }
 

@@ -4,7 +4,7 @@ import { Link, Name, Description, Category, IconWrapper } from './styled'
 
 const Item = ({ repo }) => (
   <Link href={repo.url} target="_blank" rel="noopener noreferrer">
-    <IconWrapper dangerouslySetInnerHTML={{__html: repo.icon}} />
+    <IconWrapper dangerouslySetInnerHTML={{ __html: repo.icon }} />
     <Name>{repo.name}</Name>
     <Description>{repo.description}</Description>
     <Category>{repo.category}</Category>
@@ -13,11 +13,11 @@ const Item = ({ repo }) => (
 
 Item.propTypes = {
   repo: PropTypes.shape({
-    icon: PropTypes.node.isRequired,
-    url: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    icon: PropTypes.node.isRequired,
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
   }).isRequired,
 }
 

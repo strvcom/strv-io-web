@@ -4,18 +4,12 @@ import { graphql } from 'gatsby'
 import queryString from 'query-string'
 import { CATEGORIES } from 'common/constants'
 import Header from 'components/Header'
-import {
-  Banner,
-  HeadLine,
-  HeadLineTail,
-  Main,
-  BannerInfo,
-} from 'components/Home/styled'
+import { Banner, HeadLine, HeadLineTail, Main, BannerInfo } from 'components/Home/styled'
 import Navigation from 'components/Home/Navigation'
 import List from 'components/Home/List'
 import Footer from 'components/Footer'
 
-const Home = ({ data, location }) => {
+const Home = ({ data }) => {
   const items = data.allItemsJson.edges
 
   const { search } = location
@@ -30,9 +24,7 @@ const Home = ({ data, location }) => {
       <Banner>
         <BannerInfo>
           <HeadLine className="reveal">Open source libraries</HeadLine>
-          <HeadLineTail className="reveal--delay1">
-            Curated by STRV developers
-          </HeadLineTail>
+          <HeadLineTail className="reveal--delay1">Curated by STRV developers</HeadLineTail>
         </BannerInfo>
       </Banner>
       <Navigation activeCategory={category} />
@@ -45,7 +37,7 @@ const Home = ({ data, location }) => {
 }
 
 Home.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
   location: PropTypes.shape({
     search: PropTypes.string.isRequired,
   }).isRequired,

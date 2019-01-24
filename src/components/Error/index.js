@@ -3,7 +3,7 @@ import ROUTES from 'common/routes'
 import Button from 'components/Button'
 import { InnerWrapper, Title, Message, Img } from './styled'
 
-const Error = () => (
+const ErrorPage = () => (
   <InnerWrapper>
     <Title>You Got Lost</Title>
     <Message>
@@ -16,4 +16,4 @@ const Error = () => (
   </InnerWrapper>
 )
 
-export default Error
+export default ErrorPage

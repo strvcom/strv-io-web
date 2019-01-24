@@ -26,10 +26,10 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
-  href: PropTypes.string,
-  type: PropTypes.string,
   children: PropTypes.node.isRequired,
+  href: PropTypes.string,
   isPrimary: PropTypes.bool,
+  type: PropTypes.string,
 }
 
 export default Button
