@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import routes from 'common/routes'
+import queryString from 'query-string'
+import ROUTES from 'common/routes'
 import { CATEGORIES } from 'common/constants'
 import Button from 'components/Button'
 import { Wrapper, Ul, Li } from './styled'
@@ -10,10 +11,13 @@ const Navigation = ({ activeCategory }) => (
     <Ul>
       {Object.keys(CATEGORIES).map(categoryKey => {
         const category = CATEGORIES[categoryKey]
+        const newQueryString = queryString.stringify({
+          filter: category,
+        })
         return (
           <Li key={category}>
             <Button
-              href={routes.homeWithFilter(category)}
+              href={`${ROUTES.HOME}?${newQueryString}`}
               replace
               isPrimary={activeCategory === category}
             >
