@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import queryString from 'query-string'
