@@ -12,7 +12,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": "eslint src --fix",
+    "lint:style": "stylelint src --fix"
   },
   "husky": {
     "hooks": {
@@ -21,8 +23,9 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint src --fix",
-      "stylelint src"
+      "npm run lint:js",
+      "npm run lint:style",
+      "git add"
     ]
   },
   "dependencies": {
