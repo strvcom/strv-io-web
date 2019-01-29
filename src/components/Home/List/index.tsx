@@ -1,13 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Fade from 'react-reveal/Fade'
-import { CATEGORIES } from 'common/constants'
+import { Category } from 'common/enums'
+import { RepoNode } from 'common/types'
 import Item from './Item'
 import { Ul, Li } from './styled'
 
-const List = ({ activeCategory, items }) => {
+interface Props {
+  activeCategory: Category
+  items: RepoNode[]
+}
+
+const List: React.SFC<Props> = ({ activeCategory, items }) => {
   const data =
-    activeCategory === CATEGORIES.ALL
+    activeCategory === Category.All
       ? items
       : items.filter(repo => repo.node.category === activeCategory)
 
@@ -25,12 +30,6 @@ const List = ({ activeCategory, items }) => {
       ))}
     </Ul>
   )
-}
-
-// @TODO Avoid using Object.values by switching to Typescript
-List.propTypes = {
-  activeCategory: PropTypes.oneOf(Object.values(CATEGORIES)).isRequired,
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default List

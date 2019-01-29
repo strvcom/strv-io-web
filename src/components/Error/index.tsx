@@ -10,7 +10,7 @@ const ErrorPage = () => (
       Go back, you must. <br /> Do or do not. There is no try.
     </Message>
     <Img src="/static/assets/yoda.png" alt="Yoda" />
-    <Button href={ROUTES.HOME} prefetch>
+    <Button href={ROUTES.HOME} prefetch={true}>
       Go back to home
     </Button>
   </InnerWrapper>

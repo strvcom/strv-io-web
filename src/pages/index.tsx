@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import queryString from 'query-string'
-import { CATEGORIES } from 'common/constants'
+import { Category } from 'common/enums'
+import { RepoNode } from 'common/types'
 import Header from 'components/Header'
 import {
   Banner,
@@ -15,14 +15,28 @@ import Navigation from 'components/Home/Navigation'
 import List from 'components/Home/List'
 import Footer from 'components/Footer'
 
-const Home = ({ data }) => {
+interface Props {
+  data: {
+    allItemsJson: {
+      edges: RepoNode[]
+    }
+  }
+}
+
+const Home: React.SFC<Props> = ({ data }) => {
   const items = data.allItemsJson.edges
 
   const { search } = location
   const query = queryString.parse(search)
 
   // Show all as default
-  const category = query.filter || CATEGORIES.ALL
+  const categories = Object.keys(Category).map(
+    categoryKey => Category[categoryKey]
+  )
+  const category =
+    query.filter && categories.indexOf(query.filter) >= 0
+      ? query.filter
+      : Category.All
 
   return (
     <Fragment>
@@ -42,13 +56,6 @@ const Home = ({ data }) => {
       <Footer />
     </Fragment>
   )
-}
-
-Home.propTypes = {
-  data: PropTypes.object.isRequired,
-  location: PropTypes.shape({
-    search: PropTypes.string.isRequired,
-  }).isRequired,
 }
 
 export const indexQuery = graphql`

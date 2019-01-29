@@ -1,9 +1,22 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { StyledButton } from './styled'
 
-const Button = ({ type, href, children, isPrimary, ...props }) => {
+interface Props {
+  children: React.ReactNode
+  href?: string
+  isPrimary?: boolean
+  type?: string
+  [key: string]: any
+}
+
+const Button: React.SFC<Props> = ({
+  type = 'button',
+  href = null,
+  children,
+  isPrimary = false,
+  ...props
+}) => {
   if (href) {
     return (
       <Link to={href} {...props}>
@@ -17,19 +30,6 @@ const Button = ({ type, href, children, isPrimary, ...props }) => {
       {children}
     </StyledButton>
   )
-}
-
-Button.defaultProps = {
-  type: 'button',
-  href: null,
-  isPrimary: false,
-}
-
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  href: PropTypes.string,
-  isPrimary: PropTypes.bool,
-  type: PropTypes.string,
 }
 
 export default Button
