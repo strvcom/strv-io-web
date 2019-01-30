@@ -1,24 +1,24 @@
+'use strict'
+
 module.exports = {
-  parser: 'babel-eslint',
+  env: {
+    node: true,
+  },
   extends: [
     '@strv/javascript/environments/react/v16',
+    '@strv/javascript/environments/react/optional',
     '@strv/javascript/coding-styles/recommended',
-    'prettier',
   ],
-  env: {
-    browser: true,
-    node: true,
-    jest: true,
-    es6: true,
-  },
+  parser: 'babel-eslint',
   settings: {
     'import/resolver': {
-      node: {
-        paths: ['app'],
-      },
+      'babel-module': {},
     },
   },
   rules: {
     'import/group-exports': 0,
+    'import/order': 0,
+    'max-len': 0,
+    'no-warning-comments': 0,
   },
 }

@@ -1,0 +1,8 @@
+{
+  "name": "Nodestream",
+  "url": "https://github.com/nodestream/nodestream",
+  "description": "Storage-agnostic streaming library for binary data transfers",
+  "owner": "nodestream",
+  "category": "backend",
+  "icon": "<svg width=\"52\" height=\"60\" viewBox=\"0 0 52 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#EF0D33\" d=\"M8 22l7 4v8l-7 4-7-4v-8z\"/><path stroke=\"#FFF\" d=\"M44 42l7 4v8l-7 4-7-4v-8zM44 2l7 4v8l-7 4-7-4V6zM44 23v14M32 43.5l-12-7M32 16.5l-12 7\"/></g></svg>"
+}

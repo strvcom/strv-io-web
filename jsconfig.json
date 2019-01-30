@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "baseUrl": "./app"
+    "baseUrl": "./src"
   }
 }
