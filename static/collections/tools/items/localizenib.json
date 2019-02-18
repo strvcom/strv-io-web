@@ -4,5 +4,6 @@
   "description": "Easy-to-use localization tool for storyboards and XIB files",
   "owner": "strvcom",
   "category": "ios",
-  "icon": "<svg width=\"66\" height=\"66\" viewBox=\"0 0 66 66\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M33 3L22 33l11 30 11-30z\"/><path stroke=\"#FFF\" d=\"M63 33L33 22 3 33l30 11z\"/><path d=\"M14 14l6 6m26 26l6 6M14 52l6-6m26-26l6-6\" stroke=\"#EF0D33\"/></g></svg>"
+  "icon": "<svg height=66 width=66 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M33 3L22 33l11 30 11-30z\"stroke=#FFF /><path d=\"M63 33L33 22 3 33l30 11z\"stroke=#FFF /><path d=\"M14 14l6 6m26 26l6 6M14 52l6-6m26-26l6-6\"stroke=#EF0D33 stroke-linecap=round /></g></svg>",
+  "string": "20"
 }
