@@ -4,5 +4,6 @@
   "description": "Leverages Android Data Binding and takes the best from Model-View-ViewModel",
   "owner": "jakubkinst",
   "category": "android",
-  "icon": "<svg width=\"50\" height=\"59\" viewBox=\"0 0 50 59\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path d=\"M13.59 24.06L1.72 2.45A1 1 0 0 1 2.62 1h44.76a1 1 0 0 1 .9 1.45l-11.86 21.6M36.4 34l11.88 21.61a1 1 0 0 1-.9 1.45H2.62a1 1 0 0 1-.9-1.45l11.86-21.6\" stroke=\"#FFF\"/><path d=\"M33.71 28.97L25.9 43.21a1 1 0 0 1-1.78 0l-7.82-14.24 7.83-14.36a1 1 0 0 1 1.76 0l7.83 14.36z\" stroke=\"#EF0D33\"/></g></svg>"
+  "icon": "<svg height=59 width=50 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g stroke-width=2><path d=\"M13.59 24.06L1.72 2.45A1 1 0 0 1 2.62 1h44.76a1 1 0 0 1 .9 1.45l-11.86 21.6M36.4 34l11.88 21.61a1 1 0 0 1-.9 1.45H2.62a1 1 0 0 1-.9-1.45l11.86-21.6\"stroke=#FFF stroke-linecap=round /><path d=\"M33.71 28.97L25.9 43.21a1 1 0 0 1-1.78 0l-7.82-14.24 7.83-14.36a1 1 0 0 1 1.76 0l7.83 14.36z\"stroke=#EF0D33 /></g></g></svg>",
+  "string": "16"
 }
