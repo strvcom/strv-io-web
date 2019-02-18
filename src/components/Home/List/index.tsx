@@ -18,16 +18,18 @@ const List: React.SFC<Props> = ({ activeCategory, items }) => {
 
   return (
     <Ul>
-      {data.map(repo => (
-        <Li
-          className="reveal--delay2"
-          key={`repo-item-${repo.node.name}-${activeCategory}`}
-        >
-          <Fade duration={2000}>
-            <Item repo={repo.node} />
-          </Fade>
-        </Li>
-      ))}
+      {data
+        .sort((repo1, repo2) => repo1.node.order - repo2.node.order)
+        .map(repo => (
+          <Li
+            className="reveal--delay2"
+            key={`repo-item-${repo.node.name}-${activeCategory}`}
+          >
+            <Fade duration={2000}>
+              <Item repo={repo.node} />
+            </Fade>
+          </Li>
+        ))}
     </Ul>
   )
 }

@@ -4,5 +4,6 @@
   "description": "Various utility classes to make Android development less painful",
   "owner": "tuxilero",
   "category": "android",
-  "icon": "<svg width=\"54\" height=\"62\" viewBox=\"0 0 54 62\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(1 1)\" fill=\"none\"><path d=\"M24 6V1a1 1 0 0 1 1-1h26a1 1 0 0 1 1 1v34a1 1 0 0 1-1 1h-5\" stroke=\"#EF0D33\"/><path d=\"M12 18v-5a1 1 0 0 1 1-1h26a1 1 0 0 1 1 1v34a1 1 0 0 1-1 1h-5\" stroke=\"#FFF\"/><rect stroke=\"#FFF\" y=\"24\" width=\"28\" height=\"36\" rx=\"1\"/></g></svg>"
+  "icon": "<svg height=62 width=54 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2 transform=\"translate(1 1)\"><path d=\"M24 6V1a1 1 0 0 1 1-1h26a1 1 0 0 1 1 1v34a1 1 0 0 1-1 1h-5\"stroke=#EF0D33 stroke-linecap=round /><path d=\"M12 18v-5a1 1 0 0 1 1-1h26a1 1 0 0 1 1 1v34a1 1 0 0 1-1 1h-5\"stroke=#FFF stroke-linecap=round /><rect height=36 rx=1 stroke=#FFF width=28 y=24 /></g></svg>",
+  "order": "14"
 }

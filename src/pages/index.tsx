@@ -69,6 +69,7 @@ export const indexQuery = graphql`
           description
           category
           icon
+          order
         }
       }
     }

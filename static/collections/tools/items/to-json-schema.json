@@ -4,5 +4,6 @@
   "description": "Converts JS objects (and other types) to corresponding JSON Schema",
   "owner": "ruzicka",
   "category": "backend",
-  "icon": "<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M1 49h10v10H1zM25 49h10v10H25z\"/><path stroke=\"#EF0D33\" d=\"M25 1h10v10H25z\"/><path stroke=\"#FFF\" d=\"M49 49h10v10H49zM30 15v28M6 43V30h48v15\"/></g></svg>"
+  "icon": "<svg height=60 width=60 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M1 49h10v10H1zM25 49h10v10H25z\"stroke=#FFF /><path d=\"M25 1h10v10H25z\"stroke=#EF0D33 /><path d=\"M49 49h10v10H49z\"stroke=#FFF /><path d=\"M30 15v28M6 43V30h48v15\"stroke=#FFF stroke-linecap=round /></g></svg>",
+  "order": "6"
 }

@@ -10,4 +10,5 @@ export interface Repo {
   icon: React.ReactNode
   name: string
   url: string
+  order: number
 }
