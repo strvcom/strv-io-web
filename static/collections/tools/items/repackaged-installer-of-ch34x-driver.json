@@ -4,5 +4,6 @@
   "description": "CH34x USB-to-serial driver installer for OSX 10.11 and 10.12",
   "owner": "dzindra",
   "category": "iot",
-  "icon": "<svg width=\"58\" height=\"58\" viewBox=\"0 0 58 58\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(-11 -11)\" fill=\"none\"><circle stroke=\"#FFF\" cx=\"40\" cy=\"40\" r=\"28\"/><circle stroke=\"#EF0D33\" cx=\"40\" cy=\"40\" r=\"8\"/><path d=\"M22 40a18 18 0 0 0 18 18m18-18a18 18 0 0 0-18-18\" stroke=\"#FFF\"/></g></svg>"
+  "icon": "<svg height=58 width=58 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2 transform=\"translate(-11 -11)\"><circle cx=40 cy=40 r=28 stroke=#FFF /><circle cx=40 cy=40 r=8 stroke=#EF0D33 /><path d=\"M22 40a18 18 0 0 0 18 18m18-18a18 18 0 0 0-18-18\"stroke=#FFF /></g></svg>",
+  "string": "22"
 }
