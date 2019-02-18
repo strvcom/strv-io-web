@@ -4,5 +4,6 @@
   "description": "OS X command line tool for structure comparison of JSON files",
   "owner": "DanielCech",
   "category": "ios",
-  "icon": "<svg width=\"50\" height=\"62\" viewBox=\"0 0 50 62\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M25 55H1V7h24\"/><path stroke=\"#EF0D33\" d=\"M31 55h18V7H31\"/><path d=\"M25 1v60\" stroke=\"#FFF\"/></g></svg>"
+  "icon": "<svg height=62 width=50 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-linecap=round stroke-width=2><path d=\"M25 55H1V7h24\"stroke=#FFF /><path d=\"M31 55h18V7H31\"stroke=#EF0D33 /><path d=\"M25 1v60\"stroke=#FFF /></g></svg>",
+  "string": "19"
 }
