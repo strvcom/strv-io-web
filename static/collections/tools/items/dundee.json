@@ -4,5 +4,6 @@
   "description": "Our little playground for test driving the best Android app architecture approaches",
   "owner": "strvcom",
   "category": "android",
-  "icon": "<svg width=\"52\" height=\"58\" viewBox=\"0 0 52 58\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><path stroke=\"#FFF\" d=\"M1 29h10v28H1zM21 13h10v44H21z\"/><path stroke=\"#EF0D33\" d=\"M41 1h10v56H41z\"/></g></svg>"
+  "icon": "<svg height=58 width=52 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-linecap=round stroke-width=2><path d=\"M1 29h10v28H1zM21 13h10v44H21z\"stroke=#FFF /><path d=\"M41 1h10v56H41z\"stroke=#EF0D33 /></g></svg>",
+  "string": "8"
 }
