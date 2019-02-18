@@ -4,5 +4,6 @@
   "description": "Simple tool to validate JavaScript objects by example, not schema",
   "owner": "ruzicka",
   "category": "backend",
-  "icon": "<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\"><g stroke=\"#FFF\"><path d=\"M30 15v28M6 43V30h48v15\"/></g><path d=\"M25 1l10 10M35 1L25 11M1 49l10 10M11 49L1 59\" stroke=\"#FFF\"/><path d=\"M25 49l10 10M35 49L25 59\" stroke=\"#EF0D33\"/><path d=\"M49 49l10 10M59 49L49 59\" stroke=\"#FFF\"/></g></svg>"
+  "icon": "<svg height=60 width=60 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-linecap=round stroke-width=2><g stroke=#FFF><path d=\"M30 15v28M6 43V30h48v15\"/></g><path d=\"M25 1l10 10M35 1L25 11M1 49l10 10M11 49L1 59\"stroke=#FFF /><path d=\"M25 49l10 10M35 49L25 59\"stroke=#EF0D33 /><path d=\"M49 49l10 10M59 49L49 59\"stroke=#FFF /></g></svg>",
+  "string": "7"
 }
