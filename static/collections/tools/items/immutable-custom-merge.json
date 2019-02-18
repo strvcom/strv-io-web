@@ -4,5 +4,6 @@
   "description": "Merging of Immutable structures with custom per-property merging strategy",
   "owner": "ruzicka",
   "category": "backend",
-  "icon": "<svg width=\"56\" height=\"56\" viewBox=\"0 0 56 56\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(1 1)\" fill=\"none\"><path stroke=\"#FFF\" d=\"M36 41v13H0V18h13M18 13V0h36v36H41\"/><rect stroke=\"#EF0D33\" x=\"18\" y=\"18\" width=\"18\" height=\"18\" rx=\".5\"/></g></svg>"
+  "icon": "<svg width=\"56\" height=\"56\" viewBox=\"0 0 56 56\" xmlns=\"http://www.w3.org/2000/svg\"><g transform=\"translate(1 1)\" fill=\"none\"><path stroke=\"#FFF\" d=\"M36 41v13H0V18h13M18 13V0h36v36H41\"/><rect stroke=\"#EF0D33\" x=\"18\" y=\"18\" width=\"18\" height=\"18\" rx=\".5\"/></g></svg>",
+  "string": "5"
 }
