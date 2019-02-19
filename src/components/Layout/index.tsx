@@ -1,16 +1,15 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import MetaHead from 'components/MetaHead'
 
-const Layout = ({ children }) => (
+interface Props {
+  children: React.ReactNode
+}
+
+const Layout: React.SFC<Props> = ({ children }) => (
   <Fragment>
     <MetaHead />
     {children}
   </Fragment>
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

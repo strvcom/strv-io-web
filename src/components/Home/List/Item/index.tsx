@@ -1,8 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Repo } from 'common/types'
 import { Link, Name, Description, Category, IconWrapper } from './styled'
 
-const Item = ({ repo }) => (
+interface Props {
+  repo: Repo
+}
+
+const Item: React.SFC<Props> = ({ repo }) => (
   <Link href={repo.url} target="_blank" rel="noopener noreferrer">
     <IconWrapper dangerouslySetInnerHTML={{ __html: repo.icon }} />
     <Name>{repo.name}</Name>
@@ -10,15 +14,5 @@ const Item = ({ repo }) => (
     <Category>{repo.category}</Category>
   </Link>
 )
-
-Item.propTypes = {
-  repo: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    icon: PropTypes.node.isRequired,
-    name: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-  }).isRequired,
-}
 
 export default Item

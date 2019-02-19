@@ -5,5 +5,5 @@
   "owner": "jakubkinst",
   "category": "android",
   "icon": "<svg height=58 width=54 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M1 1h10v56H1z\"stroke=#FFF /><path d=\"M21 1h32v10H21z\"stroke=#EF0D33 /><path d=\"M21 21h32v36H21z\"stroke=#FFF /></g></svg>",
-  "string": "10"
+  "order": "11"
 }

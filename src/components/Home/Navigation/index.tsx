@@ -1,16 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import queryString from 'query-string'
 import ROUTES from 'common/routes'
-import { CATEGORIES } from 'common/constants'
+import { Category } from 'common/enums'
 import Button from 'components/Button'
 import { Wrapper, Ul, Li } from './styled'
 
-const Navigation = ({ activeCategory }) => (
+interface Props {
+  activeCategory: Category
+}
+
+const Navigation: React.SFC<Props> = ({ activeCategory }) => (
   <Wrapper className="reveal--delay1">
     <Ul>
-      {Object.keys(CATEGORIES).map(categoryKey => {
-        const category = CATEGORIES[categoryKey]
+      {Object.keys(Category).map(categoryKey => {
+        const category = Category[categoryKey]
         const newQueryString = queryString.stringify({
           filter: category,
         })
@@ -18,7 +21,7 @@ const Navigation = ({ activeCategory }) => (
           <Li key={category}>
             <Button
               href={`${ROUTES.HOME}?${newQueryString}`}
-              replace
+              replace={true}
               isPrimary={activeCategory === category}
             >
               {category}
@@ -29,10 +32,5 @@ const Navigation = ({ activeCategory }) => (
     </Ul>
   </Wrapper>
 )
-
-// @TODO Avoid using Object.values by switching to Typescript
-Navigation.propTypes = {
-  activeCategory: PropTypes.oneOf(Object.values(CATEGORIES)).isRequired,
-}
 
 export default Navigation

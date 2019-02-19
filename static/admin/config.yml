@@ -22,5 +22,6 @@ collections:
           options: ['backend', 'android', 'ios', 'iot'],
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }
+      - { label: 'Order', name: 'order', widget: 'number' }
 media_folder: static/img
 public_folder: /img

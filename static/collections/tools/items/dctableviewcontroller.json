@@ -1,9 +1,8 @@
 {
-  "name": "DCTableViewController",
   "url": "https://github.com/DanielCech/DCTableViewController",
   "description": "Convenience wrapper for UITableViews will help simplify your work",
   "owner": "DanielCech",
   "category": "ios",
   "icon": "<svg height=52 width=52 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M1 1h10v10H1zM1 21h10v10H1zM1 41h10v10H1zM21 1h10v10H21z\"stroke=#FFF /><path d=\"M21 21h10v10H21z\"stroke=#EF0D33 /><path d=\"M21 41h10v10H21z\"stroke=#FFF /><path d=\"M41 1h10v10H41z\"stroke=#EF0D33 /><path d=\"M41 21h10v10H41zM41 41h10v10H41z\"stroke=#FFF /></g></svg>",
-  "string": "19"
+  "order": "20"
 }

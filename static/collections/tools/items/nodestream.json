@@ -5,5 +5,5 @@
   "owner": "nodestream",
   "category": "backend",
   "icon": "<svg height=60 version=1 width=52 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M8 22l7 4v8l-7 4-7-4v-8z\"stroke=#EF0D33 /><path d=\"M44 42l7 4v8l-7 4-7-4v-8zM44 2l7 4v8l-7 4-7-4V6z\"stroke=#FFF /><path d=\"M44 23v14M32 44l-12-7M32 17l-12 7\"stroke=#FFF stroke-linecap=round /></g></svg>",
-  "string": "3"
+  "order": "3"
 }
