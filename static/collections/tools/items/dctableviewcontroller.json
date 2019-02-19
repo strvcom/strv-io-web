@@ -1,4 +1,5 @@
 {
+  "name": "DCTableViewController",
   "url": "https://github.com/DanielCech/DCTableViewController",
   "description": "Convenience wrapper for UITableViews will help simplify your work",
   "owner": "DanielCech",
