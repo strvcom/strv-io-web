@@ -5,5 +5,5 @@
   "owner": "tuxilero",
   "category": "android",
   "icon": "<svg height=42 width=54 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-linecap=round stroke-width=2><path d=\"M1 1h10\"stroke=#EF0D33 /><path d=\"M23 1h30\"stroke=#FFF /><path d=\"M1 9h10\"stroke=#EF0D33 /><path d=\"M23 9h30\"stroke=#FFF /><path d=\"M1 17h10\"stroke=#EF0D33 /><path d=\"M23 17h30\"stroke=#FFF /><path d=\"M1 25h10\"stroke=#EF0D33 /><path d=\"M23 25h30\"stroke=#FFF /><path d=\"M1 33h10\"stroke=#EF0D33 /><path d=\"M23 33h30\"stroke=#FFF /><path d=\"M1 41h10\"stroke=#EF0D33 /><path d=\"M23 41h30\"stroke=#FFF /></g></svg>",
-  "order": "15"
+  "order": "16"
 }
