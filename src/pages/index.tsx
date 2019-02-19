@@ -23,11 +23,10 @@ interface Props {
   }
 }
 
-const Home: React.SFC<Props> = ({ data }) => {
+const Home: React.SFC<Props> = ({ data, location }) => {
   const items = data.allItemsJson.edges
 
-  const { search } = location
-  const query = queryString.parse(search)
+  const query = queryString.parse((location || {}).search)
 
   // Show all as default
   const categories = Object.keys(Category).map(
