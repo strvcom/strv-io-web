@@ -1,7 +1,7 @@
 export enum Category {
   All = 'all',
-  Android = 'android',
   Backend = 'backend',
+  Android = 'android',
   iOS = 'ios',
   IoT = 'iot',
 }
