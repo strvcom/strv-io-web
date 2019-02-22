@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from 'components/Layout'
 import queryString from 'query-string'
 import { Category } from 'common/enums'
 import { RepoNode } from 'common/types'
@@ -61,7 +62,7 @@ const Home: React.SFC<Props> = ({ data, location }) => {
       : Category.All
 
   return (
-    <Fragment>
+    <Layout>
       <Header />
       <Banner>
         <BannerInfo>
@@ -76,7 +77,7 @@ const Home: React.SFC<Props> = ({ data, location }) => {
         <List items={items} activeCategory={category} />
       </Main>
       <Footer />
-    </Fragment>
+    </Layout>
   )
 }
 
