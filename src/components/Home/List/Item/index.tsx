@@ -7,7 +7,12 @@ interface Props {
 }
 
 const Item: React.SFC<Props> = ({ repo }) => (
-  <Link href={repo.url} target="_blank" rel="noopener noreferrer">
+  <Link
+    href={repo.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={repo.name}
+  >
     <IconWrapper dangerouslySetInnerHTML={{ __html: repo.icon }} />
     <Name>{repo.name}</Name>
     <Description>{repo.description}</Description>

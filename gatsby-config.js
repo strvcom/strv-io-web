@@ -6,11 +6,24 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'TESTS',
-        short_name: 'starter',
+        name: 'STRV.io',
+        short_name: 'STRV.io',
         start_url: '/',
-        display: 'minimal-ui',
-        icon: 'static/assets/android-chrome-512x512.png', // This path is relative to the root of the site.
+        "icons": [
+            {
+                "src": "/static/android-chrome-192x192.png",
+                "sizes": "192x192",
+                "type": "image/png"
+            },
+            {
+                "src": "/static/android-chrome-512x512.png",
+                "sizes": "512x512",
+                "type": "image/png"
+            }
+        ],
+        "theme_color": "#ffffff",
+        "background_color": "#ffffff",
+        "display": "standalone"
       },
     },
     'gatsby-plugin-netlify-cms',

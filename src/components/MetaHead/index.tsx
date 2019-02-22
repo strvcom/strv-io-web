@@ -15,6 +15,7 @@ const MetaHead = () => {
       <meta property="og:description" content={DESCRIPTION} />
       <meta property="og:url" content={SITE_URL} />
       <meta name="twitter:card" content="summary_large_image" />
+      <html lang="en" />
     </Helmet>
   )
 }

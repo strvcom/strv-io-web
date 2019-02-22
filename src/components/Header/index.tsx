@@ -3,7 +3,7 @@ import { Logo, Wrapper } from './styled'
 
 const Header = () => (
   <Wrapper>
-    <Logo href="https://www.strv.com">
+    <Logo href="https://www.strv.com" aria-label="strv">
       <span />
     </Logo>
   </Wrapper>
