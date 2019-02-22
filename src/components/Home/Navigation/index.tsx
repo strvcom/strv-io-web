@@ -23,6 +23,7 @@ const Navigation: React.SFC<Props> = ({ activeCategory }) => (
               href={`${ROUTES.HOME}?${newQueryString}`}
               replace={true}
               isPrimary={activeCategory === category}
+              aria-label={category}
             >
               {category}
             </Button>
