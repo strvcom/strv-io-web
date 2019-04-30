@@ -1,5 +1,5 @@
 {
-  "name": "AlamoreEasyLogger",
+  "name": "AlamofireEasyLogger",
   "url": "https://github.com/jankaltoun/AlamofireEasyLogger",
   "description": "AlamofireEasyLogger is an easy drop-in Alamofire request & response logger",
   "owner": "Jan Kaltoun",
