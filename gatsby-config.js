@@ -1,7 +1,12 @@
 module.exports = {
   plugins: [
     'gatsby-plugin-resolve-src',
-    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-styled-components',
+      options: {
+        displayName: false,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
