@@ -8,7 +8,7 @@ const MetaHead = () => {
     <Helmet>
       <title>{TITLE}</title>
       <meta name="description" content={DESCRIPTION} />
-      <meta property="og:image" content="/static/assets/share-banner.png" />
+      <meta property="og:image" content="/assets/share-banner.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="628" />
       <meta property="og:title" content={TITLE} />
