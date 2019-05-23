@@ -19,10 +19,7 @@ const List: React.SFC<Props> = ({ activeCategory, items }) => {
   return (
     <Ul>
       {data.map(repo => (
-        <Li
-          className="reveal--delay2"
-          key={`repo-item-${repo.node.name}-${activeCategory}`}
-        >
+        <Li className="reveal--delay2" key={repo.node.name}>
           <Fade duration={2000}>
             <Item repo={repo.node} />
           </Fade>
