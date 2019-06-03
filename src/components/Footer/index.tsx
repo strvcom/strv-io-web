@@ -6,7 +6,7 @@ const Footer = () => (
   <Wrapper>
     <Title>Continue Browsing</Title>
     <ArticleLink
-      href="https://www.strv.com/blog/tag/tech"
+      href="https://www.strv.com/blog/tag/engineering"
       target="_blank"
       rel="noopener noreferrer"
     >
