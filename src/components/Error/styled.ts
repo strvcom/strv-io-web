@@ -5,6 +5,7 @@ import { mq } from 'styles/media'
 export const InnerWrapper = styled.div`
   min-height: 100vh;
   padding: 10rem 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;

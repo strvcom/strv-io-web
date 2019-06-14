@@ -9,7 +9,7 @@ const ErrorPage = () => (
     <Message>
       Go back, you must. <br /> Do or do not. There is no try.
     </Message>
-    <Img src="/static/assets/yoda.png" alt="Yoda" />
+    <Img src="/assets/yoda.png" alt="Yoda" />
     <Button href={ROUTES.HOME} prefetch={true} aria-label="home">
       Go back to home
     </Button>
