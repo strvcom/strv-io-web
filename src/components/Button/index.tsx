@@ -1,27 +1,37 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { SyntheticEvent } from 'react'
 import { StyledButton } from './styled'
 
-interface Props {
+type Props = {
   children: React.ReactNode
   href?: string
+  onClick?: (href: string) => void
   isPrimary?: boolean
   type?: string
   [key: string]: any
 }
 
+const handleClick = (href: string, onClick: void) => (
+  event: SyntheticEvent
+) => {
+  if (onClick) {
+    event.preventDefault()
+    onClick(href)
+  }
+}
+
 const Button: React.SFC<Props> = ({
   type = 'button',
-  href = null,
+  href = '/',
+  onClick,
   children,
   isPrimary = false,
   ...props
 }) => {
   if (href) {
     return (
-      <Link to={href} {...props}>
+      <a href={href} onClick={handleClick(href, onClick)} {...props}>
         <StyledButton isPrimary={isPrimary}>{children}</StyledButton>
-      </Link>
+      </a>
     )
   }
 

@@ -44,9 +44,9 @@ export default createGlobalStyle`
     color: inherit;
   }
 
-  .reveal,
+  /* .reveal,
   .reveal--delay1,
   .reveal--delay2, {
     visibility: hidden;
-  }
+  } */
 `

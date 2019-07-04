@@ -1,6 +1,14 @@
 import React from 'react'
 import { Repo } from 'common/types'
-import { Link, Name, Description, Category, IconWrapper } from './styled'
+import {
+  Ul,
+  Li,
+  Link,
+  Name,
+  Description,
+  Category,
+  IconWrapper,
+} from './styled'
 
 interface Props {
   repo: Repo
@@ -20,4 +28,12 @@ const Item: React.SFC<Props> = ({ repo }) => (
   </Link>
 )
 
-export default Item
+export const List: React.SFC = ({ data }) => (
+  <Ul>
+    {data.map(repo => (
+      <Li key={repo.node.name}>
+        <Item repo={repo.node} />
+      </Li>
+    ))}
+  </Ul>
+)

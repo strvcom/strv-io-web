@@ -103,12 +103,3 @@ export const HeadLineTail = styled.h2`
     font-size: 3.2rem;
   }
 `
-
-export const Main = styled.main`
-  margin: 0 auto;
-  padding: 0 30px;
-
-  ${mq.tabletWide} {
-    padding: 0;
-  }
-`
