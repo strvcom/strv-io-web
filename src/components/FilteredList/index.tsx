@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import queryString from 'query-string'
 import { Category } from 'common/enums'
 import { Data } from 'common/types'
@@ -12,17 +12,20 @@ export const FilteredList: React.FunctionComponent<Data> = ({ data }) => {
   const query = queryString.parse(window.location.search)
 
   const [filter, setFilter] = useState(
-    query.search ? query.search[0] : Category.All
+    typeof query.search === 'string' ? query.search : Category.All
   )
 
   const stateObj = {
     search: filter,
   }
 
-  const filterItems = (categoryName: Category) => {
-    setFilter(categoryName)
-    window.history.pushState(stateObj, filter, `?search=${filter}`)
+  const filterItems = async (categoryName: Category) => {
+    await setFilter(categoryName)
   }
+
+  useEffect(() => {
+    window.history.pushState(stateObj, filter, `?search=${filter}`)
+  })
 
   return (
     <>

@@ -18,19 +18,23 @@ const bgImage = {
   webP: require('images/banner.webp'),
 }
 
-const Home: React.FunctionComponent<Data> = ({ data }) => (
-  <Layout>
-    <Header />
-    <Banner bgImage={canUseWebP() === true ? bgImage.webP : bgImage.src}>
-      <BannerInfo>
-        <HeadLine>Open source libraries</HeadLine>
-        <HeadLineTail>Curated by STRV developers</HeadLineTail>
-      </BannerInfo>
-    </Banner>
-    <FilteredList data={data} />
-    <Footer />
-  </Layout>
-)
+const Home: React.FunctionComponent<Data> = ({ data }) => {
+  const webP = canUseWebP()
+
+  return (
+    <Layout>
+      <Header />
+      <Banner bgImage={webP ? bgImage.webP : bgImage.src}>
+        <BannerInfo>
+          <HeadLine>Open source libraries</HeadLine>
+          <HeadLineTail>Curated by STRV developers</HeadLineTail>
+        </BannerInfo>
+      </Banner>
+      <FilteredList data={data} />
+      <Footer />
+    </Layout>
+  )
+}
 
 export const indexQuery = graphql`
   query IndexQuery {
