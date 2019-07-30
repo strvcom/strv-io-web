@@ -3,43 +3,25 @@ import { StyledButton } from './styled'
 
 type Props = {
   children: React.ReactNode
-  href?: string
-  onClick?: (href: string) => void
+  onClick?: () => void
   isPrimary?: boolean
-  type?: string
-  [key: string]: any
 }
 
-const handleClick = (href: string, onClick: void) => (
-  event: SyntheticEvent
-) => {
+const handleClick = (onClick: any) => (event: SyntheticEvent) => {
   if (onClick) {
     event.preventDefault()
-    onClick(href)
+    onClick()
   }
 }
 
-const Button: React.SFC<Props> = ({
-  type = 'button',
-  href = '/',
-  onClick,
-  children,
-  isPrimary = false,
-  ...props
-}) => {
-  if (href) {
-    return (
-      <a href={href} onClick={handleClick(href, onClick)} {...props}>
-        <StyledButton isPrimary={isPrimary}>{children}</StyledButton>
-      </a>
-    )
-  }
-
-  return (
-    <StyledButton type={type} isPrimary={isPrimary}>
-      {children}
-    </StyledButton>
-  )
-}
+const Button: React.SFC<Props> = ({ onClick, children, isPrimary = false }) => (
+  <StyledButton
+    type="button"
+    isPrimary={isPrimary}
+    onClick={handleClick(onClick)}
+  >
+    {children}
+  </StyledButton>
+)
 
 export default Button

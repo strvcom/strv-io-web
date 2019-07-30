@@ -3,15 +3,12 @@ import { Category } from 'common/enums'
 import Button from 'components/Button'
 import { Wrapper, Ul, Li } from './styled'
 
-type Props = {
-  activeCategory: Category
-  handleFilterChange: (href: string) => void
+interface Props {
+  activeCategory: string | string[]
+  handleFilter: (categoryName: Category) => void
 }
 
-export const Filter: React.SFC<Props> = ({
-  activeCategory,
-  handleFilterChange,
-}) => (
+export const Filter: React.SFC<Props> = ({ activeCategory, handleFilter }) => (
   <Wrapper>
     <Ul>
       {Object.keys(Category).map(categoryKey => {
@@ -20,9 +17,7 @@ export const Filter: React.SFC<Props> = ({
         return (
           <Li key={category}>
             <Button
-              href={category}
-              replace={true}
-              onClick={handleFilterChange}
+              onClick={() => handleFilter(category)}
               isPrimary={activeCategory === category}
               aria-label={category}
             >

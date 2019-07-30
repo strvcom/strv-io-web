@@ -1,5 +1,3 @@
-import React from 'react'
-
 export interface RepoNode {
   node: Repo
 }
@@ -7,8 +5,16 @@ export interface RepoNode {
 export interface Repo {
   category: string
   description: string
-  icon: React.ReactNode
+  icon: string
   name: string
   url: string
   isFeatured: boolean
+}
+
+export interface Data {
+  data: {
+    allItemsJson: {
+      edges: RepoNode[]
+    }
+  }
 }

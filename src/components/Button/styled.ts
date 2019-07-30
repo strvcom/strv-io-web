@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 
-export const StyledButton = styled.button`
+type Props = {
+  isPrimary?: boolean
+}
+
+export const StyledButton = styled.button<Props>`
   font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
   color: ${theme.colors.white};
@@ -21,7 +25,7 @@ export const StyledButton = styled.button`
   height: 4.8rem;
   border: solid 1px
     ${props =>
-      props.isPrimary ? theme.colors.primary : 'rgba(255,255,255, 0.2)'};
+    props.isPrimary ? theme.colors.primary : 'rgba(255,255,255, 0.2)'};
 
   &:hover {
     background-color: ${theme.colors.primary};
