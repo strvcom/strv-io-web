@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { canUseWebP } from 'react-img-webp'
 import Layout from 'components/Layout'
 import { Data } from 'common/types'
 import Header from 'components/Header'
@@ -12,10 +13,15 @@ import {
 import { FilteredList } from 'components/FilteredList'
 import Footer from 'components/Footer'
 
+const bgImage = {
+  src: require('images/banner.png'),
+  webP: require('images/banner.webp'),
+}
+
 const Home: React.FunctionComponent<Data> = ({ data }) => (
   <Layout>
     <Header />
-    <Banner>
+    <Banner bgImage={canUseWebP() === true ? bgImage.webP : bgImage.src}>
       <BannerInfo>
         <HeadLine>Open source libraries</HeadLine>
         <HeadLineTail>Curated by STRV developers</HeadLineTail>

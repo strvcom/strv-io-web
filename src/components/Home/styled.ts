@@ -1,16 +1,19 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
-import banner from 'images/banner.png'
+
+type BannerProps = {
+  bgImage: string
+}
 
 export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
 `
 
-export const Banner = styled.div`
+export const Banner = styled.div<BannerProps>`
   position: relative;
-  background-image: url(${banner});
+  background-image: url(${p => p.bgImage});
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 30px;
