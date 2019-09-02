@@ -9,7 +9,11 @@ import { List } from './List'
 
 export const FilteredList: React.FunctionComponent<Data> = ({ data }) => {
   const items = sortItems(data.allItemsJson.edges)
-  const query = queryString.parse(window.location.search)
+
+  const windowQuery =
+    typeof window !== `undefined` ? window.location.search : ''
+
+  const query = queryString.parse(windowQuery)
 
   const [filter, setFilter] = useState(
     typeof query.search === 'string' ? query.search : Category.All
