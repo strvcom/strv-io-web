@@ -14,7 +14,7 @@ import { FilteredList } from 'components/FilteredList'
 import Footer from 'components/Footer'
 
 const bgImage = {
-  src: require('images/banner.png'),
+  src: require('images/banner.jpg'),
   webP: require('images/banner.webp'),
 }
 
