@@ -38,7 +38,7 @@ const Home: React.FunctionComponent<Data> = ({ data }) => {
 
 export const indexQuery = graphql`
   query IndexQuery {
-    allItemsJson {
+    allItemsJson(sort: { fields: [isFeatured], order: [DESC] }) {
       edges {
         node {
           id

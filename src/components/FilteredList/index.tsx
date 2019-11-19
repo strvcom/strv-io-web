@@ -3,13 +3,10 @@ import queryString from 'query-string'
 import { Category } from 'common/enums'
 import { Data } from 'common/types'
 import { Main } from 'components/Layout/styled'
-import { sortItems } from './helpers'
 import { Filter } from './Filter'
 import { List } from './List'
 
 export const FilteredList: React.FunctionComponent<Data> = ({ data }) => {
-  const items = sortItems(data.allItemsJson.edges)
-
   const windowQuery =
     typeof window !== `undefined` ? window.location.search : ''
 
@@ -19,23 +16,15 @@ export const FilteredList: React.FunctionComponent<Data> = ({ data }) => {
     typeof query.search === 'string' ? query.search : Category.All
   )
 
-  const stateObj = {
-    search: filter,
-  }
-
-  const filterItems = async (categoryName: Category) => {
-    await setFilter(categoryName)
-  }
-
   useEffect(() => {
-    window.history.pushState(stateObj, filter, `?search=${filter}`)
-  })
+    window.history.replaceState({ search: filter }, filter, `?search=${filter}`)
+  }, [filter])
 
   return (
     <>
-      <Filter activeCategory={filter} handleFilter={filterItems} />
+      <Filter activeCategory={filter} handleFilter={setFilter} />
       <Main>
-        <List data={items} filter={filter} />
+        <List data={data.allItemsJson.edges} filter={filter} />
       </Main>
     </>
   )
