@@ -3,6 +3,8 @@ import theme from 'styles/theme'
 
 type Props = {
   isPrimary?: boolean
+  to?: string
+  replace?: boolean
 }
 
 export const StyledButton = styled.button<Props>`
@@ -25,7 +27,7 @@ export const StyledButton = styled.button<Props>`
   height: 4.8rem;
   border: solid 1px
     ${props =>
-    props.isPrimary ? theme.colors.primary : 'rgba(255,255,255, 0.2)'};
+      props.isPrimary ? theme.colors.primary : 'rgba(255,255,255, 0.2)'};
 
   &:hover {
     background-color: ${theme.colors.primary};

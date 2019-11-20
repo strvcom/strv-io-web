@@ -18,8 +18,11 @@ const bgImage = {
   webP: require('images/banner.webp'),
 }
 
-const Home: React.FunctionComponent<Data> = ({ data }) => {
+const Home: React.FunctionComponent<
+  Data & { pageContext: { category: string } }
+> = ({ data, pageContext }) => {
   const webP = canUseWebP()
+  const category = pageContext.category || 'all'
 
   return (
     <Layout>
@@ -30,7 +33,7 @@ const Home: React.FunctionComponent<Data> = ({ data }) => {
           <HeadLineTail>Curated by STRV developers</HeadLineTail>
         </BannerInfo>
       </Banner>
-      <FilteredList data={data} />
+      <FilteredList data={data} category={category} />
       <Footer />
     </Layout>
   )

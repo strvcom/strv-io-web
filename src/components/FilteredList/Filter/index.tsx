@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
 import { Category } from 'common/enums'
-import Button from 'components/Button'
 import { Wrapper, Ul, Li } from './styled'
+import { StyledButton } from 'components/Button/styled'
 
 interface Props {
   activeCategory: string | string[]
-  handleFilter: (categoryName: Category) => void
 }
 
-export const Filter: React.SFC<Props> = ({ activeCategory, handleFilter }) => (
+export const Filter: React.SFC<Props> = ({ activeCategory }) => (
   <Wrapper>
     <Ul>
       {Object.keys(Category).map(categoryKey => {
@@ -16,13 +17,15 @@ export const Filter: React.SFC<Props> = ({ activeCategory, handleFilter }) => (
 
         return (
           <Li key={category}>
-            <Button
-              onClick={() => handleFilter(category)}
+            <StyledButton
+              as={Link}
+              to={`/repositories/${category}`}
               isPrimary={activeCategory === category}
               aria-label={category}
+              replace
             >
               {category}
-            </Button>
+            </StyledButton>
           </Li>
         )
       })}
