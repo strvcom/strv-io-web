@@ -12,8 +12,8 @@ export const wrapRootElement = ({ element }) => (
 export const shouldUpdateScroll = ({ prevRouterProps, routerProps }) => {
   const testRegEx = /^\/repositories/u
   if (
-    testRegEx.test(prevRouterProps.location.pathname)
-    && testRegEx.test(routerProps.location.pathname)
+    testRegEx.test(prevRouterProps.location.pathname) &&
+    testRegEx.test(routerProps.location.pathname)
   ) {
     return false
   }

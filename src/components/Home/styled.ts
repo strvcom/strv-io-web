@@ -2,20 +2,13 @@ import styled from 'styled-components'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
 
-type BannerProps = {
-  bgImage: string
-}
-
 export const Wrapper = styled.div`
   height: 100%;
   width: 100%;
 `
 
-export const Banner = styled.div<BannerProps>`
+export const Banner = styled.div`
   position: relative;
-  background-image: url(${p => p.bgImage});
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 0 30px;
 
   &::after {
@@ -31,12 +24,17 @@ export const Banner = styled.div<BannerProps>`
       rgba(17, 21, 23, 0.99) 99%,
       rgba(17, 21, 23, 1) 100%
     );
-    filter: dximagetransform.microsoft.gradient(
-      startColorstr= '#00111517',
-      endColorstr= '#111517',
-      GradientType=0
-    );
   }
+`
+
+export const Background = styled.picture`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 `
 
 export const BannerInfo = styled.div`

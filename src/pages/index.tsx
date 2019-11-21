@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { canUseWebP } from 'react-img-webp'
 import Layout from 'components/Layout'
 import { Data } from 'common/types'
 import Header from 'components/Header'
@@ -9,25 +8,31 @@ import {
   HeadLine,
   HeadLineTail,
   BannerInfo,
+  Background,
 } from 'components/Home/styled'
 import { FilteredList } from 'components/FilteredList'
 import Footer from 'components/Footer'
 
 const bgImage = {
-  src: require('images/banner.jpg'),
-  webP: require('images/banner.webp'),
+  jpg: require('images/banner.jpg'),
+  webp: require('images/banner.webp'),
 }
 
 const Home: React.FunctionComponent<
   Data & { pageContext: { category: string } }
 > = ({ data, pageContext }) => {
-  const webP = canUseWebP()
   const category = pageContext.category || 'all'
 
   return (
     <Layout>
       <Header />
-      <Banner bgImage={webP ? bgImage.webP : bgImage.src}>
+      <Banner>
+        <Background role="banner">
+          <source type="image/jpeg" srcSet={bgImage.jpg} />
+          <source type="image/webp" srcSet={bgImage.webp} />
+          <img src={bgImage.jpg} />
+        </Background>
+
         <BannerInfo>
           <HeadLine>Open source libraries</HeadLine>
           <HeadLineTail>Curated by STRV developers</HeadLineTail>

@@ -12370,11 +12370,6 @@ react-hot-loader@^4.8.0:
     shallowequal "^1.1.0"
     source-map "^0.7.3"
 
-react-img-webp@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-img-webp/-/react-img-webp-2.0.0.tgz#4d1720fba7c823bf6ef4fb227fac3cc2fd399974"
-  integrity sha512-y5/xxmdU2e+ePRWgfFPXeBjmDW/PdAdGuM0E3tsmWUw0LjqyDz6hBPYEhCHjtJPG+ULXi6uddMKKco12fYpSzw==
-
 react-immutable-proptypes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-immutable-proptypes/-/react-immutable-proptypes-2.1.0.tgz#023d6f39bb15c97c071e9e60d00d136eac5fa0b4"
