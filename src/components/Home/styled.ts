@@ -35,6 +35,11 @@ export const Background = styled.picture`
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
 `
 
 export const BannerInfo = styled.div`
