@@ -12,11 +12,16 @@ import {
 import { Repo, RepoNode } from 'common/types'
 import { Category as CategoryEnum } from 'common/enums'
 
-interface Props {
+interface ItemProps {
   repo: Repo
 }
 
-const Item: React.FunctionComponent<Props> = ({ repo }) => (
+interface ListProps {
+  data: RepoNode[]
+  filter: string
+}
+
+export const Item: React.FunctionComponent<ItemProps> = ({ repo }) => (
   <Link
     href={repo.url}
     target="_blank"
@@ -29,11 +34,6 @@ const Item: React.FunctionComponent<Props> = ({ repo }) => (
     <Category>{repo.category.join(' - ')}</Category>
   </Link>
 )
-
-interface ListProps {
-  data: RepoNode[]
-  filter: string
-}
 
 export const List: React.FunctionComponent<ListProps> = ({ data, filter }) => {
   const activeData =

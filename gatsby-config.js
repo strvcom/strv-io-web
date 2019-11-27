@@ -20,7 +20,6 @@ module.exports = {
         display: 'standalone',
       },
     },
-    'gatsby-plugin-netlify-cms',
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
@@ -43,6 +42,14 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/index.ts`,
+        htmlTitle: `STRV.IO CMS`,
+        htmlFavicon: `${__dirname}/static/assets/favicon.ico`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
