@@ -18,10 +18,10 @@ module.exports = {
   },
   plugins: ['prettier'],
   extends: [
-    'prettier',
     '@strv/eslint-config-typescript',
     '@strv/eslint-config-react',
     '@strv/eslint-config-react/style',
+    'prettier',
   ],
   rules: {
     'prettier/prettier': 'error',
