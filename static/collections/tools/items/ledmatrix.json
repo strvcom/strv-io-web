@@ -5,5 +5,6 @@
   "owner": "TheCaveCz",
   "category": "iot",
   "icon": "<svg height=58 width=58 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2 transform=\"translate(1 1)\"><circle cx=5 cy=5 r=5 stroke=#FFF /><path d=\"M15.45 5h25.1M51 15.45v25.1M40.55 51h-25.1M5 40.55v-25.1\"stroke=#FFF stroke-linecap=round /><circle cx=51 cy=5 r=5 stroke=#FFF /><circle cx=5 cy=51 r=5 stroke=#FFF /><circle cx=51 cy=51 r=5 stroke=#FFF /><path d=\"M12 12l13 13m6 6l13 13\"stroke=#EF0D33 stroke-linecap=round /><path d=\"M12 44l32-32\"stroke=#FFF stroke-linecap=round /></g></svg>",
-  "order": "25"
+  "order": "25",
+  "isFeatured": false
 }

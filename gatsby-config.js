@@ -43,5 +43,11 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-2385632-31',
+      },
+    },
   ],
 }

@@ -22,6 +22,11 @@ collections:
           options: ['frontend', 'backend', 'android', 'ios', 'iot'],
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }
-      - { label: 'Featured', name: 'isFeatured', widget: 'boolean' }
+      - {
+          label: 'Featured',
+          name: 'isFeatured',
+          widget: 'boolean',
+          default: false,
+        }
 media_folder: static/img
 public_folder: /img

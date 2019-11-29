@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 
-export const StyledButton = styled.button`
+type Props = {
+  isPrimary?: boolean
+  to?: string
+  replace?: boolean
+}
+
+export const StyledButton = styled.button<Props>`
   font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
   color: ${theme.colors.white};

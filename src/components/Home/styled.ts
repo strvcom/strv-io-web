@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
-import banner from 'images/banner.png'
 
 export const Wrapper = styled.div`
   height: 100%;
@@ -10,9 +9,6 @@ export const Wrapper = styled.div`
 
 export const Banner = styled.div`
   position: relative;
-  background-image: url(${banner});
-  background-size: cover;
-  background-repeat: no-repeat;
   padding: 0 30px;
 
   &::after {
@@ -28,11 +24,21 @@ export const Banner = styled.div`
       rgba(17, 21, 23, 0.99) 99%,
       rgba(17, 21, 23, 1) 100%
     );
-    filter: dximagetransform.microsoft.gradient(
-      startColorstr= '#00111517',
-      endColorstr= '#111517',
-      GradientType=0
-    );
+  }
+`
+
+export const Background = styled.picture`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
   }
 `
 
@@ -101,14 +107,5 @@ export const HeadLineTail = styled.h2`
   ${mq.tabletWide} {
     line-height: 48px;
     font-size: 3.2rem;
-  }
-`
-
-export const Main = styled.main`
-  margin: 0 auto;
-  padding: 0 30px;
-
-  ${mq.tabletWide} {
-    padding: 0;
   }
 `

@@ -1,10 +1,23 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import GlobalStyles from 'styles/global'
 import Layout from 'components/Layout'
+import 'styles/fonts.css'
 
 export const wrapRootElement = ({ element }) => (
-  <Fragment>
+  <>
     <GlobalStyles />
     <Layout>{element}</Layout>
-  </Fragment>
+  </>
 )
+
+export const shouldUpdateScroll = ({ prevRouterProps, routerProps }) => {
+  const testRegEx = /^\/repositories/u
+  if (
+    testRegEx.test(prevRouterProps.location.pathname)
+    && testRegEx.test(routerProps.location.pathname)
+  ) {
+    return false
+  }
+
+  return true
+}

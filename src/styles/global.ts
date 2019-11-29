@@ -1,11 +1,8 @@
 /* eslint-disable no-unused-expressions */
 import { createGlobalStyle } from 'styled-components'
 import theme from 'styles/theme'
-import fontFaces from 'styles/fontFaces'
 
 export default createGlobalStyle`
-  ${fontFaces};
-
   html,
   body {
     height: 100%;
@@ -44,9 +41,9 @@ export default createGlobalStyle`
     color: inherit;
   }
 
-  .reveal,
+  /* .reveal,
   .reveal--delay1,
   .reveal--delay2, {
     visibility: hidden;
-  }
+  } */
 `

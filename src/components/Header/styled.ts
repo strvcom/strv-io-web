@@ -44,10 +44,12 @@ export const Logo = styled.a`
       transform: translate3d(-50%, 0, 0);
       opacity: 0;
     }
+
     &::after {
       visibility: visible;
       opacity: 1;
       transform: translate3d(47%, 0, 0);
+
       ${mq.tablet} {
         transform: translate3d(75%, 0, 0);
       }
