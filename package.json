@@ -61,7 +61,7 @@
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
     "@types/styled-components": "^4.1.18",
-    "@typescript-eslint/parser": "^2.9.0",
+    "@typescript-eslint/parser": "^2.10.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.6",
