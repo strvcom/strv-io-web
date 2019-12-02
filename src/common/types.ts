@@ -3,7 +3,7 @@ export interface RepoNode {
 }
 
 export interface Repo {
-  category: string
+  category: string[]
   description: string
   icon: string
   name: string
