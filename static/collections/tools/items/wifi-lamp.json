@@ -3,7 +3,7 @@
   "url": "https://github.com/TheCaveCz/letsmake-wifilamp",
   "description": "ESP8266 chip on Wemos D1 mini module drives WS2812 LED strip",
   "owner": "TheCaveCz",
-  "category": "iot",
+  "category": ["iot"],
   "icon": "<svg height=60 width=60 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M10 1h40l8 32H2zM18 33a12 12 0 1 0 24 0\"stroke=#FFF /><path d=\"M30 51v8M18.43 46.79l-5.14 6.13m28.28-6.13l5.14 6.13\"stroke=#EF0D33 stroke-linecap=round /></g></svg>",
   "order": "26",
   "isFeatured": false

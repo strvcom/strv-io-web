@@ -3,7 +3,7 @@
   "url": "https://github.com/strvcom/terraform-aws-fargate",
   "description": "Terraform module to provision a Fargate-ready AWS infrastructure ",
   "owner": "jlsan92",
-  "category": "backend",
+  "category": ["backend"],
   "icon": "<svg height=\"63\" width=\"35\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\" stroke-width=\"2\" transform=\"translate(1 1)\"><ellipse cx=\"19.99\" cy=\"56\" rx=\"4.99\" ry=\"5\" stroke=\"#FFF\"/><ellipse cx=\"11.99\" cy=\"39\" rx=\"4.99\" ry=\"5\" stroke=\"#FFF\"/><ellipse cx=\"11.99\" cy=\"5\" rx=\"4.99\" ry=\"5\" stroke=\"#FFF\"/><ellipse cx=\"19.99\" cy=\"22\" rx=\"4.99\" ry=\"5\" stroke=\"#EF0D33\"/><path d=\"M21.02 39.02h11.02v-34H21.02M11.03 56H0V22h11.03\" stroke=\"#FFF\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>",
   "isFeatured": false
 }
