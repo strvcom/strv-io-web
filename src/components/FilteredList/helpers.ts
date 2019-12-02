@@ -18,6 +18,6 @@ export const sortItems = (repos: RepoNode[]): RepoNode[] =>
     )
     .sort(
       (repo1, repo2) =>
-      CategoryPriority[repo1.node.category] -
+        CategoryPriority[repo1.node.category] -
         CategoryPriority[repo2.node.category]
     )
