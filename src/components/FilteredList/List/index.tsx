@@ -1,7 +1,5 @@
 import React from 'react'
-import { Repo, RepoNode } from 'common/types'
 import Fade from 'react-reveal/Fade'
-import { Category as CategoryEnum } from 'common/enums'
 import {
   Ul,
   Li,
@@ -11,6 +9,8 @@ import {
   Category,
   IconWrapper,
 } from './styled'
+import { Repo, RepoNode } from 'common/types'
+import { Category as CategoryEnum } from 'common/enums'
 
 interface Props {
   repo: Repo
@@ -26,7 +26,7 @@ const Item: React.FunctionComponent<Props> = ({ repo }) => (
     <IconWrapper dangerouslySetInnerHTML={{ __html: repo.icon }} />
     <Name>{repo.name}</Name>
     <Description>{repo.description}</Description>
-    <Category>{repo.category}</Category>
+    <Category>{repo.category.join(' - ')}</Category>
   </Link>
 )
 
@@ -39,7 +39,7 @@ export const List: React.FunctionComponent<ListProps> = ({ data, filter }) => {
   const activeData =
     filter === CategoryEnum.All
       ? data
-      : data.filter(repo => repo.node.category === filter)
+      : data.filter(repo => repo.node.category.includes(filter))
 
   return (
     <Ul>
