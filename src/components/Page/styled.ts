@@ -46,11 +46,19 @@ export const BannerInfo = styled.div`
   position: relative;
   z-index: 1;
   text-align: center;
-  padding-top: 17.5rem;
+  padding-top: 22rem;
   padding-bottom: 10.7rem;
 
   ${mq.tabletWide} {
     padding-bottom: 16.2rem;
+  }
+`
+
+export const HomeBannerInfo = styled(BannerInfo)`
+  padding-bottom: 8rem;
+
+  ${mq.tabletWide} {
+    padding-bottom: 10rem;
   }
 `
 
@@ -91,6 +99,23 @@ export const HeadLine = styled.h1`
   }
 `
 
+export const HomeHeadline = styled(HeadLine)`
+  font-weight: ${theme.fontWeight.bold};
+  letter-spacing: 1.15px;
+  line-height: 62px;
+  font-size: 6.2rem;
+
+  ${mq.tablet} {
+    line-height: 90px;
+    font-size: 9rem;
+  }
+
+  ${mq.tabletWide} {
+    line-height: 110px;
+    font-size: 11rem;
+  }
+`
+
 export const HeadLineTail = styled.h2`
   font-family: ${theme.fonts.subHeadline};
   color: ${theme.colors.white};
@@ -107,5 +132,17 @@ export const HeadLineTail = styled.h2`
   ${mq.tabletWide} {
     line-height: 48px;
     font-size: 3.2rem;
+  }
+`
+
+export const HomeHeadLineTail = styled(HeadLineTail)`
+  font-family: ${theme.fonts.primary};
+  font-weight: ${theme.fontWeight.light};
+  line-height: 18px;
+  font-size: 1.6rem;
+
+  ${mq.tabletWide} {
+    line-height: 22px;
+    font-size: 1.8rem;
   }
 `

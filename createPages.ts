@@ -5,7 +5,7 @@ import { Category } from './src/common/enums'
 
 export const createPages: GatsbyNode['createPages'] = async ({ actions }) => {
   const { createPage, createRedirect } = actions
-  const repositoriesTemplate = path.resolve(`src/pages/index.tsx`)
+  const repositoriesTemplate = path.resolve(`src/templates/Tool.tsx`)
   const categoryKeys = Object.keys(Category).map(key => Category[key])
 
   createRedirect({

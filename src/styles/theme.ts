@@ -7,6 +7,7 @@ const theme = {
     greyDarker: '#555555',
     greyBorder: '#404345',
     greyDark: '#282B2D',
+    greyHover: '#3B3B3B',
   },
   fonts: {
     primary: 'Maison Neue, sans-serif',
