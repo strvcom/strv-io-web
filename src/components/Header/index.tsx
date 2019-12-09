@@ -1,12 +1,17 @@
 import React from 'react'
-import { Logo, Wrapper } from './styled'
+import { TopHeader } from './styled'
+import Logo from './Logo'
+import Hamburger from './Hamburger'
+import Navigation from './Navigation'
 
 const Header = () => (
-  <Wrapper>
-    <Logo href="https://www.strv.com" aria-label="strv">
-      <span />
-    </Logo>
-  </Wrapper>
+  <>
+    <TopHeader>
+      <Logo isMenuOpen />
+      <Hamburger isMenuOpen />
+    </TopHeader>
+    <Navigation isMenuOpen />
+  </>
 )
 
 export default Header

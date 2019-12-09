@@ -1,6 +1,11 @@
-import styled from 'styled-components'
+// eslint-disable-next-line import/named
+import styled, { FlattenSimpleInterpolation } from 'styled-components'
 
-export const Ul = styled.ul`
+interface UlProps {
+  styles?: FlattenSimpleInterpolation
+}
+
+export const Ul = styled.ul<UlProps>`
   width: 227px;
   display: flex;
   margin: 0 auto;
@@ -8,6 +13,7 @@ export const Ul = styled.ul`
   align-items: center;
   justify-content: space-between;
   list-style: none;
+  ${({ styles }) => styles};
 `
 
 export const Link = styled.a`
