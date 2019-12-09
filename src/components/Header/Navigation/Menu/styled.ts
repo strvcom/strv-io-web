@@ -23,16 +23,21 @@ export const Wrapper = styled.nav`
   }
 `
 
+const menuStyling = css`
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.6rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s opacity ease-in;
+`
+
 interface Props {
   isMenuOpen?: boolean
 }
 
 export const Main = styled.ul<Props>`
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2.6rem;
-  visibility: hidden;
-  transition: 0.2s opacity ease-in;
+  ${menuStyling};
   ${({ isMenuOpen }) =>
     isMenuOpen &&
     css`
@@ -41,10 +46,12 @@ export const Main = styled.ul<Props>`
     `}
 `
 
-export const Secondary = styled(Main)`
+export const Secondary = styled.ul<Props>`
+  ${menuStyling};
   ${({ isMenuOpen }) =>
     isMenuOpen &&
     css`
       animation: ${showNavigation} 0.9s 0.2s ease forwards;
+      visibility: visible;
     `}
 `

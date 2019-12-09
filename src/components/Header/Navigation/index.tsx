@@ -10,7 +10,7 @@ interface Props {
 const Navigation: FC<Props> = ({ isMenuOpen }) => (
   <Wrapper isMenuOpen={isMenuOpen}>
     <Menu isMenuOpen={isMenuOpen} />
-    <BottomMenu />
+    <BottomMenu isMenuOpen={isMenuOpen} />
   </Wrapper>
 )
 
