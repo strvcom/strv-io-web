@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Logo: FC<Props> = ({ isMenuOpen }) => (
-  <Wrapper hide={isMenuOpen} href="https://www.strv.com" aria-label="strv">
+  <Wrapper hide={isMenuOpen} href="/" aria-label="strv">
     <span />
   </Wrapper>
 )

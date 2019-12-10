@@ -13,8 +13,8 @@ export const TopHeader = styled.header`
 
     :last-child {
       position: absolute;
-      top: 4.9rem;
-      right: 4.9rem;
+      top: 4.3rem;
+      right: 4.3rem;
     }
   }
 `

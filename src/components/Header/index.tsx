@@ -3,6 +3,7 @@ import { TopHeader } from './styled'
 import Logo from './Logo'
 import Hamburger from './Hamburger'
 import Navigation from './Navigation'
+import { navigation } from 'constants/navigation'
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -17,7 +18,7 @@ const Header = () => {
         <Logo isMenuOpen={isMenuOpen} />
         <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenu} />
       </TopHeader>
-      <Navigation isMenuOpen={isMenuOpen} />
+      <Navigation navigationData={navigation} isMenuOpen={isMenuOpen} />
     </>
   )
 }

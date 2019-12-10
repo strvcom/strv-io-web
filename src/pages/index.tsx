@@ -9,37 +9,7 @@ import Layout from 'components/Layout'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import ResourceList from 'components/ResourceList'
-import { ResourceType } from 'components/ResourceList/types'
-
-const resources: ResourceType[] = [
-  {
-    id: '1',
-    image: 'assets/home/open-knowledge.png',
-    alt: 'Open Knowledge',
-    title: 'Open Knowledge',
-    description:
-      'Online course for learning React including lectures and example code.',
-    link: '#',
-  },
-  {
-    id: '2',
-    image: 'assets/home/open-source.png',
-    alt: 'Open Source Libraries',
-    title: 'Open Source Libraries',
-    description:
-      'Online course for learning React including lectures and example code.',
-    link: 'repositories',
-  },
-  {
-    id: '3',
-    image: 'assets/home/guidelines.png',
-    alt: 'Guidelines',
-    title: 'Guidelines',
-    description:
-      'Online course for learning React including lectures and example code.',
-    link: '#',
-  },
-]
+import { resources } from 'constants/resources'
 
 const Home: FC = () => (
   <Layout>

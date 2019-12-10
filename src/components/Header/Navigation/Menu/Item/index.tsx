@@ -1,18 +1,28 @@
 import React, { FC } from 'react'
+import { Link as GatsbyLink } from 'gatsby'
 import { Wrapper, Link } from './styled'
 
 interface Props {
-  text: string
+  title: string
+  link: string
+  external?: boolean
   main?: boolean
   animate?: boolean
 }
 
-const Item: FC<Props> = ({ text, animate, main }) => (
+const Item: FC<Props> = ({ title, link, animate, main }) => (
   <Wrapper>
-    <Link animate={animate} main={main}>
-      <span className="layer" data-text={text} />
-      {text}
-    </Link>
+    {!external ? (
+      <Link as={GatsbyLink} to={link} animate={animate} main={main}>
+        <span className="layer" data-text={title} />
+        {title}
+      </Link>
+    ) : (
+      <Link href={link} rel="noopener noreferrer" animate={animate} main={main}>
+        <span className="layer" data-text={title} />
+        {title}
+      </Link>
+    )}
   </Wrapper>
 )
 

@@ -47,6 +47,9 @@ interface LinkProps {
   active?: boolean
   animate?: boolean
   main?: boolean
+  isPrimary?: boolean
+  to?: string
+  replace?: boolean
 }
 
 export const Link = styled.a<LinkProps>`
@@ -60,8 +63,6 @@ export const Link = styled.a<LinkProps>`
   position: relative;
   overflow: hidden;
   cursor: pointer;
-
-  /* font-weight: ${theme.fontWeight.bold}; */
 
   ${mq.desktop} {
     font-size: 2rem;
@@ -110,18 +111,18 @@ export const Link = styled.a<LinkProps>`
       }
      }
     `};
-    ${({ main }) =>
-      main &&
-      css`
-        font-family: ${theme.fonts.headline};
-        font-weight: ${theme.fontWeight.bold};
-        font-size: 3.2rem;
-        text-transform: uppercase;
-        line-height: 1.22;
-        color: ${theme.colors.white};
+  ${({ main }) =>
+    main &&
+    css`
+      font-family: ${theme.fonts.headline};
+      font-weight: ${theme.fontWeight.bold};
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      line-height: 1.22;
+      color: ${theme.colors.white};
 
-        ${mq.tablet} {
-          font-size: 4.8rem;
-        }
-      `};
+      ${mq.tablet} {
+        font-size: 4.8rem;
+      }
+    `};
 `

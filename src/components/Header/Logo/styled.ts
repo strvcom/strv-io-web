@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { mq } from 'styles/media'
 
 interface Props {
-  hide: boolean
+  hide?: boolean
 }
 
 export const Wrapper = styled.a<Props>`

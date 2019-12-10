@@ -1,22 +1,36 @@
 import React, { FC } from 'react'
+import { NavigationType } from '../types'
 import { Wrapper, Main, Secondary } from './styled'
 import Item from './Item'
 
 interface Props {
+  navigationData: NavigationType
   isMenuOpen?: boolean
 }
 
-const Menu: FC<Props> = ({ isMenuOpen }) => (
+const Menu: FC<Props> = ({ navigationData, isMenuOpen }) => (
   <Wrapper>
     <Main isMenuOpen={isMenuOpen}>
-      <Item text="test" main animate />
-      <Item text="test" main animate />
-      <Item text="test" main animate />
+      {navigationData.main.map(item => (
+        <Item
+          key={item.id}
+          title={item.title}
+          link={item.link}
+          external={item.external}
+          main
+          animate
+        />
+      ))}
     </Main>
     <Secondary isMenuOpen={isMenuOpen}>
-      <Item text="test" />
-      <Item text="test" />
-      <Item text="test" />
+      {navigationData.secondary.map(item => (
+        <Item
+          key={item.id}
+          title={item.title}
+          link={item.link}
+          external={item.external}
+        />
+      ))}
     </Secondary>
   </Wrapper>
 )
