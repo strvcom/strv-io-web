@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react'
+import { Location } from '@reach/router'
 import { TopHeader } from './styled'
 import Logo from './Logo'
 import Hamburger from './Hamburger'
@@ -13,13 +14,22 @@ const Header = () => {
   }, [])
 
   return (
-    <>
-      <TopHeader>
-        <Logo isMenuOpen={isMenuOpen} />
-        <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenu} />
-      </TopHeader>
-      <Navigation navigationData={navigation} isMenuOpen={isMenuOpen} />
-    </>
+    <Location>
+      {/* eslint-disable-next-line no-shadow */}
+      {({ location }) => (
+        <>
+          <TopHeader>
+            <Logo isMenuOpen={isMenuOpen} />
+            <Hamburger isMenuOpen={isMenuOpen} onClick={toggleMenu} />
+          </TopHeader>
+          <Navigation
+            currentLocation={location}
+            navigationData={navigation}
+            isMenuOpen={isMenuOpen}
+          />
+        </>
+      )}
+    </Location>
   )
 }
 

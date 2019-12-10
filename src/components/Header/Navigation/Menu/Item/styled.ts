@@ -72,11 +72,6 @@ export const Link = styled.a<LinkProps>`
     color: ${theme.colors.white};
   }
 
-  ${({ active }) =>
-    active &&
-    css`
-      color: ${theme.colors.primary};
-    `};
   ${({ animate }) =>
     animate &&
     css`
@@ -111,6 +106,7 @@ export const Link = styled.a<LinkProps>`
       }
      }
     `};
+
   ${({ main }) =>
     main &&
     css`
@@ -123,6 +119,15 @@ export const Link = styled.a<LinkProps>`
 
       ${mq.tablet} {
         font-size: 4.8rem;
+      }
+    `};
+
+  ${({ active }) =>
+    active &&
+    css`
+      color: ${theme.colors.primary};
+      :hover {
+        color: ${theme.colors.primary};
       }
     `};
 `
