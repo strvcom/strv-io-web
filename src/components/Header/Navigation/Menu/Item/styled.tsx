@@ -1,4 +1,11 @@
-import styled, { css, keyframes } from 'styled-components'
+import React from 'react'
+import styled, {
+  css,
+  keyframes,
+  // eslint-disable-next-line import/named
+  FlattenSimpleInterpolation,
+} from 'styled-components'
+import { Link as GatsbyLink } from 'gatsby'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
 
@@ -43,16 +50,17 @@ export const Wrapper = styled.li`
   margin: 0;
 `
 
-interface LinkProps {
+interface LinkStyleProps {
   active?: boolean
   animate?: boolean
   main?: boolean
-  isPrimary?: boolean
-  to?: string
-  replace?: boolean
 }
 
-export const Link = styled.a<LinkProps>`
+const linkStyle = ({
+  active,
+  animate,
+  main,
+}: LinkStyleProps): FlattenSimpleInterpolation => css`
   font-family: ${theme.fonts.primary};
   font-weight: ${theme.fontWeight.light};
   font-size: 1.8rem;
@@ -72,8 +80,7 @@ export const Link = styled.a<LinkProps>`
     color: ${theme.colors.white};
   }
 
-  ${({ animate }) =>
-    animate &&
+  ${animate &&
     css`
      .layer {
       display: block;
@@ -107,8 +114,7 @@ export const Link = styled.a<LinkProps>`
      }
     `};
 
-  ${({ main }) =>
-    main &&
+  ${main &&
     css`
       font-family: ${theme.fonts.headline};
       font-weight: ${theme.fontWeight.bold};
@@ -122,12 +128,29 @@ export const Link = styled.a<LinkProps>`
       }
     `};
 
-  ${({ active }) =>
-    active &&
+  ${active &&
     css`
       color: ${theme.colors.primary};
       :hover {
         color: ${theme.colors.primary};
       }
     `};
+`
+
+interface LinkProps extends LinkStyleProps {
+  to?: string
+  replace?: boolean
+}
+
+// export const InternalLink =
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+export const Link = styled(({ active, animate, main, ...props }) => (
+  <GatsbyLink {...props} />
+))<LinkProps>`
+  ${({ ...props }) => linkStyle(props)};
+`
+
+export const ExternalLink = styled.a<LinkProps>`
+  ${({ ...props }) => linkStyle(props)};
 `

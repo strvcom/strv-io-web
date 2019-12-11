@@ -23,6 +23,8 @@ const Tool: React.FunctionComponent<Data & {
 }> = ({ data, pageContext }) => {
   const category = pageContext.category || 'all'
 
+  console.log(pageContext)
+
   return (
     <Layout>
       <Header />

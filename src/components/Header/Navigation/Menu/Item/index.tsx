@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
-import { Link as GatsbyLink } from 'gatsby'
-import { Wrapper, Link } from './styled'
+import { Wrapper, Link, ExternalLink } from './styled'
 
 interface Props {
   title: string
   link: string
   active?: boolean
-  externalLink?: boolean
+  isInternal?: boolean
   main?: boolean
   animate?: boolean
 }
@@ -17,22 +16,16 @@ const Item: FC<Props> = ({
   animate,
   main,
   active,
-  externalLink,
+  isInternal,
 }) => (
   <Wrapper>
-    {!externalLink ? (
-      <Link
-        as={GatsbyLink}
-        to={link}
-        animate={animate && !active}
-        main={main}
-        active={active}
-      >
+    {isInternal ? (
+      <Link to={link} animate={animate && !active} main={main} active={active}>
         <span className="layer" data-text={title} />
         {title}
       </Link>
     ) : (
-      <Link
+      <ExternalLink
         href={link}
         rel="noopener noreferrer"
         animate={animate && !active}
@@ -40,7 +33,7 @@ const Item: FC<Props> = ({
       >
         <span className="layer" data-text={title} />
         {title}
-      </Link>
+      </ExternalLink>
     )}
   </Wrapper>
 )

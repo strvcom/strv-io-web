@@ -19,9 +19,12 @@ const Menu: FC<Props> = ({ navigationData, isMenuOpen, currentLocation }) => (
           title={item.title}
           link={item.link}
           externalLink={item.external}
-          active={location && location.pathname.includes(item.link)}
+          active={
+            currentLocation && currentLocation.pathname.includes(item.link)
+          }
           main
           animate
+          isInternal={!item.external}
         />
       ))}
     </Main>
@@ -31,7 +34,7 @@ const Menu: FC<Props> = ({ navigationData, isMenuOpen, currentLocation }) => (
           key={item.id}
           title={item.title}
           link={item.link}
-          externalLink={item.external}
+          isInternal={!item.external}
         />
       ))}
     </Secondary>
