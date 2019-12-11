@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+import { Link as GatsbyLink } from 'gatsby'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
 
@@ -8,7 +10,10 @@ interface WrapperProps {
   replace?: boolean
 }
 
-export const Wrapper = styled.button<WrapperProps>`
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+export const Wrapper = styled(({ isPrimary, ...props }) => (
+  <GatsbyLink {...props} />
+))<WrapperProps>`
   display: flex;
   align-items: center;
   flex-direction: column;

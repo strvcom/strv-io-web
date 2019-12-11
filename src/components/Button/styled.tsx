@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+import { Link as GatsbyLink } from 'gatsby'
 import theme from 'styles/theme'
 
 type Props = {
@@ -7,7 +9,10 @@ type Props = {
   replace?: boolean
 }
 
-export const StyledButton = styled.button<Props>`
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
+export const StyledButton = styled(({ isPrimary, ...props }) => (
+  <GatsbyLink {...props} />
+))<Props>`
   font-family: ${theme.fonts.primary};
   font-size: 1.2rem;
   color: ${theme.colors.white};

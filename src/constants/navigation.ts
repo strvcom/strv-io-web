@@ -5,7 +5,7 @@ export const navigation: NavigationType = {
     {
       id: 'open-knowledge',
       title: 'Open Knowledge',
-      link: '#',
+      link: '/#',
     },
     {
       id: 'open-source',
@@ -15,7 +15,7 @@ export const navigation: NavigationType = {
     {
       id: 'guidelines',
       title: 'Guidelines',
-      link: '#',
+      link: '/#',
     },
   ],
   secondary: [
@@ -28,12 +28,12 @@ export const navigation: NavigationType = {
     {
       id: 'blog',
       title: 'Blog',
-      link: '#',
+      link: '/#',
     },
     {
       id: 'training-and-workshops',
       title: 'Training and Workshops',
-      link: '#',
+      link: '/#',
     },
   ],
 }

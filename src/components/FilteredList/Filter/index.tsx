@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-import { Category } from 'common/enums'
 import { Wrapper, Ul, Li } from './styled'
+import { Category } from 'common/enums'
 import { StyledButton } from 'components/Button/styled'
 
 interface Props {
@@ -18,7 +16,6 @@ export const Filter: React.SFC<Props> = ({ activeCategory }) => (
         return (
           <Li key={category}>
             <StyledButton
-              as={Link}
               to={`/repositories/${category}`}
               isPrimary={activeCategory === category}
               aria-label={category}
