@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+import ScrollLock from 'react-scrolllock'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { WindowLocation } from '@reach/router'
 import { Wrapper } from './styled'
 import Menu from './Menu'
@@ -17,6 +19,7 @@ const Navigation: FC<Props> = ({
   currentLocation,
 }) => (
   <Wrapper isMenuOpen={isMenuOpen}>
+    {isMenuOpen && <ScrollLock />}
     <Menu
       currentLocation={currentLocation}
       navigationData={navigationData}
