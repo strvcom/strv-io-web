@@ -126,6 +126,10 @@ const linkStyle = ({
       ${mq.tablet} {
         font-size: 4.8rem;
       }
+
+      ${mq.desktopWide} {
+        font-size: 8rem;
+      }
     `};
 
   ${active &&
@@ -141,8 +145,6 @@ interface LinkProps extends LinkStyleProps {
   to?: string
   replace?: boolean
 }
-
-// export const InternalLink =
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
 export const Link = styled(({ active, animate, main, ...props }) => (

@@ -25,7 +25,7 @@ export const Wrapper = styled.div<Props>`
 
   ${mq.tablet} {
     margin-left: 60%;
-    margin-bottom: 9rem;
+    margin-top: 8rem;
   }
 
   ${({ isMenuOpen }) =>

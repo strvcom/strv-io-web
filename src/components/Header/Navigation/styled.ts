@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import theme from 'styles/theme'
+import { mq } from 'styles/media'
 
 interface WrapperProps {
   isMenuOpen?: boolean
@@ -21,6 +22,11 @@ export const Wrapper = styled.div<WrapperProps>`
   visibility: hidden;
   opacity: 0;
   transition: 0.2s opacity ease, 0.2s visibility ease;
+
+  ${mq.tablet} {
+    justify-content: initial;
+  }
+
   ${({ isMenuOpen }) =>
     isMenuOpen &&
     css`
