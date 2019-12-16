@@ -17,6 +17,7 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   display: flex;
   align-items: center;
   flex-direction: column;
+  flex: 1 1 auto;
   margin: 1.6rem 0;
   padding: 1rem 2rem;
   width: 22rem;
@@ -47,6 +48,7 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
 
 export const Img = styled.img`
   width: 20rem;
+  min-height: 25rem;
   height: auto;
   margin: 0;
   margin-bottom: 3rem;
