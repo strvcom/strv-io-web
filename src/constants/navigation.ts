@@ -28,12 +28,14 @@ export const navigation: NavigationType = {
     {
       id: 'blog',
       title: 'Blog',
-      link: '/#',
+      link: 'https://www.strv.com/blog',
+      external: true,
     },
     {
       id: 'training-and-workshops',
       title: 'Training and Workshops',
-      link: '/#',
+      link: 'https://www.strv.com/academy',
+      external: true,
     },
   ],
 }
