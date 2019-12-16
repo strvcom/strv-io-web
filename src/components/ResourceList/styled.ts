@@ -7,7 +7,7 @@ export const Wrapper = styled.main`
   justify-content: center;
   flex-direction: column;
 
-  ${mq.tabletWide} {
+  ${mq.tablet} {
     flex-direction: row;
   }
 `

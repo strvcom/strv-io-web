@@ -17,9 +17,9 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 1rem 0;
-  padding: 2rem 3rem;
-  width: 25rem;
+  margin: 1.6rem 0;
+  padding: 1rem 2rem;
+  width: 22rem;
   border: 3px solid ${theme.colors.black};
   cursor: pointer;
   transition: border 200ms ease;
@@ -30,6 +30,7 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
 
   ${mq.tabletWide} {
     margin: 0 1rem;
+    padding: 2rem 3rem;
     width: 30rem;
   }
 
@@ -45,31 +46,46 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
 `
 
 export const Img = styled.img`
-  width: 25rem;
-  height: 34rem;
+  width: 20rem;
+  height: auto;
   margin: 0;
-  margin-bottom: 7.8rem;
+  margin-bottom: 3rem;
+
+  ${mq.tabletWide} {
+    width: 25rem;
+    margin-bottom: 7.8rem;
+  }
 `
 
 export const Title = styled.h2`
   font-family: ${theme.fonts.primary};
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
-  line-height: 32px;
-  font-size: 2rem;
+  line-height: 20px;
+  font-size: 1.8rem;
   letter-spacing: 0.1;
   text-align: center;
   margin: 0;
   margin-bottom: 1.6rem;
+
+  ${mq.tabletWide} {
+    line-height: 32px;
+    font-size: 2rem;
+  }
 `
 
 export const Description = styled.p`
   font-family: ${theme.fonts.primary};
   color: ${theme.colors.grey};
   font-weight: ${theme.fontWeight.light};
-  line-height: 24px;
-  font-size: 1.6rem;
+  line-height: 20px;
+  font-size: 1.4rem;
   letter-spacing: 0;
   text-align: center;
   margin: 0;
+
+  ${mq.tabletWide} {
+    line-height: 24px;
+    font-size: 1.6rem;
+  }
 `
