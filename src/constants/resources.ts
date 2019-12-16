@@ -8,7 +8,7 @@ export const resources: ResourceType[] = [
     title: 'Open Knowledge',
     description:
       'Online course for learning React including lectures and example code.',
-    link: '#',
+    link: '/knowledge',
   },
   {
     id: 'open-source',
@@ -17,7 +17,7 @@ export const resources: ResourceType[] = [
     title: 'Open Source Libraries',
     description:
       'Online course for learning React including lectures and example code.',
-    link: '/repositories',
+    link: '/tools',
   },
   {
     id: 'guidelines',
@@ -26,6 +26,6 @@ export const resources: ResourceType[] = [
     title: 'Guidelines',
     description:
       'Online course for learning React including lectures and example code.',
-    link: '#',
+    link: '/guidelines',
   },
 ]

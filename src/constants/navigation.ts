@@ -5,17 +5,17 @@ export const navigation: NavigationType = {
     {
       id: 'open-knowledge',
       title: 'Open Knowledge',
-      link: '/#',
+      link: '/knowledge',
     },
     {
       id: 'open-source',
       title: 'Open Source Libraries',
-      link: '/repositories',
+      link: '/tools',
     },
     {
       id: 'guidelines',
       title: 'Guidelines',
-      link: '/#',
+      link: '/guidelines',
     },
   ],
   secondary: [

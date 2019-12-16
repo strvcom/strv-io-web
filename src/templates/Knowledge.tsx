@@ -10,19 +10,19 @@ interface Props {
   }
 }
 
-const Tool: FC<Props> = ({ data, pageContext }) => (
+const Knowledge: FC<Props> = ({ data, pageContext }) => (
   <Page
-    pageRoot="tools"
-    title="Open source libraries"
+    pageRoot="knowledge"
+    title="Open Knowledge"
     description="Curated by STRV"
-    data={data.allTools.edges}
+    data={data.allKnowledge.edges}
     category={pageContext.category || 'all'}
   />
 )
 
 export const indexQuery = graphql`
   {
-    allTools(sort: { fields: [isFeatured], order: [DESC] }) {
+    allKnowledge(sort: { fields: [isFeatured], order: [DESC] }) {
       edges {
         node {
           id
@@ -38,4 +38,4 @@ export const indexQuery = graphql`
   }
 `
 
-export default Tool
+export default Knowledge

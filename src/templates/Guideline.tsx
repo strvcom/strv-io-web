@@ -10,19 +10,19 @@ interface Props {
   }
 }
 
-const Tool: FC<Props> = ({ data, pageContext }) => (
+const Guideline: FC<Props> = ({ data, pageContext }) => (
   <Page
-    pageRoot="tools"
-    title="Open source libraries"
+    pageRoot="guidelines"
+    title="Guidelines"
     description="Curated by STRV"
-    data={data.allTools.edges}
+    data={data.allGuidelines.edges}
     category={pageContext.category || 'all'}
   />
 )
 
 export const indexQuery = graphql`
   {
-    allTools(sort: { fields: [isFeatured], order: [DESC] }) {
+    allGuidelines(sort: { fields: [isFeatured], order: [DESC] }) {
       edges {
         node {
           id
@@ -38,4 +38,4 @@ export const indexQuery = graphql`
   }
 `
 
-export default Tool
+export default Guideline

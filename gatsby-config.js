@@ -20,7 +20,12 @@ module.exports = {
         display: 'standalone',
       },
     },
-    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        typeName: ({ node, object, isArray }) => node.relativeDirectory,
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

@@ -1,30 +1,15 @@
-import { GatsbyNode } from 'gatsby'
+import { GatsbyNode, Actions } from 'gatsby'
 const path = require('path')
 
 import { Category } from './src/common/enums'
 
-export const createPages: GatsbyNode['createPages'] = async ({ actions }) => {
-  const { createPage, createRedirect } = actions
-  const repositoriesTemplate = path.resolve(`src/templates/Tool.tsx`)
+const createCollectionPages = (actions: Actions, path: string, template: any) => {
+  const { createPage } = actions
   const categoryKeys = Object.keys(Category).map(key => Category[key])
 
-  createRedirect({
-    fromPath: `/repositories`,
-    toPath: `/repositories/all`,
-    isPermanent: true,
-    force: true,
-  })
-
-  createRedirect({
-    fromPath: `/`,
-    toPath: `/repositories/all`,
-    isPermanent: true,
-    force: true,
-  })
-
   createPage({
-    path: `/repositories`,
-    component: repositoriesTemplate,
+    path: `/${path}`,
+    component: template,
     context: {
       category: 'all',
     },
@@ -32,11 +17,20 @@ export const createPages: GatsbyNode['createPages'] = async ({ actions }) => {
 
   categoryKeys.map(categoryKey =>
     createPage({
-      path: `/repositories/${categoryKey}`,
-      component: repositoriesTemplate,
+      path: `/${path}/${categoryKey}`,
+      component: template,
       context: {
         category: categoryKey,
       },
     })
   )
+}
+
+export const createPages: GatsbyNode['createPages'] = async ({ actions }) => {
+  const toolsTemplate = path.resolve(`src/templates/Tool.tsx`)
+  createCollectionPages(actions, 'tools', toolsTemplate)
+  const guidelinesTemplate = path.resolve(`src/templates/Guideline.tsx`)
+  createCollectionPages(actions, 'guidelines', guidelinesTemplate)
+  const knowledgeTemplate = path.resolve(`src/templates/Knowledge.tsx`)
+  createCollectionPages(actions, 'knowledge', knowledgeTemplate)
 }

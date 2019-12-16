@@ -1,16 +1,20 @@
-import React from 'react'
-import { Data } from 'common/types'
-import { Main } from 'components/Layout/styled'
+import React, { FC } from 'react'
 import { Filter } from './Filter'
 import { List } from './List'
+import { RepoNode } from 'common/types'
+import { Main } from 'components/Layout/styled'
 
-export const FilteredList: React.FunctionComponent<
-  Data & { category: string }
-> = ({ data, category }) => (
+interface Props {
+  pageRoot: string
+  category: string
+  data: RepoNode[]
+}
+
+export const FilteredList: FC<Props> = ({ pageRoot, data, category }) => (
   <>
-    <Filter activeCategory={category} />
+    <Filter pageRoot={pageRoot} activeCategory={category} />
     <Main>
-      <List data={data.allItemsJson.edges} filter={category} />
+      <List data={data} filter={category} />
     </Main>
   </>
 )
