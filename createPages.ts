@@ -1,3 +1,4 @@
+// @ts-ignore
 import { GatsbyNode, Actions } from 'gatsby'
 const path = require('path')
 

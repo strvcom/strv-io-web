@@ -7,9 +7,9 @@ type Props = {
   isPrimary?: boolean
 }
 
-const handleClick = (onClick: any) => (event: SyntheticEvent) => {
+const handleClick = (onClick: any) => (buttonEvent: SyntheticEvent) => {
   if (onClick) {
-    event.preventDefault()
+    buttonEvent.preventDefault()
     onClick()
   }
 }

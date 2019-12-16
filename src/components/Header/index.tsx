@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Location } from '@reach/router'
+import { Location as ReachLocation } from '@reach/router'
 import { TopHeader } from './styled'
 import Logo from './Logo'
 import Hamburger from './Hamburger'
@@ -14,7 +14,7 @@ const Header = () => {
   }, [])
 
   return (
-    <Location>
+    <ReachLocation>
       {/* eslint-disable-next-line no-shadow */}
       {({ location }) => (
         <>
@@ -29,7 +29,7 @@ const Header = () => {
           />
         </>
       )}
-    </Location>
+    </ReachLocation>
   )
 }
 
