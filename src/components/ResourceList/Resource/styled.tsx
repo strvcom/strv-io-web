@@ -17,27 +17,25 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex: 1 1 auto;
+  width: 25rem;
   margin: 1.6rem 0;
   padding: 1rem 2rem;
-  width: 22rem;
   border: 3px solid ${theme.colors.black};
   cursor: pointer;
   transition: border 200ms ease;
 
   ${mq.tablet} {
-    width: 30rem;
+    flex: 0 1 30rem;
+    width: auto;
   }
 
   ${mq.tabletWide} {
     margin: 0 1rem;
     padding: 2rem 3rem;
-    width: 30rem;
   }
 
   ${mq.desktop} {
     padding: 3rem 4rem;
-    width: 30rem;
     margin: 0 3rem;
   }
 
