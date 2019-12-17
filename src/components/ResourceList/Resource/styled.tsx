@@ -47,14 +47,13 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
 `
 
 export const Img = styled.img`
-  width: 20rem;
-  min-height: 25rem;
-  height: auto;
+  width: auto;
+  height: 25rem;
   margin: 0;
   margin-bottom: 3rem;
 
   ${mq.tabletWide} {
-    width: 25rem;
+    height: 30rem;
     margin-bottom: 7.8rem;
   }
 `
