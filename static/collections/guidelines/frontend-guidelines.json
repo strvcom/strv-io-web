@@ -1,0 +1,9 @@
+{
+  "name": "Frontend Guidelines",
+  "url": "https://github.com/strvcom/strv-docs/blob/master/guides/git.md",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.",
+  "owner": "STRV",
+  "category": ["frontend"],
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"62\" height=\"50\"><g fill=\"none\" fill-rule=\"evenodd\" transform=\"translate(-9 -15)\"><rect width=\"60\" height=\"48\" x=\"10\" y=\"16\" stroke=\"#FFF\" stroke-linecap=\"round\" stroke-width=\"2\" rx=\"2\"/><path fill=\"#FFF\" d=\"M17 22c0 1.333-2 1.333-2 0s2-1.333 2 0m4 0c0 1.333-2 1.333-2 0s2-1.333 2 0m4 0c0 1.333-2 1.333-2 0s2-1.333 2 0\"/><path stroke=\"#EF0D33\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M44.99 54.25l-5.046-5.045a.309.309 0 00-.469.04l-2.445 3.473-7.105-15.799 15.801 7.104-1.433 1.01-2.038 1.437a.305.305 0 00-.129.222.317.317 0 00.088.248l5.05 5.05-2.273 2.26z\"/><path stroke=\"#FFF\" stroke-linecap=\"round\" stroke-width=\"2\" d=\"M10 28h60\"/></g></svg>",
+  "isFeatured": false
+}
