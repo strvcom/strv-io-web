@@ -19,7 +19,7 @@ collections:
           label: 'Category',
           name: 'category',
           widget: 'select',
-          options: ['frontend', 'backend', 'android', 'ios', 'iot'],
+          options: ['frontend', 'backend', 'android', 'ios', 'iot', 'all'],
           multiple: true,
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }
@@ -45,7 +45,7 @@ collections:
           label: 'Category',
           name: 'category',
           widget: 'select',
-          options: ['frontend', 'backend', 'android', 'ios', 'iot'],
+          options: ['frontend', 'backend', 'android', 'ios', 'iot', 'all'],
           multiple: true,
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }
@@ -71,7 +71,7 @@ collections:
           label: 'Category',
           name: 'category',
           widget: 'select',
-          options: ['frontend', 'backend', 'android', 'ios', 'iot'],
+          options: ['frontend', 'backend', 'android', 'ios', 'iot', 'all'],
           multiple: true,
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }
