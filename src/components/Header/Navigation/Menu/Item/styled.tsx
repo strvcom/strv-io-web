@@ -1,12 +1,12 @@
 import React from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled, {
   css,
   keyframes,
   // eslint-disable-next-line import/named
   FlattenSimpleInterpolation,
 } from 'styled-components'
-import { Link as GatsbyLink } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import LinkWithTracking from 'components/LinkWithTracking'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
 
@@ -149,7 +149,7 @@ interface LinkProps extends LinkStyleProps {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
 export const Link = styled(({ active, animate, main, ...props }) => (
-  <GatsbyLink {...props} />
+  <LinkWithTracking {...props} />
 ))<LinkProps>`
   ${({ ...props }) => linkStyle(props)};
 `

@@ -20,7 +20,7 @@ const Item: FC<Props> = ({
 }) => (
   <Wrapper>
     {isInternal ? (
-      <Link to={link} animate={animate && !active} main={main} active={active}>
+      <Link to={link} animate={animate && !active} main={main} active={active} label={title}>
         <span className="layer" data-text={title} />
         {title}
       </Link>
