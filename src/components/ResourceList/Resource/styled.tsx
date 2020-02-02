@@ -10,6 +10,19 @@ interface WrapperProps {
   replace?: boolean
 }
 
+export const Img = styled.img`
+  width: auto;
+  height: 25rem;
+  margin: 0;
+  margin-bottom: 3rem;
+  transition: transform .3s ease-in-out .1s;
+
+  ${mq.tabletWide} {
+    height: 30rem;
+    margin-bottom: 7.8rem;
+  }
+`
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
 export const Wrapper = styled(({ isPrimary, ...props }) => (
   <GatsbyLink {...props} />
@@ -22,7 +35,7 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   padding: 1rem 2rem;
   border: 3px solid ${theme.colors.black};
   cursor: pointer;
-  transition: border 200ms ease;
+  transition: border 200ms ease, background-color 200ms ease;
 
   ${mq.tablet} {
     flex: 0 1 30rem;
@@ -40,24 +53,10 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   }
 
   &:hover {
-    border: 3px solid ${theme.colors.greyBorder};
-  }
-`
+    border: 3px solid ${theme.colors.greyHoverDark};
+    background-color: ${theme.colors.greyHoverDark};
 
-export const Img = styled.img`
-  width: auto;
-  height: 25rem;
-  margin: 0;
-  margin-bottom: 3rem;
-  transition: transform .3s ease-in-out .1s;
-
-  ${mq.tabletWide} {
-    height: 30rem;
-    margin-bottom: 7.8rem;
-  }
-
-  ${mq.desktop} {
-    &:hover {
+    ${Img} {
       transform: scale(1.05);
     }
   }
