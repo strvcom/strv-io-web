@@ -54,7 +54,9 @@ export const Img = styled.img`
   ${mq.tabletWide} {
     height: 30rem;
     margin-bottom: 7.8rem;
+  }
 
+  ${mq.desktop} {
     &:hover {
       transform: scale(1.05);
     }
