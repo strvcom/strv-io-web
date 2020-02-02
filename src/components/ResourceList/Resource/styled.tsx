@@ -49,10 +49,15 @@ export const Img = styled.img`
   height: 25rem;
   margin: 0;
   margin-bottom: 3rem;
+  transition: transform .3s ease-in-out .1s;
 
   ${mq.tabletWide} {
     height: 30rem;
     margin-bottom: 7.8rem;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `
 
