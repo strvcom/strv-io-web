@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/named
 import styled, { FlattenSimpleInterpolation } from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 interface UlProps {
   styles?: FlattenSimpleInterpolation
@@ -16,7 +17,7 @@ export const Ul = styled.ul<UlProps>`
   ${({ styles }) => styles};
 `
 
-export const Link = styled.a`
+export const Link = styled(OutboundLink)`
   position: relative;
   display: inline-block;
   outline: none;

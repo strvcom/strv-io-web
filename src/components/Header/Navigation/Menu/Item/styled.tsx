@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import styled, {
   css,
   keyframes,
@@ -153,6 +154,6 @@ export const Link = styled(({ active, animate, main, ...props }) => (
   ${({ ...props }) => linkStyle(props)};
 `
 
-export const ExternalLink = styled.a<LinkProps>`
+export const ExternalLink = styled(OutboundLink)<LinkProps>`
   ${({ ...props }) => linkStyle(props)};
 `
