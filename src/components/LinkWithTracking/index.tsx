@@ -7,10 +7,6 @@ interface IEventArgs {
   label?: string
 }
 
-interface Props extends IEventArgs {
-	onPress?: () => void
-}
-
 const trackClick = ({ to, label }: IEventArgs) => () => {
 	trackCustomEvent({
 		category: 'Interaction',
@@ -20,7 +16,7 @@ const trackClick = ({ to, label }: IEventArgs) => () => {
 	})
 }
 
-const Resource: FC<Props> = props => (
+const Resource: FC<IEventArgs> = props => (
 	<Link
 		onClick={trackClick(props)}
 		{...props}
