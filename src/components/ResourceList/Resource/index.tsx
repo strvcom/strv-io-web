@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Link } from 'gatsby'
+import LinkWithTracking from 'components/LinkWithTracking'
 import Fade from 'react-reveal/Fade'
 import { ResourceType } from '../types'
 import { Wrapper, Title, Description, Img } from './styled'
@@ -9,7 +9,11 @@ interface Props {
 }
 
 const Resource: FC<Props> = ({ resource }) => (
-  <Wrapper as={Link} to={resource.link}>
+  <Wrapper
+    as={LinkWithTracking}
+    to={resource.link}
+    label={resource.title}
+  >
     <Fade duration={2000}>
       <Img src={resource.image} alt={resource.alt} />
       <Title>{resource.title}</Title>
