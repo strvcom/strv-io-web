@@ -16,8 +16,8 @@ const Home: FC = () => (
     <Header />
     <Banner>
       <BannerInfo>
-        <HomeHeadline>Dev resources</HomeHeadline>
-        <HomeHeadLineTail>Brought to you by STRV Developers</HomeHeadLineTail>
+        <HomeHeadline>STRV tech playground</HomeHeadline>
+        <HomeHeadLineTail>Our space to open up questions, learn something new, contribute and make our knowledge accessible to all</HomeHeadLineTail>
       </BannerInfo>
     </Banner>
     <ResourceList resources={resources} />
