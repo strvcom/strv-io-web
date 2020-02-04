@@ -7,7 +7,7 @@ export const resources: ResourceType[] = [
     alt: 'Open Knowledge',
     title: 'Open Knowledge',
     description:
-      'Online course for learning React including lectures and example code.',
+      'Online courses for learning main stack STRV technologies.',
     link: '/knowledge',
   },
   {
@@ -16,7 +16,7 @@ export const resources: ResourceType[] = [
     alt: 'Open Source Libraries',
     title: 'Open Source Libraries',
     description:
-      'Online course for learning React including lectures and example code.',
+      'Internal libraries and tools helping us building rock-solid apps and avoiding boilerplate.',
     link: '/tools',
   },
   {
@@ -25,7 +25,7 @@ export const resources: ResourceType[] = [
     alt: 'Guidelines',
     title: 'Guidelines',
     description:
-      'Online course for learning React including lectures and example code.',
+      'Set of conventions and best practices straight from STRV\'s engineering team.',
     link: '/guidelines',
   },
 ]

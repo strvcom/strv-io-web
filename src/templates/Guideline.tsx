@@ -14,7 +14,7 @@ const Guideline: FC<Props> = ({ data, pageContext }) => (
   <Page
     pageRoot="guidelines"
     title="Guidelines"
-    description="Curated by STRV"
+    description="Brought to you by STRV Engineers"
     data={data.allGuidelines.edges}
     category={pageContext.category || 'all'}
   />
