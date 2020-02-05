@@ -15,7 +15,7 @@ export const Img = styled.img`
   height: 25rem;
   margin: 0;
   margin-bottom: 3rem;
-  transition: transform .3s ease-in-out .1s;
+  transition: transform 0.2s ease-in-out 0.1s;
 
   ${mq.tabletWide} {
     height: 30rem;
@@ -35,7 +35,8 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   padding: 1rem 2rem;
   border: 3px solid ${theme.colors.black};
   cursor: pointer;
-  transition: border 200ms ease, background-color 200ms ease;
+  transition: border 200ms ease-in-out 0.1s,
+    background-color 200ms ease-in-out 0.1s;
 
   ${mq.tablet} {
     flex: 0 1 30rem;

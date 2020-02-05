@@ -1,9 +1,11 @@
 {
   "name": "Git Guidelines",
   "url": "https://github.com/strvcom/strv-guidelines/blob/master/git.md",
-  "description": "Set of conventions and best practices that help our engineers stay consistent, making projects easily understood and maintained.",
+  "description": "Set of conventions and best practices that help our engineers stay consistent, making projects easily understood and maintained",
   "owner": "STRV",
-  "category": ["all"],
+  "category": [
+    "all"
+  ],
   "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"64\"><g fill=\"none\" fill-rule=\"evenodd\" stroke-linecap=\"round\" stroke-width=\"2\" transform=\"rotate(135 25.136 29.364)\"><path stroke=\"#FFF\" d=\"M3 0h39a3 3 0 013 3v39a3 3 0 01-3 3h-5.916 0H3a3 3 0 01-3-3V3a3 3 0 013-3zM12.599 44.922v-5.657M18.255 26.537l5.657-5.656M13.306 24.416v-1.414\"/><circle cx=\"12.965\" cy=\"15.018\" r=\"4\" stroke=\"#EF0D33\"/><circle cx=\"28.965\" cy=\"15.018\" r=\"4\" stroke=\"#EF0D33\"/><circle cx=\"12.965\" cy=\"32.018\" r=\"4\" stroke=\"#EF0D33\"/></g></svg>",
   "isFeatured": false
 }

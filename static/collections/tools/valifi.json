@@ -1,9 +1,11 @@
 {
   "name": "ValiFi",
   "url": "https://github.com/mlykotom/valifi",
-  "description": "Android library for validation forms and inputs based on data binding.",
+  "description": "Android library for validation forms and inputs based on data binding",
   "owner": "mlykotom",
-  "category": ["android"],
+  "category": [
+    "android"
+  ],
   "icon": "<svg height=58 width=42 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd stroke-width=2><path d=\"M34 5h7v52H1V5h7\"stroke=#FFF stroke-linecap=round /><path d=\"M13 1h16v6H13z\"stroke=#FFF /><path d=\"M8.73 19.45l2.83 2.83 5.77-5.63M8.73 31.45l2.83 2.83 5.77-5.63M8.73 43.45l2.83 2.83 5.77-5.63\"stroke=#EF0D33 /><path d=\"M22 20h12M22 32h12M22 44h12\"stroke=#FFF /></g></svg>",
   "order": "13",
   "isFeatured": false

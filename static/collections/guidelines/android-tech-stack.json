@@ -1,9 +1,11 @@
 {
   "name": "Android Tech Stack",
   "url": "https://github.com/strvcom/android/blob/master/guides/techstack.md",
-  "description": "List of the most common technologies that we use in Android apps, with top sources.",
+  "description": "List of the most common technologies that we use in Android apps, with top sources",
   "owner": "STRV",
-  "category": ["android"],
+  "category": [
+    "android"
+  ],
   "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"57\" height=\"44\" viewBox=\"0 0 57 44\"><g fill=\"none\" fill-rule=\"evenodd\" stroke-width=\"2\" transform=\"translate(-12 -16)\"><path stroke=\"#FFF\" stroke-linecap=\"round\" d=\"M68 45.889v11.222M26.75 25.205l-4.318-7.773M53.568 25.205l4.318-7.773\"/><circle cx=\"27\" cy=\"38\" r=\"1\" stroke=\"#FFF\" stroke-linejoin=\"round\"/><circle cx=\"53\" cy=\"38\" r=\"1\" stroke=\"#FFF\" stroke-linejoin=\"round\"/><path stroke=\"#FFF\" d=\"M54.068 26.265l-1.553-.772C48.737 23.831 44.745 23 40.531 23c-4.215 0-8.207.831-11.942 2.473l-1.593.791c-4.284 2.174-7.684 5.193-10.214 9.068-2.34 3.585-3.591 7.466-3.762 11.668h54.96c-.17-4.2-1.422-8.082-3.762-11.668-2.53-3.875-5.909-6.893-10.15-9.067z\"/><path stroke=\"#EF0D33\" stroke-linecap=\"round\" d=\"M13 54h12M13 58.912L17 59\"/></g></svg>",
   "isFeatured": false
 }

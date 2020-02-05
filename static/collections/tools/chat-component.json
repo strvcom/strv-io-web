@@ -1,9 +1,11 @@
 {
   "name": "Chat Component",
   "url": "https://github.com/strvcom/android-chat-component",
-  "description": "Collection of modules that can be added to any project to simplify development of basic chat functionality.",
+  "description": "Collection of modules that can be added to any project to simplify development of basic chat functionality",
   "owner": "strvcom",
-  "category": ["android"],
+  "category": [
+    "android"
+  ],
   "icon": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"54px\" height=\"41px\" viewBox=\"0 0 54 41\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><!-- Generator: Sketch 61.2 (89653) - https://sketch.com --><title>chat-component</title><desc>Created with Sketch.</desc><g id=\"strv.io-\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g id=\"chat-component\" transform=\"translate(-13.000000, -20.000000)\"><g id=\"node-js\"><rect id=\"Container\" opacity=\"0.100000001\" transform=\"translate(40.000000, 40.000000) rotate(-270.000000) translate(-40.000000, -40.000000) \" x=\"0\" y=\"0\" width=\"80\" height=\"80\" rx=\"4\"></rect><path d=\"M34,42 L34,32 C34,30.8954305 34.8954305,30 36,30 L64,30 C65.1045695,30 66,30.8954305 66,32 L66,54 L66,54 L61,54 L61,60 L53,54 L36,54 C34.8954305,54 34,53.1045695 34,52 L34,48 L34,48\" id=\"Path\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linejoin=\"round\"></path><path d=\"M14,27 L14,23 C14,21.8954305 14.8954305,21 16,21 L44,21 C45.1045695,21 46,21.8954305 46,23 L46,45 L46,45 L41,45 L41,51 L32,45 L16,45 C14.8954305,45 14,44.1045695 14,43 L14,33 L14,33\" id=\"Path\" stroke=\"#EF0D33\" stroke-width=\"2\" stroke-linejoin=\"round\" transform=\"translate(30.000000, 36.000000) scale(-1, 1) translate(-30.000000, -36.000000) \"></path></g></g></g></svg>",
   "isFeatured": true
 }
