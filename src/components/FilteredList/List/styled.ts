@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export const Ul = styled.ul`
   margin: 50px auto 0 auto;
@@ -52,7 +53,7 @@ export const Name = styled.h3`
   max-width: 300px;
 `
 
-export const Link = styled.a`
+export const Link = styled(OutboundLink)`
   display: inline-block;
   padding: 57px 0 0 0;
   outline: none;

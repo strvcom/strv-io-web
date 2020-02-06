@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-import { Category } from 'common/enums'
 import { Wrapper, Ul, Li } from './styled'
+import { Category } from 'common/enums'
 import { StyledButton } from 'components/Button/styled'
 
 interface Props {
+  pageRoot: string
   activeCategory: string | string[]
 }
 
-export const Filter: React.SFC<Props> = ({ activeCategory }) => (
+export const Filter: React.SFC<Props> = ({ pageRoot, activeCategory }) => (
   <Wrapper>
     <Ul>
       {Object.keys(Category).map(categoryKey => {
@@ -18,8 +17,7 @@ export const Filter: React.SFC<Props> = ({ activeCategory }) => (
         return (
           <Li key={category}>
             <StyledButton
-              as={Link}
-              to={`/repositories/${category}`}
+              to={`/${pageRoot}/${category}`}
               isPrimary={activeCategory === category}
               aria-label={category}
               replace

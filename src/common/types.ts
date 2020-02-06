@@ -13,7 +13,13 @@ export interface Repo {
 
 export interface Data {
   data: {
-    allItemsJson: {
+    allTools: {
+      edges: RepoNode[]
+    }
+    allGuidelines: {
+      edges: RepoNode[]
+    }
+    allKnowledge: {
       edges: RepoNode[]
     }
   }

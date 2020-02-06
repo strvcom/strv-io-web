@@ -1,0 +1,12 @@
+{
+  "name": "Gatsby Netlify Starter",
+  "url": "https://github.com/varholak-peter/strv-gatsby-netlify-starter",
+  "description": "Gatsby.js + Netlify CMS Starter, flavoured with STRV goodies",
+  "owner": "strvcom",
+  "category": [
+    "frontend",
+    "backend"
+  ],
+  "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"64\" height=\"65\" viewBox=\"0 0 64 65\"><g fill=\"none\" fill-rule=\"evenodd\" transform=\"translate(-8 -8)\"><path fill=\"#FFF\" d=\"M29.0593288,40.7798131 C32.7331707,44.4586705 36.3776914,48.1083996 39.9898043,51.7255279 C35.6780314,53.308106 28.2626385,45.9718034 29.0593288,40.7798131\"/><path stroke=\"#EF0D33\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M49.2441637,34.5 C46.1794606,30.9239047 42.7426681,29.4624754 38.9337861,30.115712 C35.1249041,30.7689487 32.4803087,33.2733574 31,37.6289382 L43.7814048,50.5273766 C45.9983506,49.5280832 47.6629083,48.3359418 48.7750777,46.9509525 C49.8872471,45.5659632 50.6162492,43.7773943 50.9620842,41.5852459 L45.7690736,41.5852459\"/><rect width=\"46\" height=\"46\" x=\"17\" y=\"17.622\" stroke=\"#FFF\" stroke-width=\"2\" rx=\"5\" transform=\"rotate(45 40 40.622)\"/></g></svg>",
+  "isFeatured": true
+}

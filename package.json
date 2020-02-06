@@ -14,7 +14,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:ts": "eslint './**/*.{ts,tsx}' --fix",
-    "lint:style": "stylelint './**/*.{ts,tsx}' --fix"
+    "lint:style": "stylelint './**/*.{ts,tsx}' --fix",
+    "serve": "gatsby serve"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -24,11 +25,12 @@
     ]
   },
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "gatsby": "^2.19.10",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-google-analytics": "^2.1.12",
     "gatsby-plugin-manifest": "^2.2.33",
-    "gatsby-plugin-netlify-cms": "^4.1.30",
+    "gatsby-plugin-netlify-cms": "^4.1.33",
     "gatsby-plugin-offline": "^3.0.24",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-sharp": "^2.2.7",
@@ -43,6 +45,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-reveal": "^1.2.2",
+    "react-scrolllock": "^5.0.0",
     "source-map-support": "^0.5.16",
     "styled-components": "^4.3.2",
     "ts-node": "^8.5.2",

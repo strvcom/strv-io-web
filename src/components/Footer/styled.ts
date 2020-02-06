@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export const Wrapper = styled.footer`
   margin: 0 auto;
@@ -18,7 +19,7 @@ export const Title = styled.h2`
   margin: 0;
 `
 
-export const ArticleLink = styled.a`
+export const ArticleLink = styled(OutboundLink)`
   color: ${theme.colors.primary};
   font-family: ${theme.fonts.primary};
   font-weight: ${theme.fontWeight.light};

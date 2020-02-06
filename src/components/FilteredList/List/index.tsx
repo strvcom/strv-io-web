@@ -39,7 +39,9 @@ export const List: React.FunctionComponent<ListProps> = ({ data, filter }) => {
   const activeData =
     filter === CategoryEnum.All
       ? data
-      : data.filter(repo => repo.node.category.includes(filter))
+      : data.filter(repo =>
+          repo.node.category.includes(filter) || repo.node.category.includes(CategoryEnum.All)
+        )
 
   return (
     <Ul>

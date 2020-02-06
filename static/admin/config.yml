@@ -5,7 +5,7 @@ backend:
 collections:
   - name: 'tool' # Used in routes, e.g., /admin/collections/blog
     label: 'Tool' # Used in the UI
-    folder: 'static/collections/tools/items' # The path to the folder where the documents are stored
+    folder: 'static/collections/tools' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     identifier_field: 'name'
@@ -19,7 +19,59 @@ collections:
           label: 'Category',
           name: 'category',
           widget: 'select',
-          options: ['frontend', 'backend', 'android', 'ios', 'iot'],
+          options: ['frontend', 'backend', 'android', 'ios', 'iot', 'all'],
+          multiple: true,
+        }
+      - { label: 'Icon', name: 'icon', widget: 'string' }
+      - {
+          label: 'Featured',
+          name: 'isFeatured',
+          widget: 'boolean',
+          default: false,
+        }
+  - name: 'knowledge' # Used in routes, e.g., /admin/collections/blog
+    label: 'Knowledge' # Used in the UI
+    folder: 'static/collections/knowledge' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: 'name'
+    extension: 'json'
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'URL', name: 'url', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Owner', name: 'owner', widget: 'string' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options: ['frontend', 'backend', 'android', 'ios', 'iot', 'all'],
+          multiple: true,
+        }
+      - { label: 'Icon', name: 'icon', widget: 'string' }
+      - {
+          label: 'Featured',
+          name: 'isFeatured',
+          widget: 'boolean',
+          default: false,
+        }
+  - name: 'guidelines' # Used in routes, e.g., /admin/collections/blog
+    label: 'Guidelines' # Used in the UI
+    folder: 'static/collections/guidelines' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    identifier_field: 'name'
+    extension: 'json'
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'URL', name: 'url', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Owner', name: 'owner', widget: 'string' }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'select',
+          options: ['frontend', 'backend', 'android', 'ios', 'iot', 'all'],
           multiple: true,
         }
       - { label: 'Icon', name: 'icon', widget: 'string' }

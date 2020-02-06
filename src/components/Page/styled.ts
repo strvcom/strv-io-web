@@ -1,0 +1,148 @@
+import styled from 'styled-components'
+import theme from 'styles/theme'
+import { mq } from 'styles/media'
+
+export const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+`
+
+export const Banner = styled.div`
+  position: relative;
+  padding: 0 30px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 21, 23, 0) 0%,
+      rgba(17, 21, 23, 0.99) 99%,
+      rgba(17, 21, 23, 1) 100%
+    );
+  }
+`
+
+export const Background = styled.picture`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+`
+
+export const BannerInfo = styled.div`
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 22rem;
+  padding-bottom: 10.7rem;
+
+  ${mq.tabletWide} {
+    padding-bottom: 16.2rem;
+  }
+`
+
+export const HomeBannerInfo = styled(BannerInfo)`
+  padding-bottom: 8rem;
+
+  ${mq.tabletWide} {
+    padding-bottom: 10rem;
+  }
+`
+
+export const HeadLine = styled.h1`
+  font-family: ${theme.fonts.headline};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.bold};
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  z-index: 2;
+  margin: 0;
+  position: relative;
+  padding-bottom: 30px;
+
+  ${mq.tablet} {
+    line-height: 76px;
+    font-size: 7.6rem;
+  }
+
+  ${mq.tabletWide} {
+    line-height: 96px;
+    font-size: 9.6rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: ${theme.colors.primary};
+  }
+`
+
+export const HomeHeadline = styled(HeadLine)`
+  font-weight: ${theme.fontWeight.bold};
+  letter-spacing: 1.15px;
+  line-height: 62px;
+  font-size: 6.2rem;
+
+  ${mq.tablet} {
+    line-height: 90px;
+    font-size: 9rem;
+  }
+
+  ${mq.tabletWide} {
+    line-height: 110px;
+    font-size: 11rem;
+  }
+`
+
+export const HeadLineTail = styled.h2`
+  font-family: ${theme.fonts.subHeadline};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.regular};
+  line-height: 38px;
+  font-size: 2.6rem;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 27px 0 0 0;
+  margin: 0;
+  visibility: none;
+  z-index: 2;
+
+  ${mq.tabletWide} {
+    line-height: 48px;
+    font-size: 3.2rem;
+  }
+`
+
+export const HomeHeadLineTail = styled(HeadLineTail)`
+  font-family: ${theme.fonts.primary};
+  font-weight: ${theme.fontWeight.light};
+  line-height: 18px;
+  font-size: 1.6rem;
+
+  ${mq.tabletWide} {
+    line-height: 22px;
+    font-size: 1.8rem;
+  }
+`

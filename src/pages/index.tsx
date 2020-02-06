@@ -1,65 +1,28 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from 'components/Layout'
-import { Data } from 'common/types'
-import Header from 'components/Header'
+import React, { FC } from 'react'
 import {
   Banner,
-  HeadLine,
-  HeadLineTail,
+  HomeHeadline,
   BannerInfo,
-  Background,
-} from 'components/Home/styled'
-import { FilteredList } from 'components/FilteredList'
+  HomeHeadLineTail,
+} from 'components/Page/styled'
+import Layout from 'components/Layout'
+import Header from 'components/Header'
 import Footer from 'components/Footer'
+import ResourceList from 'components/ResourceList'
+import { resources } from 'constants/resources'
 
-const bgImage = {
-  jpg: require('images/banner.jpg'),
-  webp: require('images/banner.webp'),
-}
-
-const Home: React.FunctionComponent<
-  Data & { pageContext: { category: string } }
-> = ({ data, pageContext }) => {
-  const category = pageContext.category || 'all'
-
-  return (
-    <Layout>
-      <Header />
-      <Banner>
-        <Background role="banner">
-          <source type="image/jpeg" srcSet={bgImage.jpg} />
-          <source type="image/webp" srcSet={bgImage.webp} />
-          <img src={bgImage.jpg} />
-        </Background>
-
-        <BannerInfo>
-          <HeadLine>Open source libraries</HeadLine>
-          <HeadLineTail>Curated by STRV developers</HeadLineTail>
-        </BannerInfo>
-      </Banner>
-      <FilteredList data={data} category={category} />
-      <Footer />
-    </Layout>
-  )
-}
-
-export const indexQuery = graphql`
-  query IndexQuery {
-    allItemsJson(sort: { fields: [isFeatured], order: [DESC] }) {
-      edges {
-        node {
-          id
-          name
-          url
-          description
-          category
-          icon
-          isFeatured
-        }
-      }
-    }
-  }
-`
+const Home: FC = () => (
+  <Layout>
+    <Header />
+    <Banner>
+      <BannerInfo>
+        <HomeHeadline>STRV tech playground</HomeHeadline>
+        <HomeHeadLineTail>Our space to open up questions, learn something new, contribute and make our knowledge accessible to all</HomeHeadLineTail>
+      </BannerInfo>
+    </Banner>
+    <ResourceList resources={resources} />
+    <Footer />
+  </Layout>
+)
 
 export default Home
