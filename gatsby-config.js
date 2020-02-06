@@ -24,7 +24,7 @@ module.exports = {
       resolve: 'gatsby-transformer-json',
       options: {
         typeName: ({ node, object, isArray }) => node.relativeDirectory,
-      }
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -42,6 +42,12 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets/`,
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline

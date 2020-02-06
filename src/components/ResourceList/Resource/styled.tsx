@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link as GatsbyLink } from 'gatsby'
+import GatsbyImg from 'gatsby-image'
 import theme from 'styles/theme'
 import { mq } from 'styles/media'
 
@@ -10,12 +11,16 @@ interface WrapperProps {
   replace?: boolean
 }
 
-export const Img = styled.img`
-  width: auto;
+export const Img = styled(GatsbyImg)`
+  width: 100%;
   height: 25rem;
   margin: 0;
   margin-bottom: 3rem;
   transition: transform 0.2s ease-in-out 0.1s;
+
+  img {
+    object-fit: contain !important;
+  }
 
   ${mq.tabletWide} {
     height: 30rem;
@@ -31,6 +36,7 @@ export const Wrapper = styled(({ isPrimary, ...props }) => (
   align-items: center;
   flex-direction: column;
   width: 25rem;
+  max-width: 380px;
   margin: 1.6rem 0;
   padding: 1rem 2rem;
   border: 3px solid ${theme.colors.black};
