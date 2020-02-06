@@ -14,7 +14,7 @@ const Knowledge: FC<Props> = ({ data, pageContext }) => (
   <Page
     pageRoot="knowledge"
     title="Open Knowledge"
-    description="Brought to you by STRV Engineers"
+    description="Brought to you by STRV Engineering"
     data={data.allKnowledge.edges}
     category={pageContext.category || 'all'}
   />

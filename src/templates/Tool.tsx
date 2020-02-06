@@ -14,7 +14,7 @@ const Tool: FC<Props> = ({ data, pageContext }) => (
   <Page
     pageRoot="tools"
     title="Open source libraries"
-    description="Brought to you by STRV Engineers"
+    description="Brought to you by STRV Engineering"
     data={data.allTools.edges}
     category={pageContext.category || 'all'}
   />
