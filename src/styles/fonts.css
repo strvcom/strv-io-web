@@ -45,7 +45,7 @@
   font-family: 'Trump Gothic East';
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
+  font-display: block;
   src: url('/assets/fonts/TrumpGothicEastBold.woff2') format('woff2'),
     url('/assets/fonts/TrumpGothicEastBold.woff') format('woff');
 }
