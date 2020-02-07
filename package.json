@@ -52,7 +52,7 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
+    "@babel/core": "^7.8.4",
     "@strv/eslint-config-react": "^3.0.0",
     "@strv/eslint-config-typescript": "^2.0.0",
     "@strv/prettier-config": "^1.0.2",
