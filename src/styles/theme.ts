@@ -12,7 +12,7 @@ const theme = {
   },
   fonts: {
     primary: 'Maison Neue, sans-serif',
-    headline: 'Trump Gothic East, Impact, sans-serif',
+    headline: 'Trump Gothic East, sans-serif',
     subHeadline: 'Playfair Display, sans-serif',
   },
   fontWeight: {
