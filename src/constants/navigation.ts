@@ -32,9 +32,9 @@ export const navigation: NavigationType = {
       external: true,
     },
     {
-      id: 'training-and-workshops',
-      title: 'Training and Workshops',
-      link: 'https://www.strv.com/academy',
+      id: 'events',
+      title: 'Events',
+      link: 'https://www.strv.com/events',
       external: true,
     },
   ],
