@@ -72,6 +72,7 @@ const linkStyle = ({
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: inline-block;
 
   ${mq.desktop} {
     font-size: 2rem;
