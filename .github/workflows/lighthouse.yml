@@ -1,7 +1,7 @@
 name: Lighthouse Audit
 
 on:
-  commit:
+  push:
     branches:
       - feat/lighthouse
 
