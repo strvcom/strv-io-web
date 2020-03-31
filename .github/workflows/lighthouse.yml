@@ -1,9 +1,9 @@
 name: Lighthouse Audit
 
 on:
-  pull_request:
+  commit:
     branches:
-      - master
+      - feat/lighthouse
 
 jobs:
   build:
