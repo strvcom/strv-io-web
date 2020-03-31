@@ -3,7 +3,7 @@ name: Lighthouse Audit
 on:
   pull_request:
     branches:
-      - feat/lighthouse
+      - master
 
 jobs:
   build:
