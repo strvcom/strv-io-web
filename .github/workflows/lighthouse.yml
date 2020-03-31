@@ -25,6 +25,8 @@ jobs:
         run: |
           npm install -g @lhci/cli@0.3.x
           lhci autorun --upload.target=temporary-public-storage --collect.url=https://www.strv.io
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
       - name: Running Page Speed Insights
         uses: jakepartusch/psi-action@v1
         with:
