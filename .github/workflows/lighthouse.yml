@@ -21,6 +21,13 @@ jobs:
       - name: Build
         run: |
           npm run build
+      - name: Lighthouse CI Action
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          # List of URL(s) to analyze
+          urls: |
+            https://www.strv.io
+            https://www.strv.io/tools
       - name: Run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.3.x
