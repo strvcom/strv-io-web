@@ -92,3 +92,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+
+## Measurement tools
+
+### Bundle-analyzer
+
+The project integrates with [bundle-analyzer](https://www.bundle-analyzer.com/) to control the size of the build output, including JavaScript files, CSS stylesheets and images. BA will run a check on every PR and validate that the size of the build output is within the limits specified in [bundle-analyzer.config.js](/bundle-analyzer.config.js) file.
+
+To build project locally, you have to export `BUNDLE_ANALYZER_TOKEN` environment variable before running `yarn build`.

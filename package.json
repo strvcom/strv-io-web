@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@bundle-analyzer/gatsby-plugin": "^0.5.1",
     "@strv/eslint-config-react": "^3.0.0",
     "@strv/eslint-config-typescript": "^2.0.0",
     "@strv/prettier-config": "^1.0.2",

@@ -67,5 +67,9 @@ module.exports = {
         trackingId: 'UA-2385632-31',
       },
     },
+    {
+      resolve: '@bundle-analyzer/gatsby-plugin',
+      options: { token: process.env.BUNDLE_ANALYZER_TOKEN },
+    }
   ],
 }
