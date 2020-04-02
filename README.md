@@ -98,6 +98,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ### Bundle-analyzer
 
-The project integrates with [bundle-analyzer](https://www.bundle-analyzer.com/) to control the size of the build output, including JavaScript files, CSS stylesheets and images. BA will run a check on every PR and validate that the size of the build output is within the limits specified in [bundle-analyzer.config.js](/bundle-analyzer.config.js) file.
+The project integrates with [bundle-analyzer](https://www.bundle-analyzer.com/), which is a free and open-source tool that can control the size of the build output, including JavaScript files, CSS stylesheets and images. BA will run a check on every PR and validate that the size of the build output is within the limits specified in [bundle-analyzer.config.js](/bundle-analyzer.config.js) file. *The max size for JS and CSS files should be set manually based on the available performance budget.*
+
+It runs "size limit" check on every PR, and runs "size compare" check on a master branch.
 
 To build project locally, you have to export `BUNDLE_ANALYZER_TOKEN` environment variable before running `yarn build`.

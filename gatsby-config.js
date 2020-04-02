@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   plugins: [
     'gatsby-plugin-resolve-src',
     {
@@ -66,10 +66,15 @@ module.exports = {
       options: {
         trackingId: 'UA-2385632-31',
       },
-    },
-    {
-      resolve: '@bundle-analyzer/gatsby-plugin',
-      options: { token: process.env.BUNDLE_ANALYZER_TOKEN },
     }
   ],
 }
+
+if (process.env.BUNDLE_ANALYZER_TOKEN) {
+  config.plugins.push({
+    resolve: '@bundle-analyzer/gatsby-plugin',
+    options: { token: process.env.BUNDLE_ANALYZER_TOKEN },
+  })
+}
+
+module.exports = config

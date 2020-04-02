@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       test: '*.css',
-      maxSize: '100 kB',
+      maxSize: '170 kB',
     },
   ],
 }
