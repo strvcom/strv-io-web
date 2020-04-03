@@ -12,11 +12,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.ts\"",
-    "test": "bundlesize",
     "lint:ts": "eslint './**/*.{ts,tsx}' --fix",
     "lint:style": "stylelint './**/*.{ts,tsx}' --fix",
-    "serve": "gatsby serve",
-    "analyze": "bundlesize"
+    "serve": "gatsby serve"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -70,7 +68,6 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.6",
-    "bundlesize": "^0.18.0",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.0",

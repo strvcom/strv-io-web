@@ -1,8 +1,0 @@
-{
-  "files": [
-    {
-      "path": "./public/**/!(netlify-cms-app).js",
-      "maxSize": "200 kB"
-    }
-  ]
-}
