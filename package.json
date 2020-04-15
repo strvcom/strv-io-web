@@ -12,7 +12,6 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.ts\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint:ts": "eslint './**/*.{ts,tsx}' --fix",
     "lint:style": "stylelint './**/*.{ts,tsx}' --fix",
     "serve": "gatsby serve"
@@ -53,6 +52,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@bundle-analyzer/gatsby-plugin": "^0.5.1",
     "@strv/eslint-config-react": "^3.0.0",
     "@strv/eslint-config-typescript": "^2.0.0",
     "@strv/prettier-config": "^1.0.2",
