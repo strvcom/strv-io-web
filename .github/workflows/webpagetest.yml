@@ -1,0 +1,21 @@
+name: WebPageTest
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Waiting for 200 from the Netlify Preview
+        uses: JosephDuffy/wait-for-netlify-action@v1.0
+        id: wait-for-netflify-preview
+        with:
+          site_name: ${{ secrets.NETLIFY_SITE_NAME }}
+      - name: WebPageTest
+        uses: JCofman/webPagetestAction@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST_URL: ${{ steps.wait-for-netflify-preview.outputs.url }}
+          WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
