@@ -9,10 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Waiting for 200 from the Netlify Preview
-        uses: JosephDuffy/wait-for-netlify-action@v1.0
+        uses: JakePartusch/wait-for-netlify-action@v1.0
         id: wait-for-netflify-preview
         with:
           site_name: ${{ secrets.NETLIFY_SITE_NAME }}
+          max_timeout: 120
       - name: WebPageTest
         uses: JCofman/webPagetestAction@master
         env:
