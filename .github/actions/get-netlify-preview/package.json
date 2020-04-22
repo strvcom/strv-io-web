@@ -1,0 +1,16 @@
+{
+  "name": "get-netlify-preview",
+  "version": "1.0.0",
+  "description": "Get last preview deploy from Netlify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arnost Pleskot <me@pleskot.net>",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "netlify": "^4.0.5"
+  }
+}
