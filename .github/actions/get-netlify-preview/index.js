@@ -1,6 +1,5 @@
 const NetlifyAPI = require("netlify");
 const core = require("@actions/core");
-const { context } = require("@actions/github");
 
 const DEPLOY_STATE = "ready";
 const DEPLOY_CONTEXT = "deploy-preview";
@@ -42,6 +41,9 @@ const getNeltifyPreviewURL = async () => {
   // Parse timeout in case that it is not number or set fallback
   const maxTimeout = parseInt(process.env.MAX_TIMEOUT, 10) || MAX_TIMEOUT;
   const waitForDeploy = Boolean(process.env.WAIT_FOR_DEPLOY) || true;
+  const commitRef = process.env.GITHUB_SHA;
+
+  core.debug(`Commit sha: ${commitRef}`);
 
   core.debug(
     JSON.stringify(
@@ -61,16 +63,6 @@ const getNeltifyPreviewURL = async () => {
     core.setFailed(
       "One of following inputs wasnt provided: NETLIFY_API_KEY, NETLIFY_SITE_NAME, NETLIFY_API_ID"
     );
-  }
-
-  // Get commit sha from github context
-  const commitRef = context.sha;
-
-  core.debug(`Commit sha: ${commitRef}`);
-
-  // When we are out of github context end with error
-  if (!commitRef) {
-    core.setFailed("Can't get SHA of current commit.");
   }
 
   try {
