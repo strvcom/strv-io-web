@@ -8,6 +8,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1.4.0
+        with:
+          working-directory: .github/actions/get-netlify-preview
       - name: Get Netlify Preview
         id: getNetlifyPreview
         uses: ./.github/actions/get-netlify-preview
