@@ -44,12 +44,16 @@ const getNeltifyPreviewURL = async () => {
   const waitForDeploy = Boolean(process.env.WAIT_FOR_DEPLOY) || true;
 
   core.debug(
-    JSON.stringify({
-      siteName,
-      siteId,
-      maxTimeout,
-      waitForDeploy,
-    })
+    JSON.stringify(
+      {
+        siteName,
+        siteId,
+        maxTimeout,
+        waitForDeploy,
+      },
+      null,
+      "\t"
+    )
   );
 
   // If any of mandatory env vars are not provided end action with error
@@ -78,13 +82,15 @@ const getNeltifyPreviewURL = async () => {
       site_id: siteId,
     });
 
+    core.debug(JSON.stringify(siteDeploys, null, "\t"));
+
     // Find deploy that is related to current commit and is "deploy-preview"
     const latestDeploy = siteDeploys.filter(
       (deploy) =>
         deploy.commit_ref === commitRef && deploy.context === DEPLOY_CONTEXT
     )[0];
 
-    core.debug(JSON.stringify(latestDeploy));
+    core.debug(JSON.stringify(latestDeploy, null, "\t"));
 
     // Compose ulr
     const url = `https://${latestDeploy.id}--${siteName}.netlify.app`;
