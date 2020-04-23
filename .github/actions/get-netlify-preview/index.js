@@ -3,7 +3,7 @@ const core = require("@actions/core");
 
 const DEPLOY_STATE = "ready";
 const DEPLOY_CONTEXT = "deploy-preview";
-const MAX_TIMEOUT = 120000;
+const MAX_TIMEOUT = 240000;
 const DELAY = 5000;
 
 const waitUntilReady = async (deployId, client, timeout) => {
@@ -41,9 +41,6 @@ const getNeltifyPreviewURL = async () => {
   // Parse timeout in case that it is not number or set fallback
   const maxTimeout = parseInt(process.env.MAX_TIMEOUT, 10) || MAX_TIMEOUT;
   const waitForDeploy = Boolean(process.env.WAIT_FOR_DEPLOY) || true;
-  const commitRef = process.env.GITHUB_SHA;
-
-  core.debug(`Commit sha: ${commitRef}`);
 
   core.debug(
     JSON.stringify(
@@ -54,7 +51,7 @@ const getNeltifyPreviewURL = async () => {
         waitForDeploy,
       },
       null,
-      "\t"
+      "  "
     )
   );
 
@@ -74,15 +71,12 @@ const getNeltifyPreviewURL = async () => {
       site_id: siteId,
     });
 
-    core.debug(JSON.stringify(siteDeploys, null, "\t"));
-
     // Find deploy that is related to current commit and is "deploy-preview"
     const latestDeploy = siteDeploys.filter(
-      (deploy) =>
-        deploy.commit_ref === commitRef && deploy.context === DEPLOY_CONTEXT
+      (deploy) => deploy.context === DEPLOY_CONTEXT
     )[0];
 
-    core.debug(JSON.stringify(latestDeploy, null, "\t"));
+    core.debug(JSON.stringify(latestDeploy, null, "  "));
 
     // Compose ulr
     const url = `https://${latestDeploy.id}--${siteName}.netlify.app`;
