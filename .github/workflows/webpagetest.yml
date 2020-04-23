@@ -16,7 +16,7 @@ jobs:
         uses: ./.github/actions/get-netlify-preview
         env:
           NETLIFY_API_KEY: ${{ secrets.NETLIFY_API_KEY }}
-          NETLIFY_SITE_NAME: ${{ secrets.NETLIFY_SITE_NAME }}
+          NETLIFY_SITE_NAME: "clever-yonath-fa980f"
           NETLIFY_API_ID: ${{ secrets.NETLIFY_API_ID }}
       - name: WebPageTest
         uses: JCofman/webPagetestAction@master
