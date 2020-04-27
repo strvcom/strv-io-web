@@ -1,8 +1,8 @@
 name: 'Get Netlify preview url'
 description: 'Get url from  Netlify API'
 outputs:
-  url:     
+  url:
     description: 'url to Netlify preview deploy'
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: "docker"
+  image: "Dockerfile"
