@@ -71,6 +71,15 @@ const getNeltifyPreviewURL = async () => {
       site_id: siteId,
     });
 
+    const commitRef = process.env.GITHUB_SHA;
+
+    core.debug(`Commit sha: ${commitRef}`);
+    const shaDeploy = siteDeploys.filter(
+      (deploy) => deploy.commit_ref === commitRef
+    );
+
+    shaDeploy.map((deploy) => core.debug(deploy));
+
     // Find deploy that is related to current commit and is "deploy-preview"
     const latestDeploy = siteDeploys.filter(
       (deploy) => deploy.context === DEPLOY_CONTEXT
