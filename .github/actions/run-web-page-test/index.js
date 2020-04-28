@@ -67,14 +67,14 @@ const composeComment = data => {
 }
 
 const addComment = async data => {
-  const { event, owner, repo } = github.context
+  const { eventName, repo, number } = github.context
 
-  core.debug(`Context: ${JSON.stringify(github.context, null, 2)}`)
+  core.debug(`Context: ${JSON.stringify({ eventName, number, repo }, null, 2)}`)
 
-  if (event === 'pull_request') {
+  if (eventName === 'pull_request') {
     await github.octokit.issue.createComment({
       ...repo,
-      issue_number: 126,
+      number,
       body: composeComment(data),
     })
   }
