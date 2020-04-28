@@ -123,8 +123,7 @@ const run = async () => {
 
     // run test and poll for result
     const { data } = await runWebPageTest(wpt, testUrl)
-    core.info(`Test results: `)
-    core.debug(JSON.stringify(data, null, 2))
+
     // add github comment
     addComment(data)
   } catch (err) {
