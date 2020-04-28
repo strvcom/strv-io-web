@@ -77,12 +77,16 @@ const addComment = async (data, githubToken) => {
 
   core.debug(`Context: ${JSON.stringify({ eventName, number, repo }, null, 2)}`)
 
-  if (eventName === 'pull_request') {
-    await octokit.issue.createComment({
-      ...repo,
-      number,
-      body: composeComment(data),
-    })
+  try {
+    if (eventName === 'pull_request') {
+      await octokit.issue.createComment({
+        ...repo,
+        number,
+        body: composeComment(data),
+      })
+    }
+  } catch (err) {
+    core.error(err.message)
   }
 }
 
@@ -109,7 +113,7 @@ const runWebPageTest = async (wpt, testUrl) =>
 const run = async () => {
   // Get data from env variables
   const apiKey = process.env.WEBPAGETEST_API_KEY
-  const githubToken = process.ent.GITHUB_TOKEN
+  const githubToken = process.env.GITHUB_TOKEN
   const testUrl = process.env.TEST_URL
   const webPageTestServer = process.env.WEBPAGETEST_SERVER_URL
 
