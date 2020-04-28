@@ -66,17 +66,19 @@ const composeComment = data => {
       `
 }
 
-const addComment = async data => {
+const addComment = async (data, githubToken) => {
   const {
     eventName,
     repo,
     payload: { number },
   } = github.context
 
+  const octokit = new github.GitHub(githubToken)
+
   core.debug(`Context: ${JSON.stringify({ eventName, number, repo }, null, 2)}`)
 
   if (eventName === 'pull_request') {
-    await github.octokit.issue.createComment({
+    await octokit.issue.createComment({
       ...repo,
       number,
       body: composeComment(data),
@@ -106,18 +108,17 @@ const runWebPageTest = async (wpt, testUrl) =>
 
 const run = async () => {
   // Get data from env variables
-  const apiKey =
-    process.env.WEBPAGETEST_API_KEY || 'A.0cb50ee59f49ba062834a25404a10f04'
-  const webPageTestServer =
-    process.env.WEBPAGETEST_SERVER_URL || 'www.webpagetest.org'
-  const testUrl = process.env.TEST_URL || 'www.strv.io'
+  const apiKey = process.env.WEBPAGETEST_API_KEY
+  const githubToken = process.ent.GITHUB_TOKEN
+  const testUrl = process.env.TEST_URL
+  const webPageTestServer = process.env.WEBPAGETEST_SERVER_URL
 
   core.debug(`Test server: ${webPageTestServer}`)
   core.debug(`Test URL: ${testUrl}`)
 
   if (!apiKey || !testUrl) {
     core.setFailed(
-      "One of mandatory environment variables wasn't provided: WEBPAGETEST_API_KEY, TEST_URL"
+      "One of mandatory environment variables wasn't provided: WEBPAGETEST_API_KEY, TEST_URL, GITHUB_TOKEN"
     )
   }
 
@@ -129,7 +130,7 @@ const run = async () => {
     const { data } = await runWebPageTest(wpt, testUrl)
 
     // add github comment
-    addComment(data)
+    addComment(data, githubToken)
   } catch (err) {
     core.error(err.message)
   }
