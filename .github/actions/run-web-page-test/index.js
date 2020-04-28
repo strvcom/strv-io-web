@@ -67,7 +67,11 @@ const composeComment = data => {
 }
 
 const addComment = async data => {
-  const { eventName, repo, number } = github.context
+  const {
+    eventName,
+    repo,
+    payload: { number },
+  } = github.context
 
   core.debug(`Context: ${JSON.stringify({ eventName, number, repo }, null, 2)}`)
 
