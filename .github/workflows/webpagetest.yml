@@ -8,16 +8,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Get Netlify Preview
-        id: getNetlifyPreview
-        uses: ./.github/actions/get-netlify-preview
-        env:
-          NETLIFY_API_KEY: ${{ secrets.NETLIFY_API_KEY }}
-          NETLIFY_SITE_NAME: "clever-yonath-fa980f"
-          NETLIFY_API_ID: ${{ secrets.NETLIFY_API_ID }}
+      # - name: Get Netlify Preview
+      #   id: getNetlifyPreview
+      #   uses: ./.github/actions/get-netlify-preview
+      #   env:
+      #     NETLIFY_API_KEY: ${{ secrets.NETLIFY_API_KEY }}
+      #     NETLIFY_SITE_NAME: "clever-yonath-fa980f"
+      #     NETLIFY_API_ID: ${{ secrets.NETLIFY_API_ID }}
       - name: WebPageTest
-        uses: JCofman/webPagetestAction@master
+        uses: ./.github/actions/run-web-page-test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TEST_URL: ${{ steps.getNetlifyPreview.outputs.url }}
+          TEST_URL: "http://www.strv.io"
           WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
