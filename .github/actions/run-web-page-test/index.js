@@ -81,7 +81,7 @@ const addComment = async (data, githubToken) => {
     if (eventName === 'pull_request') {
       await octokit.issues.createComment({
         ...repo,
-        number,
+        issue_number: number,
         body: composeComment(data),
       })
     }
