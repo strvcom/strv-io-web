@@ -21,3 +21,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TEST_URL: "http://www.strv.io"
           WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+        with:
+          options: '{
+            "location": "ec2-eu-central-1",
+            "connectivity": "DSL"
+          }'
