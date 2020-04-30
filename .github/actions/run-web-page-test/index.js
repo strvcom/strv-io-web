@@ -103,11 +103,11 @@ const composeComment = data => `
 <br/>
 
 
-* run id: [${data.id}](${data.summary})
+* Run ID: [${data.id}](${data.summary})
 * Tested URL: [${data.testUrl}](${data.testUrl})
-* location: ${data.from} (${data.location})
-* connectivity: ${data.connectivity}
-* successFullRuns: ${data.successfulFVRuns}
+* Location: ${data.from} (${data.location})
+* Connectivity: ${data.connectivity}
+* Successfull runs: ${data.successfulFVRuns}
 
 ## Performance Results (Median Run - SpeedIndex)
 
