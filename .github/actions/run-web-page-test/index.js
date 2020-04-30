@@ -22,10 +22,10 @@ const perfTable = data =>
       'Load Time',
       'First Byte',
       'Start Render',
-      `[https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint](First Contentful Paint)`,
-      `[https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index](Speed Index)`,
-      `[https://github.com/WPO-Foundation/webpagetest/blob/master/docs/Metrics/HeroElements.md](Last Painted Hero)`,
-      `[https://github.com/WPO-Foundation/webpagetest/blob/master/docs/Metrics/TimeToInteractive.md](First CPU Idle)`,
+      `[First Contentful Paint](https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint)`,
+      `[Speed Index](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index)`,
+      `[Last Painted Hero](https://github.com/WPO-Foundation/webpagetest/blob/master/docs/Metrics/HeroElements.md)`,
+      `[First CPU Idle](https://github.com/WPO-Foundation/webpagetest/blob/master/docs/Metrics/TimeToInteractive.md)`,
     ],
     [
       'First View',
@@ -96,12 +96,15 @@ const fullLoadedPerfTable = data =>
   ])
 
 const composeComment = data => `
-# WebPageTest Report
+## WebPageTest Report
 
-** Detail report: ${data.summary} **
+<br/>
+<h3 align="center"><a href="${data.summary}">Test Results</a></h3>
+<br/>
+
 
 * run id: [${data.id}](${data.summary})
-* URL testid: [${data.testUrl}](${data.testUrl})
+* Tested URL: [${data.testUrl}](${data.testUrl})
 * location where the test has run: ${data.location}
 * from run parameter: ${data.from}
 * connectivity: ${data.connectivity}
@@ -118,12 +121,20 @@ ${docPerfTable(data)}
 ### Fully Loaded
 
 ${fullLoadedPerfTable(data)}
+
+## Median Waterfall
+### First View
+![First View Waterfall Chart](${data.median.firstView.images.waterfall})
+
+### Repeat View
+![Repeat View Waterfall Chart](${data.median.repeatView.images.waterfall})
 `
 
 const addComment = async (data, githubToken) => {
   const {
     eventName,
     repo,
+    sha,
     payload: { number },
   } = github.context
 
@@ -139,38 +150,53 @@ const addComment = async (data, githubToken) => {
         body: composeComment(data),
       })
     }
+
+    if (eventName === 'push') {
+      await octokit.repos.createCommitComment({
+        owner,
+        repo,
+        sha,
+        body: composeComment(data),
+      })
+    }
   } catch (err) {
     core.error(err.message)
   }
 }
 
-const runWebPageTest = async (wpt, testUrl) => {
-  let userOptions = {}
-
-  core.debug(`User options: ${core.getInput('options')}`)
-
-  try {
-    const optionsInput = core.getInput('options')
-    if (optionsInput) {
-      userOptions = JSON.parse(optionsInput)
+const parseJSON = jsonString => {
+  if (jsonString) {
+    try {
+      return JSON.parse(jsonString)
+    } catch (err) {
+      core.error(`There was problem with parsing options: ${err.message}`)
     }
-  } catch (err) {
-    core.error(`There was problem with parsing options: ${err.message}`)
   }
+
+  return {}
+}
+
+const runWebPageTest = async (wpt, testUrl) => {
+  const userOptions = parseJSON(core.getInput('options'))
+  const options = {
+    pollResults: 10,
+    label: `GitHub Action: ${github.context.sha}`,
+    runs: 3,
+    ...userOptions,
+  }
+
+  core.debug('Test options:')
+  core.debug(JSON.stringify(options, null, 2))
 
   return new Promise((resolve, reject) => {
     core.info('Polling for results...')
-    wpt.runTest(
-      testUrl,
-      { pollResults: 10, label: `GitHub Action`, runs: 3, ...userOptions },
-      (err, result) => {
-        if (err) {
-          return reject(err)
-        }
-
-        return resolve(result)
+    wpt.runTest(testUrl, options, (err, result) => {
+      if (err) {
+        return reject(err)
       }
-    )
+
+      return resolve(result)
+    })
   })
 }
 
@@ -185,6 +211,7 @@ const run = async () => {
   core.debug(`Test server: ${webPageTestServer}`)
   core.debug(`Test URL: ${testUrl}`)
 
+  // Set failed if requred env vars aren't provided
   if (!apiKey || !testUrl || !githubToken) {
     core.setFailed(
       "One of mandatory environment variables wasn't provided: WEBPAGETEST_API_KEY, TEST_URL, GITHUB_TOKEN"
@@ -198,7 +225,7 @@ const run = async () => {
     // run test and poll for result
     const { data } = await runWebPageTest(wpt, testUrl)
 
-    core.info(`Test results: ${data.summary}`)
+    core.info(`Test results url: ${data.summary}`)
 
     // add github comment
     addComment(data, githubToken)
