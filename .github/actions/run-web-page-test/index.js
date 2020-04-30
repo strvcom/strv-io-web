@@ -105,8 +105,7 @@ const composeComment = data => `
 
 * run id: [${data.id}](${data.summary})
 * Tested URL: [${data.testUrl}](${data.testUrl})
-* location where the test has run: ${data.location}
-* from run parameter: ${data.from}
+* location: ${data.from} (${data.location})
 * connectivity: ${data.connectivity}
 * successFullRuns: ${data.successfulFVRuns}
 
