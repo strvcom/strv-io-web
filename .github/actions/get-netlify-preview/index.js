@@ -39,10 +39,6 @@ const getNeltifyPreviewURL = async () => {
   const apiKey = process.env.NETLIFY_API_KEY
   const siteName = process.env.NETLIFY_SITE_NAME
   const siteId = process.env.NETLIFY_API_ID
-
-  core.debug(JSON.stringify(github.context, null, 2))
-  core.debug(github.context.payload.pull_request.head.sha)
-
   // Get commit sha - for pull request we need sha of commit pull request head and not current context
   const commitRef =
     github.context.eventName === 'pull_request'
@@ -51,8 +47,6 @@ const getNeltifyPreviewURL = async () => {
   // Parse timeout in case that it is not number or set fallback
   const maxTimeout = parseInt(process.env.MAX_TIMEOUT, 10) || MAX_TIMEOUT
   const waitForDeploy = Boolean(process.env.WAIT_FOR_DEPLOY) || true
-
-  core.debug(`Commit SHA: ${commitRef}`)
 
   core.debug(
     JSON.stringify(
@@ -90,16 +84,16 @@ const getNeltifyPreviewURL = async () => {
     )
 
     // Filter preview deploys by commit
-    const deployByCommit = previewDeploys.filter(
+    const deploysByCommit = previewDeploys.filter(
       deploy => deploy.commit_ref === commitRef
     )
 
     core.debug(`Preview deploys: ${previewDeploys.length}`)
-    core.debug(`Deploys related to latest commit: ${previewDeploys.length}`)
+    core.debug(`Deploys related to latest commit: ${deploysByCommit.length}`)
 
     // If there is no deploy by commit found return latest preview deploy
-    const relatedDeploy = deployByCommit.length
-      ? deployByCommit[0]
+    const relatedDeploy = deploysByCommit.length
+      ? deploysByCommit[0]
       : previewDeploys[0]
 
     core.debug(JSON.stringify(relatedDeploy, null, 2))
