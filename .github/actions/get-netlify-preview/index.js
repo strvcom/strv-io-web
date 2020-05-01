@@ -46,7 +46,7 @@ const getNeltifyPreviewURL = async () => {
   // Get commit sha - for pull request we need sha of commit pull request head and not current context
   const commitRef =
     github.context.eventName === 'pull_request'
-      ? github.context.event.pull_request.head.sha
+      ? github.context.event.pull_request.head.sha || 'sha'
       : github.context.sha
   // Parse timeout in case that it is not number or set fallback
   const maxTimeout = parseInt(process.env.MAX_TIMEOUT, 10) || MAX_TIMEOUT
