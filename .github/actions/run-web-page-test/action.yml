@@ -1,0 +1,5 @@
+name: 'Run WebPageTest'
+description: 'Trigger WebPageTest for given url'
+runs:
+  using: "docker"
+  image: "Dockerfile"

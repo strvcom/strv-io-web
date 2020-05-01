@@ -1,0 +1,30 @@
+name: WebPageTest
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Get Netlify Preview
+        id: getNetlifyPreview
+        uses: ./.github/actions/get-netlify-preview
+        env:
+          NETLIFY_API_KEY: ${{ secrets.NETLIFY_API_KEY }}
+          NETLIFY_SITE_NAME: "clever-yonath-fa980f"
+          NETLIFY_API_ID: ${{ secrets.NETLIFY_API_ID }}
+      - name: WebPageTest
+        uses: ./.github/actions/run-web-page-test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST_URL: ${{ steps.getNetlifyPreview.outputs.url }}
+          WEBPAGETEST_API_KEY: ${{ secrets.WEBPAGETEST_API_KEY }}
+        with:
+          options: '{
+            "location": "ec2-eu-central-1",
+            "connectivity": "DSL"
+          }'
