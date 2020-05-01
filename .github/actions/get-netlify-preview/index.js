@@ -40,14 +40,11 @@ const getNeltifyPreviewURL = async () => {
   const siteName = process.env.NETLIFY_SITE_NAME
   const siteId = process.env.NETLIFY_API_ID
 
-  core.debug(JSON.stringify(github.contex, null, 2))
+  core.debug(JSON.stringify(github.context, null, 2))
   core.debug(JSON.stringify(github.event, null, 2))
 
   // Get commit sha - for pull request we need sha of commit pull request head and not current context
-  const commitRef =
-    github.context.eventName === 'pull_request'
-      ? github.context.event.pull_request.head.sha || 'sha'
-      : github.context.sha
+  const commitRef = github.context.sha
   // Parse timeout in case that it is not number or set fallback
   const maxTimeout = parseInt(process.env.MAX_TIMEOUT, 10) || MAX_TIMEOUT
   const waitForDeploy = Boolean(process.env.WAIT_FOR_DEPLOY) || true
