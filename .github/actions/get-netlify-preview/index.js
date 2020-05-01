@@ -1,5 +1,6 @@
 const NetlifyAPI = require('netlify')
 const core = require('@actions/core')
+const github = require('@actions/github')
 
 const DEPLOY_STATE = 'ready'
 const DEPLOY_CONTEXT = 'deploy-preview'
@@ -43,6 +44,10 @@ const getNeltifyPreviewURL = async () => {
   const maxTimeout = parseInt(process.env.MAX_TIMEOUT, 10) || MAX_TIMEOUT
   const waitForDeploy = Boolean(process.env.WAIT_FOR_DEPLOY) || true
 
+  core.debug('SHA')
+  core.debug(process.env.GITHUB_SHA)
+  core.debug(github.context.sha)
+
   core.debug(
     JSON.stringify(
       {
@@ -83,8 +88,8 @@ const getNeltifyPreviewURL = async () => {
       deploy => deploy.commit_ref === commitRef
     )
 
-    code.debug(`Preview deploys: ${previewDeploys.length}`)
-    code.debug(`Deploys related to latest commit: ${previewDeploys.length}`)
+    core.debug(`Preview deploys: ${previewDeploys.length}`)
+    core.debug(`Deploys related to latest commit: ${previewDeploys.length}`)
 
     // If there is no deploy by commit found return latest preview deploy
     const relatedDeploy = deployByCommit.length
