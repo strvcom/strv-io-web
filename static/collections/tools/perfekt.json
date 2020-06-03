@@ -1,7 +1,7 @@
 {
   "name": "perfekt",
   "url": "https://github.com/lekterable/perfekt",
-  "description": "perfekt is a release, changelog and versioning manager.",
+  "description": "perfekt is a release, changelog and versioning manager",
   "owner": "Korneliusz Dubieniecki",
   "category": [
     "frontend"
