@@ -1,7 +1,7 @@
 {
   "name": "CustomModalView",
   "url": "https://github.com/jankaltoun/CustomModalView",
-  "description": "The lightweight SwiftUI library that lets you present completely customizable modal dialogs.",
+  "description": "The lightweight SwiftUI library that lets you present completely customizable modal dialogs",
   "owner": "Jan Kaltou",
   "category": [
     "ios"
