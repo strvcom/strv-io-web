@@ -17,5 +17,6 @@ jobs:
           urls: |
             https://www.strv.io/
             https://www.strv.io/tools
+          configPath: '.lighthouserc.js'
           serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
           serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}

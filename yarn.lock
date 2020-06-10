@@ -9005,6 +9005,14 @@ lighthouse-logger@1.2.0, lighthouse-logger@^1.0.0, lighthouse-logger@^1.2.0:
     debug "^2.6.8"
     marky "^1.2.0"
 
+lighthouse-plugin-field-performance@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/lighthouse-plugin-field-performance/-/lighthouse-plugin-field-performance-2.2.0.tgz#8dc4210781ef97ada0a7d8e37646efb1edcdfb96"
+  integrity sha512-Cx7YqSwrEWtOcytqFlufE6mRLnTJwMdQBnw2Deas/YNVw3oUli7Yyr+SZ7VfkBWy/m448lbYKmthX+XB+GpgIg==
+  dependencies:
+    lodash "^4.17.15"
+    node-fetch "^2.6.0"
+
 lighthouse@5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/lighthouse/-/lighthouse-5.5.0.tgz#86eb8770f89117dd27075e4f292f181be509f65c"
